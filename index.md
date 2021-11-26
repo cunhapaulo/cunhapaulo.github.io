@@ -130,4 +130,4 @@ section.cool-list > ol ol > li > em {
 1. *[**Yvon Costa** - Material de Estudo do Grupo de Transição (GT)](gt/index.html)*
 1. *[**UEP** - Material de Estudo do Livro Conduta Espírita](condutaespirita/index.html)*
 
-> Atualização: 25.nov.2021 - Contato: cunha.paulo@gmail.com.
+> Atualização: 26.nov.2021 - Contato: [Paulo Cunha](https://github.com/cunhapaulo).
