@@ -14,5 +14,6 @@ As you might suspect the site URL is: [https://cunhapaulo.github.io/](https://cu
 Cheers!
 
 ## About Marp
-Marp is a tool created by Yuki Hattori ([@yhatt](https://github.com/yhatt)) to generate beautiful slides from Markdown and CSS. I strongly sugest it as a powerful, practical and marvelous toot to produce your new slide deck.
+Marp is a tool created by Yuki Hattori ([@yhatt](https://github.com/yhatt)) to generate beautiful slides from Markdown and CSS code. I strongly urge you to get to know it as a powerful, practical and beautiful generator tool to produce your next world changing slide deck.
 
+Thanks Yuki Hattori, for this marvelous and outstandig tool that Marp is!
