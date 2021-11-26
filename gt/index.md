@@ -126,8 +126,9 @@ section.cool-list > ol ol > li > em {
 
 # Repertório de Temas para Estudo do GT
 
-
+##### Conteúdo Programático Completo: [(**html**)](0.conteudo.html) - [(**PDF**)](0.conteudo.pdf)
 <!-- _class: cool-list -->
+
 1. *[**Deus**](1.deus.html)*
 2. *[**Atributos de Deus**](2.atributos.html)*
 
