@@ -9,7 +9,7 @@
 
 This website has been conceived to be used temporarely as a repository for the slides used in my study groups. It is under continuous creation using [Marp](https://marpit.marp.app/) to build up the website using the metaphor of slide decks.
 
-## About my website
+## 🚀 About my website
 
 As the need to share these slides with other group members grew stronger, I decided to endure the effort to learn how to use Github, as a first chalenge and then Github.io as a repository of shared projects and a stylish free of charge website.
 
@@ -19,7 +19,7 @@ As you might suspect, the site URL is: [https://cunhapaulo.github.io/](https://c
 
 Cheers!
 
-### Website Front Page:
+### 💎Website Front Page:
 ![Front Page](frontpage.png)
 
 ## About Marp
@@ -29,5 +29,5 @@ Marp is a tool created by Yuki Hattori ([@yhatt](https://github.com/yhatt)) and 
 
 Thanks, Yuki Hattori and Marp Team of colaborators for Marp, this marvelous and outstandig tool!
 
-## Credits
+## ⭐️ Credits
 I owe [Juan Vera del Campo](http://www.incide.es/en/) (Juanvvc) thanks for some fantastic CSS styles in use in my website. _Gracias_!
