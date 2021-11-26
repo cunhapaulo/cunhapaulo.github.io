@@ -122,7 +122,7 @@ section.cool-list > ol ol > li > em {
 </style>
 
 <!-- class: lead -->
-![bg right:30% opacity:60%](https://github.com/elymatos/kardec-theme/blob/master/images/banner.jpg?raw=true)
+![bg right:30% opacity:80%](https://github.com/elymatos/kardec-theme/blob/master/images/banner.jpg?raw=true)
 # Repositório de Documentos Espíritas
 
 
