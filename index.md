@@ -1,5 +1,7 @@
 ---
-Title: Repositório de Documentos
+Title: Repositório de Conteúdos Espíritas
+description: Repositório de conteúdos espíritas para grupos de estudo.
+keywords: Doutrina Espírita, UEP, Yvon Costa, Espiritismo
 marp: true
 ---
 
