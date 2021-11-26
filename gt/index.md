@@ -1,5 +1,8 @@
 ---
-Title: Repositório de Documentos
+Title: Repositório de Conteúdos Programados para o GT - Yvon Costa
+author: Paulo Cunha
+description: Repositório de conteúdos espíritas para estudo do Grupo de Transição.
+keywords: Doutrina Espírita, UEP, Yvon Costa, Espiritismo
 marp: true
 ---
 
@@ -9,7 +12,7 @@ marp: true
 <style>
 
 h1 {
-    color: var(--darker-color);
+    color: blue;
 }
 
 section a {
