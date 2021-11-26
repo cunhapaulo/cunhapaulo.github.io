@@ -6,7 +6,7 @@ marp: true
 ---
 
 <!-- 
-    Styles got from Juan Vera del Campo at https://github.com/Juanvvc/markdown-slides
+    Credits: style borowed from Juan Vera del Campo at https://github.com/Juanvvc/markdown-slides
 -->
 <style>
 
@@ -20,7 +20,7 @@ section a {
 
 section blockquote {
     border-top: 0.1em dashed var(--extra-back-color);
-    font-size: 70%;
+    font-size: 65%;
     margin-top: auto;
 }
 
@@ -122,7 +122,7 @@ section.cool-list > ol ol > li > em {
 </style>
 
 <!-- class: lead -->
-![bg right:40% contrast:113%](https://images.unsplash.com/photo-1499002238440-d264edd596ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
+![bg right:30% opacity:60%](https://github.com/elymatos/kardec-theme/blob/master/images/banner.jpg?raw=true)
 # Repositório de Documentos Espíritas
 
 
