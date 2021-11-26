@@ -21,4 +21,7 @@ Marp is a tool created by Yuki Hattori ([@yhatt](https://github.com/yhatt)) to g
 
 - Marp´s website is at: [https://marpit.marp.app/](https://marpit.marp.app/)
 
-Thanks, Yuki Hattori for this marvelous and outstandig tool that Marp is!
+Thanks, Yuki Hattori and Marp Team for this marvelous and outstandig tool that Marp is!
+
+## Credits
+I owe thanks to [Juan Vera del Campo](http://www.incide.es/en/) (Juanvvc) for some fantastic CSS styles. Thanks!
