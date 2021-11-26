@@ -31,4 +31,4 @@ Marp is a tool created by Yuki Hattori ([@yhatt](https://github.com/yhatt)) and 
 Thanks, Yuki Hattori and Marp Team of colaborators for Marp, this marvelous and outstandig tool!
 
 ## ⭐️ Credits
-I owe [Juan Vera del Campo](http://www.incide.es/en/) (Juanvvc) thanks for some fantastic CSS styles in use in my website. _Gracias_!
+I owe Juan Vera del Campo ([Juanvvc](https://github.com/Juanvvc)) thanks for all the fantastic CSS styles. _Gracias_!
