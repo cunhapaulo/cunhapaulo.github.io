@@ -124,10 +124,10 @@ section.cool-list > ol ol > li > em {
 <!-- class: lead -->
 ![bg right:40% contrast:113%](https://kardec.blog.br/wp-content/uploads/2019/06/acervo-allan-kardec-Kardecnews-12-e1560796436664.jpg)
 # Repositório de Documentos Espíritas
-Por: Paulo Cunha (cunha.paulo@gmail.com).
+
 
 <!-- _class: cool-list -->
 1. *[**Yvon Costa** - Material de Estudo do Grupo de Transição (GT)](gt/index.html)*
 1. *[**UEP** - Material de Estudo do Livro Conduta Espírita](condutaespirita/index.html)*
 
-> Última atualização: 25.nov.2021.
+> Atualização: 25.nov.2021 - Contato: cunha.paulo@gmail.com.
