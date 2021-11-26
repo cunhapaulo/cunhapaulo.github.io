@@ -122,7 +122,7 @@ section.cool-list > ol ol > li > em {
 </style>
 
 <!-- class: lead -->
-
+![bg right:40% contrast:113%](https://kardec.blog.br/wp-content/uploads/2019/06/acervo-allan-kardec-Kardecnews-12-e1560796436664.jpg)
 # Repositório de Documentos Espíritas
 Por: Paulo Cunha (cunha.paulo@gmail.com).
 
