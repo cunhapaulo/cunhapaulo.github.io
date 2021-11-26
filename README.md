@@ -19,10 +19,10 @@ As you might suspect, the site URL is: [https://cunhapaulo.github.io/](https://c
 
 Cheers!
 
-### 💎Website Front Page:
+### 💎 Website Front Page:
 ![Front Page](frontpage.png)
 
-## About Marp
+## 🎈 About Marp
 Marp is a tool created by Yuki Hattori ([@yhatt](https://github.com/yhatt)) and colaborators to generate beautiful slides from Markdown and CSS code into html or else. I strongly urge you to get to know it as a powerful, practical and beautiful code generator tool to produce your next world changing slide deck.
 
 - Marp´s website is at: [https://marpit.marp.app/](https://marpit.marp.app/)
