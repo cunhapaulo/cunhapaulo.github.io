@@ -1,5 +1,12 @@
 # Welcome to my website at `github.io`
 
+<p align="center">
+  <a href="https://github.com/medusajs/medusa/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Medusa is released under the MIT license." />
+  </a>
+</p>
+
+
 This website has been conceived to be used temporarely as a repository for the slides used in my study groups. It is under continuous creation using [Marp](https://marpit.marp.app/) to build up the website using the metaphor of slide decks.
 
 ## About my website
