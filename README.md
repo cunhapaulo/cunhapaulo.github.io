@@ -16,4 +16,6 @@ Cheers!
 ## About Marp
 Marp is a tool created by Yuki Hattori ([@yhatt](https://github.com/yhatt)) to generate beautiful slides from Markdown and CSS code. I strongly urge you to get to know it as a powerful, practical and beautiful generator tool to produce your next world changing slide deck.
 
-Thanks Yuki Hattori, for this marvelous and outstandig tool that Marp is!
+- Marp´s website is at: [https://marpit.marp.app/](https://marpit.marp.app/)
+
+Thanks, Yuki Hattori for this marvelous and outstandig tool that Marp is!
