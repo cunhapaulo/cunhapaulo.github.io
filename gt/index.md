@@ -129,6 +129,6 @@ section.cool-list > ol ol > li > em {
 
 <!-- _class: cool-list -->
 1. *[**Deus**](1.deus.html)*
-1. *[**Atributos de Deus**](2.atributos.html)*
+2. *[**Atributos de Deus**](2.atributos.html)*
 
 > Última atualização: 25.nov.2021.
