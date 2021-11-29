@@ -1,7 +1,8 @@
 {
     "markdown.marp.exportType": "html",
     "markdown.marp.themes": [
-        "https://cunhapaulo.github.io/kant.css",
-        "https://cunhapaulo.github.io/hegel.css"
+        "https://cunhapaulo.github.io/styles/kant.css",
+        "https://cunhapaulo.github.io/styles/hegel.css",
+        "styles/helgel.css"
     ]
 }
