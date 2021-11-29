@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"markdown.marp.exportType": "html",
+		"markdown.marp.themes": [
+			"https://cunhapaulo.github.io/styles/kant.css",
+			"https://cunhapaulo.github.io/styles/hegel.css",
+			"styles/kant.css",
+			"styles/hegel.css"
+		]
+	}
+}
