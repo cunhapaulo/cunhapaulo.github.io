@@ -2,8 +2,8 @@
 title: Repositório de Conteúdos Espíritas
 description: Repositório de conteúdos espíritas para grupos de estudo.
 keywords: Doutrina Espírita, UEP, Yvon Costa, Espiritismo
-marp: true 
-theme: kant
+marp: true
+theme: 
 ---
 
 <!-- class: lead -->
