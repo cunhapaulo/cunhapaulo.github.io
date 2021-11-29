@@ -1,4 +1,4 @@
-# Welcome to my website at `github.io`
+# Welcome to my Website at `github.io`
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
@@ -9,7 +9,7 @@
 
 This website has been conceived to be used temporarely as a repository for the slides used in my study groups. It is under continuous creation using [Marp](https://marpit.marp.app/) to build up the website using the metaphor of slide decks.
 
-## 🚀 About my website
+## 🚀 About my Website
 
 As the need to share these slides with other group members grew stronger, I decided to endure the effort to learn how to use Github, as a first chalenge and then Github.io as a repository of shared projects and a stylish free of charge website.
 
