@@ -6,20 +6,15 @@
 section::after {
     content: "pág. " attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
     color: rgba(207, 201, 201, 0.952);
-    
-  }
-  
+}
 section p {
     margin-bottom: 0.6em;
     line-height: 1.2em;
 }
-
 h1 {
     text-align: center;
-    color: darkslateblue;
-    
+    color: darkslateblue;    
 }
-
 section li {
     margin-top: 0.6em;
     margin-bottom: 0.6em;
@@ -27,7 +22,6 @@ section li {
     font-size:100%;
     color: rgba(128, 128, 128, 0.959);
 }
-
 .columns {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -44,63 +38,91 @@ section li {
 
 section.titlepage {
 
-    --titlesize     : 125%;
-    --subtitlesize  : 100%;
-    --authorsize    : 90%;
-    --datesize      : 90%;
-    --orgsize       : 90%;
+    --titlesize         : 150%;
+    --subtitlesize      : 110%;
+    --authorsize        : 90%;
+    --datesize          : 90%;
+    --institutesize     : 90%;
 
-    --extra-back-color : black;
+    --title-color       : #6754b3;
+    --subtitle-color    : #40356a;
+    --titlepage-color   : #555250;
+
+
+    --border-color      : #e99211;
+    --border-color      : #daba8a; 
+    --border-color      : #8aa6da;
 
     background-color: white;
-    text-align: ;
 }
+
+/* Titlepage informations */
+
+section.titlepage .title {
+    
+    font-size: var(--titlesize);
+    font-weight: 500;
+    text-align: left;
+    color: var(--title-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+section.titlepage .subtitle {
+    font-size: var(--subtitlesize);
+    font-weight: 500;
+}
+section.titlepage .author {
+    font-size: var(--authorsize);
+}
+section.titlepage .date {
+    font-size: var(--datesize);
+    
+}
+section.titlepage .organization {
+    font-size: var(--institutesize);
+    
+}
+section.titlepage .author, section.titlepage .date, section.titlepage .organization {
+    font-weight: 400;
+    text-align: right;
+    color: var(--titlepage-color);
+}
+
+
+/* Titlepage definitions for h1,h2..h5 */
+
+section.titlepage h1 {
+    font-size: var(--titlesize);
+    text-align: left;
+    color: var(--title-color);
+    border-bottom: 1px solid var(--border-color);
+}
+section.titlepage h2 {
+    font-size: var(--subtitlesize);
+    font-weight: 500;
+}
+section.titlepage h3 {
+    font-size: var(--authorsize);
+}
+section.titlepage h4 {
+    font-size: var(--datesize);
+}
+section.titlepage h5 {
+    font-size: var(--institutesize ); 
+}
+section.titlepage h3, section.titlepage h4, section.titlepage h5 {
+    font-weight: 500;
+    text-align: right;
+    color: var(--titlepage-color);
+}
+
+
+/* Omits page number in Title Page Slide */
 
 section.titlepage footer, section.titlepage header, section.titlepage:after {
     /* hide header, footer and pagination */
     display: none;
 }
-
-section.titlepage h1 {
-    font-size: var(--titlesize);
-    text-align: left;
-    color: blue;
-    border-bottom: 1px solid #8aa6da;
-}
-
-section.titlepage h2 {
-    font-size: var(--subtitlesize);
-}
-
-
-
-/* Titlepage informations */
-
-section.titlepage .title {
-    font-size: var(--titlesize);
-    text-align: left;
-    color: blue;
-    border-bottom: 1px solid #8aa6da;
-}
-section.titlepage .subtitle {
-    font-size: var(--subtitlesize);
-}
-section.titlepage .author {
-    font-size: var(--authorsize);
-    text-align: right;
-}
-section.titlepage .date {
-    font-size: var(--datesize);
-    text-align: right;
-
-}
-section.titlepage .organization {
-    font-size: 1var(--orgsize);
-    text-align: right;
-}
-
-
-
 
 
 /******************* lead *****************************/
@@ -124,3 +146,6 @@ section.lead footer, section.lead header, section.lead:after {
 }
 
 
+:root h1, h2, h3, h4, h5 {
+    text-align: initial ;
+}
