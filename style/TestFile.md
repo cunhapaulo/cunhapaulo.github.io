@@ -9,14 +9,36 @@ theme       : plato
 ---
 
 
+
 <!-- _class: titlepage -->
 
 ![bg left:33%](https://www.cnj.jus.br/wp-content/uploads/2019/07/d838b1934903737dba35d46c07793a8c.jpg)
-<div class="title">Main Title</div>
-<div class="subtitle">Subtitle<div>
-<div class="author">Author</div>
-<div class="date">Date</div>
-<div class="organization">Organization</div>
+<div class="title">Processo Eletrônico Seguro</div>
+<div class="subtitle">Uma abrodagem segundo a LGPD<div>
+<div class="author">Paulo Cunha</div>
+<div class="date">01.jan.2022</div>
+<div class="organization">Comitê Gestor de Proteção de Dados Pessoais</div>
+
+---
+<!-- _class: titlepage -->
+
+![bg left:33%](https://www.cnj.jus.br/wp-content/uploads/2019/07/d838b1934903737dba35d46c07793a8c.jpg)
+# Processo Eletrônico Seguro
+## Uma abrodagem segundo a LGPD
+### Paulo Cunha
+#### 01.jan.2022
+##### Comitê Gestor de Proteção de Dados Pessoais
+
+---
+
+<!-- _class: titlepage -->
+
+![bg left:33%](https://www.cnj.jus.br/wp-content/uploads/2019/07/d838b1934903737dba35d46c07793a8c.jpg)
+<div class="title">Título</div>
+<div class="subtitle">Subtítulo<div>
+<div class="author">Autor</div>
+<div class="date">data</div>
+<div class="organization">Organização</div>
 
 ---
 <!-- _class: titlepage -->
