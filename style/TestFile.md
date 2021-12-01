@@ -14,7 +14,7 @@ theme       : plato
 
 ![bg left:33%](https://www.cnj.jus.br/wp-content/uploads/2019/07/d838b1934903737dba35d46c07793a8c.jpg)
 <div class="title">Processo Eletrônico Seguro</div>
-<div class="subtitle">Uma abrodagem segundo a LGPD<div>
+<div class="subtitle">Uma abordagem segundo a LGPD</div>
 <div class="author">Paulo Cunha</div>
 <div class="date">01.jan.2022</div>
 <div class="organization">Comitê Gestor de Proteção de Dados Pessoais</div>
@@ -24,7 +24,7 @@ theme       : plato
 
 ![bg left:33%](https://www.cnj.jus.br/wp-content/uploads/2019/07/d838b1934903737dba35d46c07793a8c.jpg)
 # Processo Eletrônico Seguro
-## Uma abrodagem segundo a LGPD
+## Uma abordagem segundo a LGPD
 ### Paulo Cunha
 #### 01.jan.2022
 ##### Comitê Gestor de Proteção de Dados Pessoais
