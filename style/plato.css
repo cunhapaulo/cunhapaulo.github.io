@@ -1,20 +1,64 @@
 /* @theme plato */
 
+/*******************************************************
+    
+    EXPORTED SECTIONS:
+
+        <!-- _class: titlepage -->
+        <!-- _class: lead -->
+
+********************************************************/
+
+/* Importing default theme from MARP */
 @import "default";
 
-/* Add "Page" prefix and total page number */
-section::after {
-    content: "pág. " attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
-    color: rgba(207, 201, 201, 0.952);
+
+
+/***************** common styles **********************/
+
+:root {
+    --font-family           : 'Fira Sans';   
+    --transitionpage-color  : orangered;
+
+
+    font-family: var(--font-family);
+    font-weight: initial;
 }
+
+
+section.titlepage {
+    
+    /* fonts sizes */
+    --title-size         : 150%;
+    --subtitle-size      : 110%;
+    --author-size        : 100%;
+    --date-size          : 100%;
+    --institute-size     : 85%;
+
+    /* font weights */
+    --title-font-weight     : 500;
+    --subtitle-font-weight  : 400;
+
+    /* colors in style */
+    --title-color       : #6185bb;
+    --subtitle-color    : #40356a;
+    --titlepage-color   : #555250;
+    --transitionpage-color : orangered;
+    --border-color      : #f0cf9e; 
+    --border-color      : #b5c9ee;
+    --border-color      : #e99211;
+    --border-color      : #8aa6da;
+
+}
+/***************** common styles **********************/
+
+
+
 section p {
     margin-bottom: 0.6em;
     line-height: 1.2em;
 }
-h1 {
-    text-align: center;
-    color: darkslateblue;    
-}
+
 section li {
     margin-top: 0.6em;
     margin-bottom: 0.6em;
@@ -22,6 +66,14 @@ section li {
     font-size:100%;
     color: rgba(128, 128, 128, 0.959);
 }
+
+/* Add "Page" prefix and total page number */
+section::after {
+    content: "[ " attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total) " ]";
+    color: rgba(207, 201, 201, 0.952);
+}
+
+/* Adds two-columns class */
 .columns {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -37,83 +89,77 @@ section li {
 */
 
 section.titlepage {
-
-    --titlesize         : 150%;
-    --subtitlesize      : 110%;
-    --authorsize        : 90%;
-    --datesize          : 90%;
-    --institutesize     : 90%;
-
-    --title-color       : #6754b3;
-    --subtitle-color    : #40356a;
-    --titlepage-color   : #555250;
-
-
-    --border-color      : #e99211;
-    --border-color      : #daba8a; 
-    --border-color      : #8aa6da;
-
+    
     background-color: white;
 }
 
 /* Titlepage informations */
 
-section.titlepage .title {
-    
-    font-size: var(--titlesize);
-    font-weight: 500;
+section.titlepage .title {  
+    font-size: var(--title-size);
+    font-weight: var(--title-font-weight);
     text-align: left;
     color: var(--title-color);
     border-bottom: 1px solid var(--border-color);
+    
 }
-
 section.titlepage .subtitle {
-    font-size: var(--subtitlesize);
-    font-weight: 500;
+    font-size: var(--subtitle-size);
+    font-weight: var(--subtitle-font-weight);
+    padding-bottom: 60pt;
+    letter-spacing: -0.125px;   
 }
 section.titlepage .author {
-    font-size: var(--authorsize);
+    font-size: var(--author-size);
 }
 section.titlepage .date {
-    font-size: var(--datesize);
-    
+    font-s-ize: var(--datesize);  
 }
 section.titlepage .organization {
-    font-size: var(--institutesize);
-    
+    font-size: var(--institute-size);  
 }
 section.titlepage .author, section.titlepage .date, section.titlepage .organization {
     font-weight: 400;
     text-align: right;
     color: var(--titlepage-color);
+    line-height: 1.5;
 }
 
 
 /* Titlepage definitions for h1,h2..h5 */
 
+section.titlepage h3, section.titlepage h4, section.titlepage h5 {
+    font-weight: 400;
+    text-align: right;
+    color: var(--titlepage-color);
+    line-height: 0;
+    letter-spacing: -0.125px;
+}
+
 section.titlepage h1 {
-    font-size: var(--titlesize);
+    font-size: var(--title-size);
+    font-weight: var(--title-font-weight);
     text-align: left;
     color: var(--title-color);
     border-bottom: 1px solid var(--border-color);
+    line-height: 1;
 }
 section.titlepage h2 {
-    font-size: var(--subtitlesize);
-    font-weight: 500;
+    font-size: var(--subtitle-size);
+    font-weight: var(--subtitle-font-weight);
+    letter-spacing: -0.125px;
+    line-height: 0;
+    padding-bottom: 80px;
+    
 }
 section.titlepage h3 {
-    font-size: var(--authorsize);
+    font-size: var(--author-size);
 }
 section.titlepage h4 {
-    font-size: var(--datesize);
+    font-s-ize: var(--datesize);
 }
 section.titlepage h5 {
-    font-size: var(--institutesize ); 
-}
-section.titlepage h3, section.titlepage h4, section.titlepage h5 {
-    font-weight: 500;
-    text-align: right;
-    color: var(--titlepage-color);
+    font-size: var(--institute-size ); 
 }
 
 
@@ -125,27 +171,23 @@ section.titlepage footer, section.titlepage header, section.titlepage:after {
 }
 
 
-/******************* lead *****************************/
-
-/* lead class: first slide in a section. Use h1 as header.
-Use: <!-- _class: lead --> */
+/************************* lead *****************************/
+/* 
+    lead class: first slide in a section. Use h1 as header.
+    Use: <!-- _class: lead --> 
+*/
 section.lead {
-    background-color: orangered;
-    text-align: center;
+    background-color: var(--transitionpage-color);
+    text-align: center !important;
     color: white;
     padding-top: auto;
     padding-buttom: auto;
 }
 section.lead h1, section.lead h2, section.lead p, section.lead a {
     color: white;
-    font-size: 200%
+    font-size: 200%;
 }
 section.lead footer, section.lead header, section.lead:after {
     /* hide header, footer and pagination */
     display: none;
-}
-
-
-:root h1, h2, h3, h4, h5 {
-    text-align: initial ;
 }
