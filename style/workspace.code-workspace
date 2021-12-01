@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"markdown.marp.themes": [
+			"https://cunhapaulo.github.io/style/hegel.css"
+			"https://cunhapaulo.github.io/style/kant.css"
+			"https://cunhapaulo.github.io/style/simple.css"
+			"https://cunhapaulo.github.io/style/plato.css"
+			"./hegel.css"
+			"./kant.css"
+			"./simple.css"
+			"./plato.css"
+		]
+	}
+}
