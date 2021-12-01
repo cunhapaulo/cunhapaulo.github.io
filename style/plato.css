@@ -1,0 +1,126 @@
+/* @theme plato */
+
+@import "default";
+
+/* Add "Page" prefix and total page number */
+section::after {
+    content: "pág. " attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
+    color: rgba(207, 201, 201, 0.952);
+    
+  }
+  
+section p {
+    margin-bottom: 0.6em;
+    line-height: 1.2em;
+}
+
+h1 {
+    text-align: center;
+    color: darkslateblue;
+    
+}
+
+section li {
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    line-height: 1.2em;
+    font-size:100%;
+    color: rgba(128, 128, 128, 0.959);
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    justify-content: center !important;
+}
+
+
+/******************* titlepage *************************/
+/* 
+    Title Page Class: first slide in a deck.
+    Use: <!-- _class: titlepage --> 
+*/
+
+section.titlepage {
+
+    --titlesize     : 125%;
+    --subtitlesize  : 100%;
+    --authorsize    : 90%;
+    --datesize      : 90%;
+    --orgsize       : 90%;
+
+    --extra-back-color : black;
+
+    background-color: white;
+    text-align: ;
+}
+
+section.titlepage footer, section.titlepage header, section.titlepage:after {
+    /* hide header, footer and pagination */
+    display: none;
+}
+
+section.titlepage h1 {
+    font-size: var(--titlesize);
+    text-align: left;
+    color: blue;
+    border-bottom: 1px solid #8aa6da;
+}
+
+section.titlepage h2 {
+    font-size: var(--subtitlesize);
+}
+
+
+
+/* Titlepage informations */
+
+section.titlepage .title {
+    font-size: var(--titlesize);
+    text-align: left;
+    color: blue;
+    border-bottom: 1px solid #8aa6da;
+}
+section.titlepage .subtitle {
+    font-size: var(--subtitlesize);
+}
+section.titlepage .author {
+    font-size: var(--authorsize);
+    text-align: right;
+}
+section.titlepage .date {
+    font-size: var(--datesize);
+    text-align: right;
+
+}
+section.titlepage .organization {
+    font-size: 1var(--orgsize);
+    text-align: right;
+}
+
+
+
+
+
+/******************* lead *****************************/
+
+/* lead class: first slide in a section. Use h1 as header.
+Use: <!-- _class: lead --> */
+section.lead {
+    background-color: orangered;
+    text-align: center;
+    color: white;
+    padding-top: auto;
+    padding-buttom: auto;
+}
+section.lead h1, section.lead h2, section.lead p, section.lead a {
+    color: white;
+    font-size: 200%
+}
+section.lead footer, section.lead header, section.lead:after {
+    /* hide header, footer and pagination */
+    display: none;
+}
+
+
