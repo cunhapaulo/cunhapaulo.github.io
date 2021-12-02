@@ -17,9 +17,11 @@
 /***************** common styles **********************/
 
 :root {
-    --font-family           : 'Fira Sans';
     
+    --font-family           : 'Fira Sans Light';
     --transitionpage-color  : orangered;
+
+
 
 
     font-family: var(--font-family);
@@ -37,18 +39,23 @@ section.titlepage {
     --institute-size     : 85%;
 
     /* font weights */
-    --title-font-weight     : 500;
-    --subtitle-font-weight  : 400;
+    --title-font-weight     : 600;
+    --subtitle-font-weight  : 600;
 
     /* colors in style */
-    --title-color       : #6185bb;
-    --subtitle-color    : #40356a;
-    --titlepage-color   : #555250;
+    --title-color       : #ee0d0d;
+    --title-color       : #4d7baf;
+    --title-color       : #0a67f1;
+    
+    --subtitle-color    : #3c4044;
+    --titlepage-color   : #242d31;
+
     --transitionpage-color : orangered;
-    --border-color      : #f0cf9e; 
-    --border-color      : #b5c9ee;
+
     --border-color      : #e99211;
+    --border-color      : #f0cf9e; 
     --border-color      : #8aa6da;
+    --border-color      : #b5c9ee;
 
 }
 /***************** common styles **********************/
@@ -63,9 +70,13 @@ section p {
 section li {
     margin-top: 0.6em;
     margin-bottom: 0.6em;
-    line-height: 1.2em;
-    font-size:100%;
-    color: rgba(128, 128, 128, 0.959);
+    line-height: 1.1em;
+    font-size:90%;
+    color: rgb(18, 20, 20);    
+}
+
+section li strong {
+    color: orangered;
 }
 
 /* Add "Page" prefix and total page number */
@@ -91,15 +102,13 @@ section::after {
 
 section.titlepage {
     
-    background-color: white;
+    background-color: white
 }
 
 /* Titlepage informations */
-
 section.titlepage .title {  
     font-size: var(--title-size);
     font-weight: var(--title-font-weight);
-    text-align: left;
     color: var(--title-color);
     border-bottom: 1px solid var(--border-color);
     
@@ -107,6 +116,7 @@ section.titlepage .title {
 section.titlepage .subtitle {
     font-size: var(--subtitle-size);
     font-weight: var(--subtitle-font-weight);
+    color: var(--subtitle-color);
     padding-bottom: 60pt;
     letter-spacing: -0.125px;   
 }
@@ -128,7 +138,6 @@ section.titlepage .author, section.titlepage .date, section.titlepage .organizat
 
 
 /* Titlepage definitions for h1,h2..h5 */
-
 section.titlepage h3, section.titlepage h4, section.titlepage h5 {
     font-weight: 400;
     text-align: right;
@@ -148,8 +157,11 @@ section.titlepage h1 {
 section.titlepage h2 {
     font-size: var(--subtitle-size);
     font-weight: var(--subtitle-font-weight);
+    text-align: left;
+    color: var(--subtitle-color);
     letter-spacing: -0.125px;
     line-height: 0;
+    margin-top: 0.3em;
     padding-bottom: 80px;
     
 }
@@ -164,6 +176,10 @@ section.titlepage h5 {
 }
 
 
+section.titlepage strong {
+    color:rgb(3, 50, 180);
+    font-weight: bold;
+}
 /* Omits page number in Title Page Slide */
 
 section.titlepage footer, section.titlepage header, section.titlepage:after {
