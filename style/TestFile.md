@@ -12,23 +12,23 @@ theme       : plato
 
 <!-- _class: titlepage -->
 
-![bg left:33%](https://www.cnj.jus.br/wp-content/uploads/2019/07/d838b1934903737dba35d46c07793a8c.jpg)
+![bg left:33%](https://images.unsplash.com/photo-1436891620584-47fd0e565afb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80)
 
-<div class="title">Processo Eletrônico Seguro - Parte 1</div>
-<div class="subtitle">Uma abordagem segundo a LGPD</div>
+<div class="title">Processo Eletrônico Seguro</div>
+<div class="subtitle">Uma abordagem segundo a <b>LGPD</b> </div>
 <div class="author">Paulo Cunha</div>
 <div class="date">01.jan.2022</div>
 <div class="organization">Comitê Gestor de Proteção de Dados Pessoais</div>
 
 ---
 <!-- _class: titlepage -->
+![bg left:33%](https://images.unsplash.com/photo-1502675135487-e971002a6adb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80)
 
-![bg left:33%](https://www.cnj.jus.br/wp-content/uploads/2019/07/d838b1934903737dba35d46c07793a8c.jpg)
 # Processo Eletrônico Seguro
 ## Uma abordagem segundo a LGPD
 ### Paulo Cunha
 #### 01.jan.2022
-##### Comitê Gestor de Proteção de Dados Pessoais
+##### **Comitê Gestor** de Proteção de Dados Pessoais
 
 ---
 
@@ -53,11 +53,19 @@ theme       : plato
 
 ---
 # H1
-## H2
+## H2 
 ### H3
 #### H4
 ##### H5
 
+---
+# Lists
+
+1. **One**
+2. _Two_
+3. Three is a **canonical** number;
+   1. abc
+   2. 
 
 ---
 <!-- _class: lead -->
@@ -68,14 +76,6 @@ theme       : plato
 [ ]------------------- [ SLIDE ] ---------------------[ ] 
 -->
 
-# "_Quando mesmo eu tivesse a linguagem dos anjos; quando tivesse o dom de profecia, que penetrasse todos os mistérios; quando tivesse toda a fé possível, até o ponto de transportar montanhas, se não tiver caridade, nada sou. Dentre estas três virtudes: a **fé**, a **esperança** e a **caridade**, a mais excelente é a **CARIDADE**_".
-
----
-
-
-# Coloca assim, sem equívoco, a <br> **CARIDADE** acima até da **FÉ**. 
-
-# É que a caridade está ao alcance de todos: do **ignorante**, como do **sábio**, do **rico**, como do **pobre**, e **independe** de qualquer crença **particular**.
 
 ---
 <!-- 
