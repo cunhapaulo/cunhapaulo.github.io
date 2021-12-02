@@ -13,7 +13,8 @@ theme       : plato
 <!-- _class: titlepage -->
 
 ![bg left:33%](https://www.cnj.jus.br/wp-content/uploads/2019/07/d838b1934903737dba35d46c07793a8c.jpg)
-<div class="title">Processo Eletrônico Seguro</div>
+
+<div class="title">Processo Eletrônico Seguro - Parte 1</div>
 <div class="subtitle">Uma abordagem segundo a LGPD</div>
 <div class="author">Paulo Cunha</div>
 <div class="date">01.jan.2022</div>
