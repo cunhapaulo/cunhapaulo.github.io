@@ -21,9 +21,6 @@
     --font-family           : 'Fira Sans Light';
     --transitionpage-color  : orangered;
 
-
-
-
     font-family: var(--font-family);
     font-weight: initial;
 }
@@ -56,11 +53,9 @@ section.titlepage {
     --border-color      : #f0cf9e; 
     --border-color      : #8aa6da;
     --border-color      : #b5c9ee;
-
 }
+
 /***************** common styles **********************/
-
-
 
 section p {
     margin-bottom: 0.6em;
@@ -71,18 +66,34 @@ section li {
     margin-top: 0.6em;
     margin-bottom: 0.6em;
     line-height: 1.1em;
-    font-size:90%;
-    color: rgb(18, 20, 20);    
+    font-size:95%;
+    color: rgb(50, 56, 56);
 }
 
-section li strong {
-    color: orangered;
+/* Definition for emphasis */
+section em {
+    color: black;
+    background: yellow;
+    font-style: normal;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 6px;
+}
+
+/* Definition for bold text */
+section strong {
+    color: #0a67f1;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /* Add "Page" prefix and total page number */
 section::after {
-    content: "[ " attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total) " ]";
-    color: rgba(207, 201, 201, 0.952);
+    content: "[" attr(data-marpit-pagination) "/" attr(data-marpit-pagination-total) "]";
+    color: rgb(22, 158, 72);
 }
 
 /* Adds two-columns class */
@@ -90,7 +101,7 @@ section::after {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
-    justify-content: center !important;
+    /* justify-content: center !important; */
 }
 
 
@@ -175,17 +186,13 @@ section.titlepage h5 {
     font-size: var(--institute-size ); 
 }
 
-
-section.titlepage strong {
-    color:rgb(3, 50, 180);
-    font-weight: bold;
-}
 /* Omits page number in Title Page Slide */
 
 section.titlepage footer, section.titlepage header, section.titlepage:after {
     /* hide header, footer and pagination */
     display: none;
 }
+
 
 
 /************************* lead *****************************/
