@@ -20,6 +20,8 @@
     
     --font-family           : 'Fira Sans Light';
     --transitionpage-color  : orangered;
+    --border-color          : #e99211;
+    --h1-color              : orangered;
 
     font-family: var(--font-family);
     font-weight: initial;
@@ -47,16 +49,18 @@ section.titlepage {
     --subtitle-color    : #3c4044;
     --titlepage-color   : #242d31;
 
-    --transitionpage-color : orangered;
-
     --border-color      : #e99211;
     --border-color      : #f0cf9e; 
-    --border-color      : #8aa6da;
     --border-color      : #b5c9ee;
+    --border-color      : #8aa6da;
 }
 
 /***************** common styles **********************/
 
+h1 {
+    color: var(--h1-color);
+    border-bottom: 1px solid var(--border-color);
+}
 section p {
     margin-bottom: 0.6em;
     line-height: 1.2em;
@@ -72,11 +76,11 @@ section li {
 
 /* Definition for emphasis */
 section em {
-    color: black;
-    background: yellow;
+    color: rgb(36, 39, 68);
+    background: rgb(255, 249, 164);
     font-style: normal;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+ /* font-family: sans-serif; */
     padding-top: 6px;
     padding-left: 6px;
     padding-right: 6px;
