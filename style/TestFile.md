@@ -32,35 +32,34 @@ theme       : plato
 
 ---
 
-<!-- _class: titlepage -->
+<div class="columns">
+<div>
 
-![bg left:33%](https://www.cnj.jus.br/wp-content/uploads/2019/07/d838b1934903737dba35d46c07793a8c.jpg)
-<div class="title">Título</div>
-<div class="subtitle">Subtítulo<div>
-<div class="author">Autor</div>
-<div class="date">data</div>
-<div class="organization">Organização</div>
-
----
-<!-- _class: titlepage -->
-
-![bg left:33%](https://www.cnj.jus.br/wp-content/uploads/2019/07/d838b1934903737dba35d46c07793a8c.jpg)
-# Título
-## Subtítulo
-### Autor
-#### Data
-##### Organização
-
----
 # H1
 ## H2 
 ### H3
 #### H4
 ##### H5
 ###### H6
+</div>
+<div>
+
+- This is a _fragment_ o normal text _written_ here in order to exemplify the use of several featrues in _CSS_.
+
+- This is a **fragment** o normal text **written** here in order to exemplify the use of several featrues in **CSS**.
+
+  - This is one feature
+  - This is another subjetc.
+
+</div>
+</div>
 
 ---
+
 # Lists
+
+<div class="columns">
+<div>
 
 1. One
 2. _Two in italic_
@@ -69,6 +68,29 @@ theme       : plato
    2. def
 4. End of list.
    
+</div>
+<div>
+
+```c
+/*************************
+   This is C code
+*************************/
+
+#include <stdio.h>
+
+void main(int strnum, char** strarg) {
+   int x=0;
+
+   for (i=0; i <=strnum; i++>)
+   {
+      printf("%s\n", strarg[i]);
+   }
+}
+```
+
+
+</div>
+</div>
 
 
 
