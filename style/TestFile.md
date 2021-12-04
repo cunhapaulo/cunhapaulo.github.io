@@ -65,7 +65,13 @@ theme       : plato
 2. _Two_
 3. Three is a **canonical** number;
    1. abc
-   2. 
+   2. def
+   
+a. sasasa
+b. assasa
+
+
+
 
 ---
 <!-- _class: lead -->
