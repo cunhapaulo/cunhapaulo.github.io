@@ -18,7 +18,7 @@ theme       : plato
 <div class="subtitle">Uma abordagem segundo a <b>LGPD</b> </div>
 <div class="author">Paulo Cunha</div>
 <div class="date">01.jan.2022</div>
-<div class="organization">Comitê Gestor de Proteção de Dados Pessoais</div>
+<div class="organization"><b>Comitê Gestor</b> de Proteção de Dados Pessoais</div>
 
 ---
 <!-- _class: titlepage -->
@@ -28,7 +28,7 @@ theme       : plato
 ## Uma abordagem segundo a LGPD
 ### Paulo Cunha
 #### 01.jan.2022
-##### **Comitê Gestor** de Proteção de Dados Pessoais
+##### Comitê Gestor de Proteção de Dados Pessoais
 
 ---
 
@@ -57,15 +57,20 @@ theme       : plato
 ### H3
 #### H4
 ##### H5
+###### H6
 
 ---
 # Lists
 
-1. **One**
-2. _Two_
-3. Three is a **canonical** number;
+1. One
+2. _Two in italic_
+3. Three is a **bold number**;
    1. abc
-   2. 
+   2. def
+4. End of list.
+   
+
+
 
 ---
 <!-- _class: lead -->
