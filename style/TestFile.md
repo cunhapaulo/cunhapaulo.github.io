@@ -34,10 +34,15 @@ theme       : plato
 
 # O que é o Espiritismo?
 
-O **Espiritismo** é uma ciência que trata da **natureza**, **origem** e **destino** dos Espíritos, bem como de suas _relações_ com o mundo corporal. 
+O Espiritismo é uma ciência que trata da natureza, origem e destino dos Espíritos, bem como de suas relações com o mundo corporal. 
 
-- Existe apenas uma Doutrina Espírita!
+- Existe apenas uma Doutrina Espírita com tríplice aspecto!
 
+Texto realçado ficará assim:
+- Realce tipo 1 é assim: **texto realçado**!
+- Realce tipo 2 é assim: _texto realçado_!
+
+Texto final.
 
 ---
 
@@ -113,6 +118,7 @@ void main(int argn, char** argptr) {
 
 ---
 <!-- _class: lead -->
+
 # Slide de Transição
 
 ---
