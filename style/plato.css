@@ -49,14 +49,20 @@ section.titlepage {
     --title-color       : #ee0d0d;
     --title-color       : #4d7baf;
     --title-color       : #0a67f1;
+    --title-color       : #002b36;
     
-    --subtitle-color    : #3c4044;
-    --titlepage-color   : #242d31;
+    --subtitle-color    : #586e75;
+    --subtitle-color    : #93a1a1;
 
-    --border-color      : #e99211;
+    --titlepage-color   : #242d31;
+    --background-color  : #fdf6e3;
+
     --border-color      : #f0cf9e; 
     --border-color      : #b5c9ee;
     --border-color      : #8aa6da;
+    --border-color      : #6c71c4;
+    --border-color      : #e99211;
+
 }
 
 /***************** common styles **********************/
@@ -66,17 +72,17 @@ h1 {
     border-bottom: 1px solid var(--border-color);
 }
 section p {
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+    margin-top: .5em;
+    margin-bottom: 0.25em;
     line-height: 1.3em;
     font-size: 35px;
 }
 
 section li {
-    margin-top: 0.6em;
-    margin-bottom: 0.6em;
-    line-height: 1.1em;
-    font-size:95%;
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+    line-height: 1.25em;
+    font-size:105%;
     color: rgb(50, 56, 56);
 }
 
@@ -123,7 +129,7 @@ section::after {
 
 section.titlepage {
     
-    background-color: white
+    background-color: var(--background-color);
 }
 
 /* Titlepage informations */
@@ -237,7 +243,7 @@ section.cite p {
     font-size: 150%;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
+    font-style: oblique;
     padding-top: auto;
     padding-bottom: auto;
     padding-left: 125px;
