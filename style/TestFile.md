@@ -32,6 +32,15 @@ theme       : plato
 
 ---
 
+# O que é o Espiritismo?
+
+O **Espiritismo** é uma ciência que trata da **natureza**, **origem** e **destino** dos Espíritos, bem como de suas _relações_ com o mundo corporal. 
+
+- Existe apenas uma Doutrina Espírita!
+
+
+---
+
 <div class="columns">
 <div>
 
@@ -78,13 +87,17 @@ theme       : plato
 
 #include <stdio.h>
 
-void main(int strnum, char** strarg) {
+void main(int argn, char** argptr) {
+
    int x=0;
+   FILE* fptr;
 
    for (i=0; i <=strnum; i++>)
    {
       printf("%s\n", strarg[i]);
    }
+
+   fptr = fopen();
 }
 ```
 
@@ -92,7 +105,11 @@ void main(int strnum, char** strarg) {
 </div>
 </div>
 
+---
 
+<!-- _class: cite -->
+
+"O Espiritismo é uma ciência cujo fim é a demonstração experimental da existência da alma e sua imortalidade, por meio de comunicações com aqueles aos quais impropriamente têm sido chamados mortos."
 
 ---
 <!-- _class: lead -->
