@@ -18,13 +18,17 @@
 
 :root {
     
-    --font-family           : 'Fira Sans Light';
-    --transitionpage-color  : orangered;
-    --border-color          : #e99211;
-    --h1-color              : orangered;
+    --font-family               : 'Fira Sans Light';
+    --transitionpage-color      : orangered;
+    --border-color              : #e99211;
+    --h1-color                  : black;
+
+    --italic-color              : black;
+    --italic-background-color   : rgb(255, 208, 0);
 
     font-family: var(--font-family);
     font-weight: initial;
+    
 }
 
 
@@ -62,8 +66,10 @@ h1 {
     border-bottom: 1px solid var(--border-color);
 }
 section p {
-    margin-bottom: 0.6em;
-    line-height: 1.2em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    line-height: 1.3em;
+    font-size: 35px;
 }
 
 section li {
@@ -76,11 +82,11 @@ section li {
 
 /* Definition for emphasis */
 section em {
-    color: rgb(36, 39, 68);
-    background: rgb(255, 249, 164);
+    color: var(--italic-color);
+    background: var(--italic-background-color);
     font-style: normal;
     font-weight: bold;
- /* font-family: sans-serif; */
+    font-family: sans-serif;
     padding-top: 6px;
     padding-left: 6px;
     padding-right: 6px;
@@ -214,8 +220,26 @@ section.lead {
 section.lead h1, section.lead h2, section.lead p, section.lead a {
     color: white;
     font-size: 200%;
+    border-bottom: none;
 }
 section.lead footer, section.lead header, section.lead:after {
     /* hide header, footer and pagination */
     display: none;
+}
+
+/************************* cite *****************************/
+/* 
+    cite class: slide containg a citation 
+    Use: <!-- _class: lead --> 
+*/
+section.cite p {
+    color: black;
+    font-size: 150%;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-left: 125px;
+    padding-right: 125px;   
 }
