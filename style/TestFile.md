@@ -16,7 +16,7 @@ theme       : plato
 <div class="subtitle">Uma abordagem segundo a <b>LGPD</b> </div>
 <div class="author">Paulo Cunha</div>
 <div class="date">01.jan.2022</div>
-<div class="organization"><b>Comitê Gestor</b> de Proteção de Dados Pessoais</div>
+<div class="organization">Comitê Gestor de Proteção de Dados Pessoais</div>
 
 ---
 
@@ -110,6 +110,23 @@ void main(int argn, char** argptr) {
 
 ---
 
+# Imagens
+
+<div class="columns-center">
+<div>
+
+![h:400px](https://www.tjpa.jus.br/PortalExterno/hotsite/anuario-estatistico-2018/resources/img/brasao-tjpa.png)
+   
+</div>
+<div>
+
+![](https://www.serpro.gov.br/lgpd/menu/arquivos/infografico-lgpd-em-um-giro)
+
+</div>
+</div>
+
+---
+
 <!-- _class: cite -->
 
 "O Espiritismo é uma ciência cujo fim é a **demonstração** experimental da **existência** da alma e sua imortalidade, por meio de comunicações com aqueles aos quais impropriamente têm sido chamados mortos."
@@ -132,14 +149,7 @@ void main(int argn, char** argptr) {
 
 <!-- _class: biblio -->
 
-<!-- 
-_backgroundColor: 
-_color: black
-_paginate: false
-footer: "" 
--->
-
-![bg opacity:17%](https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)
+![bg opacity:20% blur:8px](https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)
 
 # Referências Bibliográficas
 
