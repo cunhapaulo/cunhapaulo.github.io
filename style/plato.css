@@ -13,25 +13,36 @@
 @import "default";
 
 
-
-/***************** common styles **********************/
-
+/* -------------------- ROOT ----------------------------------*/
 :root {
     
     --font-family               : 'Fira Sans Light';
-    --transitionpage-color      : orangered;
     --border-color              : #e99211;
     --h1-color                  : black;
 
     --italic-color              : black;
     --italic-background-color   : rgb(255, 208, 0);
+    --background-color          : #fdf6e3;
+    
 
     font-family: var(--font-family);
     font-weight: initial;
-    
 }
 
+/* -------------------- LEAD ---------------------------------*/
+section.lead {
+    --transitionpage-color      : orangered;
+}
 
+/* -------------------- BIBLIO -------------------------------*/
+section.biblio {
+    --text-color                : white;
+    --background-color          : rgb(167, 59, 9);
+    --border-color              : #6c71c4;
+
+}
+
+/* ------------------- TITLEPAGE -----------------------------*/
 section.titlepage {
     
     /* fonts sizes */
@@ -55,7 +66,7 @@ section.titlepage {
     --subtitle-color    : #93a1a1;
 
     --titlepage-color   : #242d31;
-    --background-color  : #fdf6e3;
+    --background-color  : #faf7f7;
 
     --border-color      : #f0cf9e; 
     --border-color      : #b5c9ee;
@@ -75,9 +86,8 @@ section p {
     margin-top: .5em;
     margin-bottom: 0.25em;
     line-height: 1.3em;
-    font-size: 35px;
+    font-size: 32px;
 }
-
 section li {
     margin-top: 0.5em;
     margin-bottom: 0.25em;
@@ -138,12 +148,16 @@ section.titlepage .title {
     font-weight: var(--title-font-weight);
     color: var(--title-color);
     border-bottom: 1px solid var(--border-color);
+    line-height: 1.35;
+    padding-bottom: 15px;
+    padding-right: 20%;
     
 }
 section.titlepage .subtitle {
     font-size: var(--subtitle-size);
     font-weight: var(--subtitle-font-weight);
     color: var(--subtitle-color);
+    padding-top: 10px;
     padding-bottom: 60pt;
     letter-spacing: -0.125px;   
 }
@@ -162,8 +176,6 @@ section.titlepage .author, section.titlepage .date, section.titlepage .organizat
     color: var(--titlepage-color);
     line-height: 1.5;
 }
-
-
 /* Titlepage definitions for h1,h2..h5 */
 section.titlepage h3, section.titlepage h4, section.titlepage h5 {
     font-weight: 400;
@@ -179,7 +191,8 @@ section.titlepage h1 {
     text-align: left;
     color: var(--title-color);
     border-bottom: 1px solid var(--border-color);
-    line-height: 1;
+    line-height: 1.35;
+    padding-right: 20%;
 }
 section.titlepage h2 {
     font-size: var(--subtitle-size);
@@ -189,8 +202,7 @@ section.titlepage h2 {
     letter-spacing: -0.125px;
     line-height: 0;
     margin-top: 0.3em;
-    padding-bottom: 80px;
-    
+    padding-bottom: 80px;    
 }
 section.titlepage h3 {
     font-size: var(--author-size);
@@ -240,12 +252,49 @@ section.lead footer, section.lead header, section.lead:after {
 */
 section.cite p {
     color: black;
+    background-color: ;
     font-size: 150%;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: oblique;
+/*  font-style: oblique; */
     padding-top: auto;
     padding-bottom: auto;
     padding-left: 125px;
     padding-right: 125px;   
+}
+
+section.cite strong {
+    color:rgb(182, 112, 27);
+}
+
+section.cite {
+    background-color: var(--background-color);
+}
+
+/************************* biblio *****************************/
+/* 
+    slides containg bibliography
+    Use: <!-- _class: biblio --> 
+*/
+
+section.biblio {
+    background-color: var(--background-color);
+
+}
+section.biblio p {
+    color           : var(--text-color);
+    font-size       : 90%;
+    font-weight     : 400;
+    padding-left    : 5px;
+    
+}
+section.biblio h1 {
+    font-size: 35px;
+    color           : var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+
+}
+section.biblio li {
+    color           : var(--text-color);
+
 }
