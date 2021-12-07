@@ -4,8 +4,12 @@
     
     EXPORTED SECTIONS:
 
-        <!-- _class: titlepage -->
-        <!-- _class: lead -->
+        <!-- _class: cite             -->
+        <!-- _class: columns          -->
+        <!-- _class: columns-center   -->
+        <!-- _class: lead             -->
+        <!-- _class: titlepage        -->
+
 
 ********************************************************/
 
@@ -31,14 +35,15 @@
 
 /* -------------------- LEAD ---------------------------------*/
 section.lead {
-    --transitionpage-color      : orangered;
+    --transitionpage-color  : orangered;
 }
 
 /* -------------------- BIBLIO -------------------------------*/
 section.biblio {
-    --text-color                : white;
-    --background-color          : rgb(167, 59, 9);
-    --border-color              : #6c71c4;
+    --text-color            : white;
+    --background-color      : rgb(11, 50, 175);
+    --border-color          : darkorange;
+    --bold-color            : orange;
 
 }
 
@@ -46,11 +51,11 @@ section.biblio {
 section.titlepage {
     
     /* fonts sizes */
-    --title-size         : 150%;
-    --subtitle-size      : 110%;
-    --author-size        : 100%;
-    --date-size          : 100%;
-    --institute-size     : 85%;
+    --title-size            : 150%;
+    --subtitle-size         : 110%;
+    --author-size           : 100%;
+    --date-size             : 100%;
+    --institute-size        : 85%;
 
     /* font weights */
     --title-font-weight     : 600;
@@ -76,7 +81,7 @@ section.titlepage {
 
 }
 
-/***************** common styles **********************/
+/***************** COMMON STYLES **********************/
 
 h1 {
     color: var(--h1-color);
@@ -130,15 +135,25 @@ section::after {
     /* justify-content: center !important; */
 }
 
+/* Adds two-columns with centered contens class */
+.columns-center {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
 
-/******************* titlepage *************************/
+
+
+/******************* TITLEPAGE *************************/
 /* 
     Title Page Class: first slide in a deck.
     Use: <!-- _class: titlepage --> 
 */
 
-section.titlepage {
-    
+section.titlepage {    
     background-color: var(--background-color);
 }
 
@@ -148,7 +163,7 @@ section.titlepage .title {
     font-weight: var(--title-font-weight);
     color: var(--title-color);
     border-bottom: 1px solid var(--border-color);
-    line-height: 1.35;
+    line-height: 1.25;
     padding-bottom: 15px;
     padding-right: 20%;
     
@@ -158,14 +173,14 @@ section.titlepage .subtitle {
     font-weight: var(--subtitle-font-weight);
     color: var(--subtitle-color);
     padding-top: 10px;
-    padding-bottom: 60pt;
+    padding-bottom: 65pt;
     letter-spacing: -0.125px;   
 }
 section.titlepage .author {
     font-size: var(--author-size);
 }
 section.titlepage .date {
-    font-s-ize: var(--datesize);  
+    font-s-ize: var(--date-size);  
 }
 section.titlepage .organization {
     font-size: var(--institute-size);  
@@ -191,7 +206,7 @@ section.titlepage h1 {
     text-align: left;
     color: var(--title-color);
     border-bottom: 1px solid var(--border-color);
-    line-height: 1.35;
+    line-height: 1.25;
     padding-right: 20%;
 }
 section.titlepage h2 {
@@ -201,14 +216,14 @@ section.titlepage h2 {
     color: var(--subtitle-color);
     letter-spacing: -0.125px;
     line-height: 0;
-    margin-top: 0.3em;
-    padding-bottom: 80px;    
+    margin-top: 0.4em;
+    padding-bottom: 95px;    
 }
 section.titlepage h3 {
     font-size: var(--author-size);
 }
 section.titlepage h4 {
-    font-s-ize: var(--datesize);
+    font-s-ize: var(--date-size);
 }
 section.titlepage h5 {
     font-size: var(--institute-size ); 
@@ -223,7 +238,7 @@ section.titlepage footer, section.titlepage header, section.titlepage:after {
 
 
 
-/************************* lead *****************************/
+/************************* LEAD *****************************/
 /* 
     lead class: first slide in a section. Use h1 as header.
     Use: <!-- _class: lead --> 
@@ -245,7 +260,7 @@ section.lead footer, section.lead header, section.lead:after {
     display: none;
 }
 
-/************************* cite *****************************/
+/************************* CITE *****************************/
 /* 
     cite class: slide containg a citation 
     Use: <!-- _class: lead --> 
@@ -271,10 +286,14 @@ section.cite {
     background-color: var(--background-color);
 }
 
-/************************* biblio *****************************/
+/************************* BIBLIO *****************************/
 /* 
     slides containg bibliography
-    Use: <!-- _class: biblio --> 
+    Use: 
+    
+    <!-- _class: biblio --> 
+    # References
+
 */
 
 section.biblio {
@@ -284,7 +303,7 @@ section.biblio {
 section.biblio p {
     color           : var(--text-color);
     font-size       : 90%;
-    font-weight     : 400;
+    font-weight     : 300;
     padding-left    : 5px;
     
 }
@@ -294,7 +313,15 @@ section.biblio h1 {
     border-bottom: 1px solid var(--border-color);
 
 }
-section.biblio li {
+section.biblio a {
+    font-size   : 31px;
+    font-weight: bold;
+    color       : var(--bold-color);
+}
+    section.biblio li {
     color           : var(--text-color);
-
+}
+section.biblio footer, section.biblio header, section.biblio:after {
+    /* hide header, footer and pagination */
+    display: none;
 }
