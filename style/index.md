@@ -57,6 +57,29 @@ theme       : plato
 
 ---
 
+# Lists
+
+<div class="columns">
+<div>
+
+<!-- _class: cool-list -->
+
+1. *Uno*
+1. *Dos*
+1. *Cinco*
+
+</div>
+<div>
+
+4. *Uno*
+1. *Dos*
+1. *Cinco*
+
+</div>
+</div>
+
+---
+
 # Is Algebraic Graph Knowledge possible?
 
 O Espiritismo é uma ciência que trata da natureza, origem e destino dos Espíritos, bem como de suas relações com o mundo corporal. 
@@ -68,8 +91,8 @@ Texto realçado ficará assim:
 - Realce tipo 2 é assim: _texto realçado_!
 - Texto sem realce algum.
 
-Texto final.
 
+> **Footenote**: This is a footnote.
 ---
 
 <div class="columns">

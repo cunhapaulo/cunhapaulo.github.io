@@ -16,74 +16,103 @@
 /* Importing default theme from MARP */
 @import "color1";
 
-
 /***************** COMMON STYLES **********************/
 
 h1 {
-    color: var(--h1-color);
-    border-bottom: 1px solid var(--border-color);
+  color: var(--h1-color);
+  border-bottom: 1px solid var(--border-color);
 }
 section p {
-    margin-top: .5em;
-    margin-bottom: 0.25em;
-    line-height: 1.3em;
-    font-size: 32px;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+  line-height: 1.3em;
+  font-size: 32px;
 }
 section li {
-    margin-top: 0.5em;
-    margin-bottom: 0.25em;
-    line-height: 1.25em;
-    font-size:105%;
-    color: val(--list-item-color);
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+  line-height: 1.25em;
+  font-size: 105%;
+  color: val(--list-item-color);
 }
 
 /* Definition for emphasis */
 section em {
-    color: var(--italic-color);
-    background: var(--italic-background-color);
-    font-style: normal;
-    font-weight: bold;
-    font-family: sans-serif;
-    padding-top: 6px;
-    padding-left: 6px;
-    padding-right: 6px;
-    padding-bottom: 6px;
+  color: var(--italic-color);
+  background: var(--italic-background-color);
+  font-style: normal;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding-top: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-bottom: 6px;
 }
 
 /* Definition for bold text */
 section strong {
-    color: #2d77e6;
-    padding-left: 5px;
-    padding-right: 5px;
+  color: #2d77e6;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 /* Add "Page" prefix and total page number */
 section::after {
-    color: rgb(255, 39, 1);;
-    font-size: 25px;
-    content: "" attr(data-marpit-pagination) "/" attr(data-marpit-pagination-total) "";
+  color: rgb(111, 126, 158);
+  font-size: 0.8em;
+  content: "" attr(data-marpit-pagination) "/"
+    attr(data-marpit-pagination-total) "";
+}
 
+/* tables: always centered */
+section table {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  width: auto;
+  border: 0;
+}
+section table th {
+  background-color: var(--table-header-color);
+  color: white;
+  border: 0;
+  border-top: black solid 2px;
+}
+section table td {
+  border: 0;
+}
+section table tr:nth-child(2) {
+  background-color: #dedede;
+}
+section table tr:last-child {
+  border-bottom: black solid 2px;
+}
+
+/* Block quote: used for footnote substitution. Use as the last element of a slide. */
+section blockquote {
+  color: gray;
+  border-top: 0.1em dashed var(--extra-back-color);
+  font-size: 40%;
+  margin-top: auto;
 }
 
 /* Adds two-columns class */
 .columns {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-    /* justify-content: center !important; */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  /* justify-content: center !important; */
 }
 
 /* Adds two-columns with centered contens class */
 .columns-center {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
-
 
 /******************* TITLEPAGE *************************/
 /* 
@@ -91,89 +120,92 @@ section::after {
     Use: <!-- _class: titlepage --> 
 */
 
-section.titlepage {    
-    background-color: var(--background-color);
+section.titlepage {
+  background-color: var(--background-color);
 }
 
 /* Titlepage informations */
-section.titlepage .title {  
-    font-size: var(--title-size);
-    font-weight: var(--title-font-weight);
-    color: var(--title-color);
-    border-bottom: 1px solid var(--border-color);
-    line-height: 1.25;
-    padding-bottom: 15px;
-    padding-right: 20%;
-    
+section.titlepage .title {
+  font-size: var(--title-size);
+  font-weight: var(--title-font-weight);
+  color: var(--title-color);
+  border-bottom: 1px solid var(--border-color);
+  line-height: 1.25;
+  padding-bottom: 15px;
+  padding-right: 20%;
 }
 section.titlepage .subtitle {
-    font-size: var(--subtitle-size);
-    font-weight: var(--subtitle-font-weight);
-    color: var(--subtitle-color);
-    padding-top: 10px;
-    padding-bottom: 65pt;
-    letter-spacing: -0.125px;   
+  font-size: var(--subtitle-size);
+  font-weight: var(--subtitle-font-weight);
+  color: var(--subtitle-color);
+  padding-top: 10px;
+  padding-bottom: 65pt;
+  letter-spacing: -0.125px;
 }
 section.titlepage .author {
-    font-size: var(--author-size);
+  font-size: var(--author-size);
 }
 section.titlepage .date {
-    font-s-ize: var(--date-size);  
+  font-s-ize: var(--date-size);
 }
 section.titlepage .organization {
-    font-size: var(--institute-size);  
+  font-size: var(--institute-size);
 }
-section.titlepage .author, section.titlepage .date, section.titlepage .organization {
-    font-weight: 400;
-    text-align: right;
-    color: var(--titlepage-color);
-    line-height: 1.5;
+section.titlepage .author,
+section.titlepage .date,
+section.titlepage .organization {
+  font-weight: 400;
+  text-align: right;
+  color: var(--titlepage-color);
+  line-height: 1.5;
 }
 /* Titlepage definitions for h1,h2..h5 */
-section.titlepage h3, section.titlepage h4, section.titlepage h5 {
-    font-weight: 400;
-    text-align: right;
-    color: var(--titlepage-color);
-    line-height: 0;
-    letter-spacing: -0.125px;
+section.titlepage h3,
+section.titlepage h4,
+section.titlepage h5 {
+  font-weight: 400;
+  text-align: right;
+  color: var(--titlepage-color);
+  line-height: 0;
+  letter-spacing: -0.125px;
 }
 
 section.titlepage h1 {
-    font-size: var(--title-size);
-    font-weight: var(--title-font-weight);
-    text-align: left;
-    color: var(--title-color);
-    border-bottom: 1px solid var(--border-color);
-    line-height: 1.25;
-    padding-right: 20%;
+  font-size: var(--title-size);
+  font-weight: var(--title-font-weight);
+  text-align: left;
+  color: var(--title-color);
+  border-bottom: 1px solid var(--border-color);
+  line-height: 1.25;
+  padding-right: 20%;
 }
 section.titlepage h2 {
-    font-size: var(--subtitle-size);
-    font-weight: var(--subtitle-font-weight);
-    text-align: left;
-    color: var(--subtitle-color);
-    letter-spacing: -0.125px;
-    line-height: 0;
-    margin-top: 0.4em;
-    padding-bottom: 95px;    
+  font-size: var(--subtitle-size);
+  font-weight: var(--subtitle-font-weight);
+  text-align: left;
+  color: var(--subtitle-color);
+  letter-spacing: -0.125px;
+  line-height: 0;
+  margin-top: 0.4em;
+  padding-bottom: 95px;
 }
 section.titlepage h3 {
-    font-size: var(--author-size);
+  font-size: var(--author-size);
 }
 section.titlepage h4 {
-    font-s-ize: var(--date-size);
+  font-s-ize: var(--date-size);
 }
 section.titlepage h5 {
-    font-size: var(--institute-size ); 
+  font-size: var(--institute-size);
 }
 
 /* Omits page number in Title Page Slide */
-section.titlepage footer, section.titlepage header, section.titlepage:after {
-    /* hide header, footer and pagination */
-    display: none;
+section.titlepage footer,
+section.titlepage header,
+section.titlepage:after {
+  /* hide header, footer and pagination */
+  display: none;
 }
-
-
 
 /************************* LEAD *****************************/
 /* 
@@ -181,20 +213,25 @@ section.titlepage footer, section.titlepage header, section.titlepage:after {
     Use: <!-- _class: lead --> 
 */
 section.lead {
-    background-color: var(--transitionpage-color);
-    text-align: center !important;
-    color: white;
-    padding-top: auto;
-    padding-buttom: auto;
+  background-color: var(--transitionpage-color);
+  text-align: center !important;
+  color: white;
+  padding-top: auto;
+  padding-buttom: auto;
 }
-section.lead h1, section.lead h2, section.lead p, section.lead a {
-    color: white;
-    font-size: 200%;
-    border-bottom: none;
+section.lead h1,
+section.lead h2,
+section.lead p,
+section.lead a {
+  color: white;
+  font-size: 200%;
+  border-bottom: none;
 }
-section.lead footer, section.lead header, section.lead:after {
-    /* hide header, footer and pagination */
-    display: none;
+section.lead footer,
+section.lead header,
+section.lead:after {
+  /* hide header, footer and pagination */
+  display: none;
 }
 
 /************************* CITE *****************************/
@@ -203,30 +240,32 @@ section.lead footer, section.lead header, section.lead:after {
     Use: <!-- _class: cite --> 
 */
 section.cite p {
-    color: black;
-    background-color: ;
-    font-size: 150%;
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-/*  font-style: oblique; */
-    padding-top: auto;
-    padding-bottom: auto;
-    padding-left: 125px;
-    padding-right: 125px;   
+  color: black;
+  background-color: ;
+  font-size: 150%;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /*  font-style: oblique; */
+  padding-top: auto;
+  padding-bottom: auto;
+  padding-left: 125px;
+  padding-right: 125px;
 }
 
 section.cite strong {
-    color: var(--strong-color);
+  color: var(--strong-color);
 }
 
 section.cite {
-    background-color: var(--background-color);
+  background-color: var(--background-color);
 }
 
 /* Omits page number in Title Page Slide */
-section.cite footer, section.cite header, section.cite:after {
-    /* hide header, footer and pagination */
-    display: none;
+section.cite footer,
+section.cite header,
+section.cite:after {
+  /* hide header, footer and pagination */
+  display: none;
 }
 
 /************************* BIBLIO *****************************/
@@ -240,31 +279,212 @@ section.cite footer, section.cite header, section.cite:after {
 */
 
 section.biblio {
-    background-color: var(--background-color);
-
+  background-color: var(--background-color);
 }
 section.biblio p {
-    color           : var(--text-color);
-    font-size       : 90%;
-    font-weight     : 300;
-    padding-left    : 5px;
-    
+  color: var(--text-color);
+  font-size: 90%;
+  font-weight: 300;
+  padding-left: 5px;
 }
 section.biblio h1 {
-    font-size: 35px;
-    color           : var(--text-color);
-    border-bottom: 1px solid var(--border-color);
-
+  font-size: 35px;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
 }
 section.biblio a {
-    font-size   : 31px;
-    font-weight: bold;
-    color       : var(--bold-color);
+  font-size: 31px;
+  font-weight: bold;
+  color: var(--bold-color);
 }
-    section.biblio li {
-    color           : var(--text-color);
+section.biblio li {
+  color: var(--text-color);
 }
-section.biblio footer, section.biblio header, section.biblio:after {
-    /* hide header, footer and pagination */
-    display: none;
+section.biblio footer,
+section.biblio header,
+section.biblio:after {
+  /* hide header, footer and pagination */
+  display: none;
+}
+
+/******************* cool-list *****************************/
+
+/* Una lista redonda
+
+Sacada de: https://catalin.red/css3-ordered-list-styles/
+
+Uso:
+
+## cool-list
+<!-- _class: cool-list -->
+
+1. *Uno*
+1. *Dos*
+    1. *Tres*
+    1. *Cuatro*
+1. *Cinco*
+*/
+
+section.cool-list ol {
+  counter-reset: li; /* Initiate a counter */
+  list-style: none; /* Remove default numbering */
+  padding: 0;
+  /*text-shadow: 0 1px 0 rgba(255,255,255,.5);*/
+}
+section.cool-list li {
+  margin-bottom: 0.1em !important;
+  margin-top: 0.1em !important;
+}
+section.cool-list ol > li > em,
+section.cool-list > ol > li > a {
+  position: relative;
+  display: block;
+  padding: 0.4em 0.4em 0.4em 2em;
+  margin: 0.5em 0;
+  background: #ddd;
+  color: #444;
+  text-decoration: none;
+  border-radius: 0.3em;
+  transition: all 0.3s ease-out;
+  font-style: normal;
+}
+section.cool-list ol > li > em:before,
+section.cool-list > ol > li > a:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -1.3em;
+  top: 50%;
+  margin-top: -1.3em;
+  background: var(--main-color);
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  border: 0.3em solid #fff;
+  text-align: center;
+  font-weight: normal;
+  border-radius: 2em;
+  transition: all 0.3s ease-out;
+  color: white;
+}
+section.cool-list > ol > li > em:hover,
+section.cool-list > ol > li > a:hover {
+  background: #eee;
+  font-weight: bolder;
+}
+/* Rotating effect */
+/*
+section.cool-list ol > li > em:hover:before,section.cool-list ol > li > a:hover:before{
+    transform: rotate(360deg);
+}*/
+/* Lists inside lists */
+section.cool-list > ol ol {
+  margin: 0 0 0 2em; /* Add some left margin for inner lists */
+  font-size: 75%;
+  counter-reset: li2; /* Initiate a counter */
+}
+section.cool-list > ol ol > li > em:before,
+section.cool-list > ol ol > li > a:before {
+  content: counter(li2);
+  counter-increment: li2;
+}
+section.cool-list > ol > li > ul {
+  list-style-type: disc;
+  margin: 0 0 0 1em;
+  font-size: 75%;
+}
+section.cool-list > ol ol > li > em {
+  background: #efefef;
+}
+
+/******************* cool-list2 *****************************/
+
+/* Una lista animada.
+
+Sacada de: https://catalin.red/css3-ordered-list-styles/
+
+Uso:
+
+## cool-list2
+<!-- _class: cool-list2 -->
+
+1. *Uno*
+1. *Dos*
+    1. *Tres*
+    1. *Cuatro*
+1. *Cinco*
+*/
+
+section.cool-list2 ol {
+  counter-reset: li; /* Initiate a counter */
+  list-style: none; /* Remove default numbering */
+  padding: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+section.cool-list2 ol ol {
+  margin: 0 0 0 2em; /* Add some left margin for inner lists */
+}
+section.cool-list2 ol li em {
+  position: relative;
+  display: block;
+  padding: 0.4em 0.4em 0.4em 0.8em;
+  margin: 0.5em 0 0.5em 2.5em;
+  background: #ddd;
+  color: #444;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  font-style: normal;
+}
+section.cool-list2 ol li em:hover {
+  background: #eee;
+  font-weight: bolder;
+}
+section.cool-list2 ol li em:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -2.5em;
+  top: 50%;
+  margin-top: -1em;
+  /* background: #fa8072; */
+  background: var(--lighter-color);
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  text-align: center;
+  font-weight: bold;
+}
+section.cool-list2 ol li em:after {
+  position: absolute;
+  content: "";
+  border: 0.5em solid transparent;
+  left: -1em;
+  top: 50%;
+  margin-top: -0.5em;
+  transition: all 0.3s ease-out;
+}
+section.cool-list2 ol li em:hover:after {
+  left: -0.5em;
+  /* border-left-color: #fa8072; */
+  border-left-color: var(--lighter-color);
+}
+/* Lists inside lists */
+section.cool-list2 ol ol {
+  margin: 0 0 0 2em; /* Add some left margin for inner lists */
+  font-size: 75%;
+  counter-reset: li2; /* Initiate a counter */
+}
+section.cool-list2 ol ol > li > em:before,
+section.cool-list2 ol ol > li > a:before {
+  content: counter(li2);
+  counter-increment: li2;
+  background: lightgray;
+}
+section.cool-list2 ol ul {
+  list-style-type: disc;
+  margin: 0 0 0 1em;
+  font-size: 75%;
+}
+section.cool-list2 ol ol em {
+  background: #efefef;
 }

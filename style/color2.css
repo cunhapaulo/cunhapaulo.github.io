@@ -16,6 +16,14 @@
     --list-item-color           : rgb(50, 56, 56);
     --after-color               : rgb(1, 5, 255);
     
+    --table-header-color        : rgb(0, 132, 255);
+    --table-header-color        : orangered;
+    
+    --main-color                : rgb(17, 138, 207);
+    --darker-color              : #246;
+    --lighter-color             : #87ceeb;
+    --extra-back-color          : rgb(175, 172, 172);
+    
     font-family: var(--font-family);
     font-weight: initial;
 }
