@@ -132,6 +132,7 @@ seqAppend (Cons x xs) ys = Cons x (seqAppend xs ys)
 </div>
 
 ---
+
 # Tables
 
 
@@ -142,6 +143,16 @@ seqAppend (Cons x xs) ys = Cons x (seqAppend xs ys)
 | A3       | B3       | C3       |    D3    |
 
 ---
+
+# LaTeX Equations
+
+$$\frac{1}{c^2}\frac{\partial^2\mathbf{\psi}}{\partial t^2} = \nabla^2 \circ\mathbf{\psi}$$
+$$\nabla \times \textbf{E}=- \frac{\partial \textbf{B}}{\partial t}$$
+$$\nabla^2 \textbf{E} = \mu \epsilon \frac{\partial^2 \textbf{E}}{\partial t^2}$$
+$$c=\sqrt{\frac{1}{\mu \epsilon}}$$
+
+---
+
 # Imagens in Two Columns
 
 <div class="columns-center">
@@ -179,12 +190,7 @@ seqAppend (Cons x xs) ys = Cons x (seqAppend xs ys)
 # Slide de Transição
 
 ---
- <!-- 
-[ ]------------------- [ SLIDE ] ---------------------[ ] 
--->
 
-
----
 <!-- 
 ############################### [ SECTION ] #################################### 
 -->
