@@ -8,15 +8,40 @@ paginate    : true
 theme       : plato
 ---
 
+
+<style>
+
+   .cite-author {
+      text-align        : right;
+   }
+   .cite-author:after {
+      color             : orangered;
+      font-size         : 125%;
+      /* font-style        : italic; */
+      font-weight       : bold;
+      font-family       : Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      padding-right     : 130px;
+   }
+   .cite-author[data-text]:after {
+      content           : " - "attr(data-text) " - ";      
+   }
+
+   .cite-author p {
+      padding-bottom : 40px
+   }
+
+</style>
+
+
 <!-- _class: titlepage -->
 
 ![bg left:33%](https://images.unsplash.com/photo-1436891620584-47fd0e565afb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80)
 
-<div class="title">Processo Eletrônico Seguro e Proteção da Privacidade</div>
-<div class="subtitle">Uma abordagem segundo a <b>LGPD</b> </div>
-<div class="author">Paulo Cunha</div>
+<div class="title">Graph Algebra Formally Defined in Z Notation</div>
+<div class="subtitle">Using Haskell to Reason about Programs </div>
+<div class="author">Leonard Kleinrock</div>
 <div class="date">01.jan.2022</div>
-<div class="organization">Comitê Gestor de Proteção de Dados Pessoais</div>
+<div class="organization">Formal Methods International Congress</div>
 
 ---
 
@@ -24,15 +49,15 @@ theme       : plato
 
 ![bg left:33%](https://images.unsplash.com/photo-1502675135487-e971002a6adb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80)
 
-# Processo Eletrônico Seguro e Proteção da Privacidade
-## Uma abordagem segundo a LGPD
-### Paulo Cunha
+# Graph Algebra Formally Defined in Z Notation
+## Using Haskell to Reason about Programs
+### Leonard Kleinrock
 #### 01.jan.2022
-##### Comitê Gestor de Proteção de Dados Pessoais
+##### Formal Methods International Congress
 
 ---
 
-# O que é o Espiritismo?
+# Is Algebraic Graph Knowledge possible?
 
 O Espiritismo é uma ciência que trata da natureza, origem e destino dos Espíritos, bem como de suas relações com o mundo corporal. 
 
@@ -86,41 +111,48 @@ Texto final.
 </div>
 <div>
 
-```c
-/* This is C code */
+```haskell
 
-#include <stdio.h>
+primes = filterPrime [2..]
+  where filterPrime (p:xs) =
+          p : filterPrime [x | x <- xs, x `mod` p /= 0]
 
-void main(int argn, char** argptr) {
+seqLength :: Num b ⇒ Sequence a → b
+seqAppend :: Sequence a → Sequence a → Sequence a
 
-   int x=0;
-   FILE* fptr;
+seqLength Nil = 0
+seqLength (Cons _ xs) = 1 + seqLength xs
 
-   for (i=0; i <=strnum; i++>)
-   {
-      printf("%s\n", strarg[i]);
-   }
-
-   fptr = fopen();
-}
+seqAppend Nil ys = ys
+seqAppend (Cons x xs) ys = Cons x (seqAppend xs ys)    
+     
 ```
 
 </div>
 </div>
 
 ---
+# Tables
 
-# Imagens
+
+| Column A | Column B | Column C | Column D |
+| -------- | -------- | -------- | :------: |
+| A1       | B1       | C1       |    D1    |
+| A2       | B2       | C2       |    D2    |
+| A3       | B3       | C3       |    D3    |
+
+---
+# Imagens in Two Columns
 
 <div class="columns-center">
 <div>
 
-![h:400px](https://www.tjpa.jus.br/PortalExterno/hotsite/anuario-estatistico-2018/resources/img/brasao-tjpa.png)
+![h:450px](https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/4715/9780471555681.jpg)
    
 </div>
 <div>
 
-![](https://www.serpro.gov.br/lgpd/menu/arquivos/infografico-lgpd-em-um-giro)
+![h:450px](https://m.media-amazon.com/images/P/B008BBM9B8.01._SCLZZZZZZZ_SX500_.jpg)
 
 </div>
 </div>
@@ -130,6 +162,16 @@ void main(int argn, char** argptr) {
 <!-- _class: cite -->
 
 "O Espiritismo é uma ciência cujo fim é a **demonstração** experimental da **existência** da alma e sua imortalidade, por meio de comunicações com aqueles aos quais impropriamente têm sido chamados mortos."
+
+---
+
+<!-- _class: cite -->
+
+<div class="cite-author" data-text="Allan Kardec">
+
+   "O Espiritismo é uma ciência cujo fim é a **demonstração** experimental da **existência** da alma e sua imortalidade, por meio de comunicações com aqueles aos quais impropriamente têm sido chamados mortos."
+
+</div>
 
 ---
 <!-- _class: lead -->
@@ -149,6 +191,21 @@ void main(int argn, char** argptr) {
 
 <!-- _class: biblio -->
 
+![bg left:33% opacity:20% blur:8px](https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)
+
+# Referências Bibliográficas
+
+1. KARDEC, Allan. [O Evangelho segundo o Espiritismo](https://www.febnet.org.br/wp-content/uploads/2014/05/Livro-dos-Espiritos.pdf). Tradução: Guillon Ribeiro. 131. ed. 1. imp. Brasília: FEB, 2013. 
+
+2. Imagens livres usadas dos sites [Unsplash](https://unsplash.com/) e [Picsum](https://picsum.photos/).
+
+---
+<!-- 
+############################### [ SECTION ] #################################### 
+-->
+
+<!-- _class: biblio -->
+
 ![bg opacity:20% blur:8px](https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)
 
 # Referências Bibliográficas
@@ -156,6 +213,7 @@ void main(int argn, char** argptr) {
 1. KARDEC, Allan. [O Evangelho segundo o Espiritismo](https://www.febnet.org.br/wp-content/uploads/2014/05/Livro-dos-Espiritos.pdf). Tradução: Guillon Ribeiro. 131. ed. 1. imp. Brasília: FEB, 2013. 
 
 2. Imagens livres usadas dos sites [Unsplash](https://unsplash.com/) e [Picsum](https://picsum.photos/).
+
 
 ---
 
