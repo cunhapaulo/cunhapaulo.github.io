@@ -6,12 +6,13 @@
 /* -------------------- ROOT ----------------------------------*/
 :root {
     
+    --bold-color                : rgb(255, 68, 0);
     --font-family               : 'Fira Sans Light';
     --border-color              : #e99211;
     --h1-color                  : black;
 
     --italic-color              : black;
-    --italic-background-color   : rgb(255, 208, 0);
+    --italic-background-color   : rgba(255, 210, 8, 0.713);
     --background-color          : #fdf6e3;
     --list-item-color           : rgb(50, 56, 56);
     --after-color               : rgb(255, 39, 1);
@@ -27,8 +28,8 @@
     font-weight: initial;
 }
 
-/* -------------------- LEAD ---------------------------------*/
-section.lead {
+/* -------------------- TRANSITION ---------------------------------*/
+section.transition {
     --transitionpage-color  : orangered;
 }
 

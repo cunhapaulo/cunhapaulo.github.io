@@ -1,22 +1,35 @@
 /* @theme plato */
 
-/*******************************************************
-    
-    EXPORTED SECTIONS:
+/*
+  ============================================
+    Created by Paulo Cunha
+    version: 1.0
+    last update: 09.dez.2021
+  ============================================
+
+    You may use freely (MIT license) provided  
+    due credits are granted. 
+
+    CLASSES:
+        
+        <!-- _class: cool-list        -->
+        <!-- _class: cool-list2       -->
 
         <!-- _class: cite             -->
         <!-- _class: columns          -->
         <!-- _class: columns-center   -->
-        <!-- _class: lead             -->
+        <!-- _class: transition       -->
         <!-- _class: titlepage        -->
+        
+*/
 
+/* Importing COLOR SCHEMA */
 
-********************************************************/
-
-/* Importing default theme from MARP */
 @import "color1";
 
-/***************** COMMON STYLES **********************/
+
+
+/***************** COMMON STRUCTURE **********************/
 
 h1 {
   color: var(--h1-color);
@@ -51,20 +64,28 @@ section em {
 
 /* Definition for bold text */
 section strong {
-  color: #2d77e6;
+  color: var(--bold-color);
   padding-left: 5px;
   padding-right: 5px;
+  font-weight: 500;
 }
 
-/* Add "Page" prefix and total page number */
+/* May append some string to page number     */
+/* Uses format "page-number / total pages" */
 section::after {
   color: rgb(111, 126, 158);
   font-size: 0.8em;
-  content: "" attr(data-marpit-pagination) "/"
-    attr(data-marpit-pagination-total) "";
+  content: " " attr(data-marpit-pagination) "/"
+    attr(data-marpit-pagination-total) " ";
 }
 
-/* tables: always centered */
+/* 
+   Tables are always centered.
+   Credits: Juan Vera del Campo 
+   Locus:   https://github.com/Juanvvc
+   
+*/
+
 section table {
   margin-right: auto;
   margin-left: auto;
@@ -117,7 +138,16 @@ section blockquote {
 /******************* TITLEPAGE *************************/
 /* 
     Title Page Class: first slide in a deck.
-    Use: <!-- _class: titlepage --> 
+    
+    Use: 
+    
+    <!-- _class: titlepage --> 
+
+    # TTILE
+    ## SUBTITLE
+    ### AUTHOR
+    #### DATE
+    ##### INSTITUTION
 */
 
 section.titlepage {
@@ -207,29 +237,34 @@ section.titlepage:after {
   display: none;
 }
 
-/************************* LEAD *****************************/
+/************************* transition *****************************/
 /* 
-    lead class: first slide in a section. Use h1 as header.
-    Use: <!-- _class: lead --> 
+    transition class: first slide in a section. Use h1 as header.
+    Use: 
+    
+    <!-- _class: transition --> 
+
+    # Header
+   
 */
-section.lead {
+section.transition {
   background-color: var(--transitionpage-color);
   text-align: center !important;
   color: white;
   padding-top: auto;
   padding-buttom: auto;
 }
-section.lead h1,
-section.lead h2,
-section.lead p,
-section.lead a {
+section.transition h1,
+section.transition h2,
+section.transition p,
+section.transition a {
   color: white;
   font-size: 200%;
   border-bottom: none;
 }
-section.lead footer,
-section.lead header,
-section.lead:after {
+section.transition footer,
+section.transition header,
+section.transition:after {
   /* hide header, footer and pagination */
   display: none;
 }
@@ -237,7 +272,13 @@ section.lead:after {
 /************************* CITE *****************************/
 /* 
     cite class: slide containg a citation 
-    Use: <!-- _class: cite --> 
+    
+    Use: 
+    
+    <!-- _class: cite --> 
+
+    Text
+
 */
 section.cite p {
   color: black;
@@ -264,7 +305,7 @@ section.cite {
 section.cite footer,
 section.cite header,
 section.cite:after {
-  /* hide header, footer and pagination */
+/* hide header, footer and pagination */
   display: none;
 }
 
@@ -275,6 +316,9 @@ section.cite:after {
     
     <!-- _class: biblio --> 
     # References
+
+    1. Item one
+    2. Item two
 
 */
 
@@ -308,21 +352,21 @@ section.biblio:after {
 }
 
 /******************* cool-list *****************************/
+/* 
 
-/* Una lista redonda
+  Credits: https://catalin.red/css3-ordered-list-styles/
 
-Sacada de: https://catalin.red/css3-ordered-list-styles/
+  Use:
 
-Uso:
+  <!-- _class: cool-list -->
 
-## cool-list
-<!-- _class: cool-list -->
-
-1. *Uno*
-1. *Dos*
-    1. *Tres*
-    1. *Cuatro*
-1. *Cinco*
+  1. *Item One*
+  1. *Item two*
+      1. *Item two.one*
+      1. *Item two.two*
+      1. *Item two.three*
+  1. *Item Three*
+  
 */
 
 section.cool-list ol {
@@ -398,21 +442,21 @@ section.cool-list > ol ol > li > em {
 }
 
 /******************* cool-list2 *****************************/
+/* 
 
-/* Una lista animada.
+  Credits: https://catalin.red/css3-ordered-list-styles/
 
-Sacada de: https://catalin.red/css3-ordered-list-styles/
+  Use:
 
-Uso:
+  <!-- _class: cool-list2 -->
 
-## cool-list2
-<!-- _class: cool-list2 -->
+  1. *Item One*
+  1. *Item two*
+      1. *Item two.one*
+      1. *Item two.two*
+      1. *Item two.three*
+  1. *Item Three*
 
-1. *Uno*
-1. *Dos*
-    1. *Tres*
-    1. *Cuatro*
-1. *Cinco*
 */
 
 section.cool-list2 ol {

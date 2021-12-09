@@ -33,6 +33,7 @@ theme       : plato
 </style>
 
 
+
 <!-- _class: titlepage -->
 
 ![bg left:33%](https://images.unsplash.com/photo-1436891620584-47fd0e565afb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80)
@@ -111,7 +112,7 @@ Texto realçado ficará assim:
 
 - This is a fragment o normal text written here in order to exemplify the use of several featrues in CSS.
 
-  - This is _one_ **feature**
+  - This is one **feature**
   - This is another subjetc.
 
 </div>
@@ -158,12 +159,15 @@ seqAppend (Cons x xs) ys = Cons x (seqAppend xs ys)
 
 # Tables
 
-
 | Column A | Column B | Column C | Column D |
 | -------- | -------- | -------- | :------: |
 | A1       | B1       | C1       |    D1    |
 | A2       | B2       | C2       |    D2    |
 | A3       | B3       | C3       |    D3    |
+
+<center>
+<b>Table</b>: Exemple of table use.
+</center>
 
 ---
 
@@ -208,7 +212,7 @@ $$c=\sqrt{\frac{1}{\mu \epsilon}}$$
 </div>
 
 ---
-<!-- _class: lead -->
+<!-- _class: transition -->
 
 # Slide de Transição
 
