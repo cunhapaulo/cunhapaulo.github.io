@@ -25,9 +25,9 @@
 
 /* Importing COLOR SCHEMA */
 
-@import "color1";
-
-
+@import "default";
+@import "schema1";
+@import "structure1";
 
 /***************** COMMON STRUCTURE **********************/
 
