@@ -2,25 +2,18 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "..\\..\\_ESPIRITISMO\\_CENTROS\\YVON\\GT\\apresentacao\\slides"
-		},
-		{
-			"path": "..\\..\\_ESPIRITISMO\\_CENTROS\\UEP\\ESDE\\Conduta Espírita"
 		}
 	],
 	"settings": {
 		"markdown.marp.exportType": "html",
 		"markdown.marp.themes": [
-			"./style/color1.css",
-			"./style/color2.css",
-			"./style/color3.css",
-			"./style/structure.css",
+			"./style/socrates.css",
 			"./style/plato.css",
+			"./style/leibniz.css",
 			"./style/kant.css",
 			"./style/hegel.css",
-			"./style/simple.css",
+			"./style/schema.css",
+			"./style/structure.css",
 		]
 	}
 }

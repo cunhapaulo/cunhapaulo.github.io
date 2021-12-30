@@ -1,5 +1,5 @@
 ---
-title: Repositório de Conteúdos Espíritas
+title: Repositório de Conteúdos Espíritas para Estudo
 description: Repositório de conteúdos espíritas para grupos de estudo.
 keywords: Doutrina Espírita, UEP, Yvon Costa, Espiritismo
 marp: true
@@ -10,12 +10,12 @@ theme: hegel
 
 ![bg right:30% opacity:80%](https://github.com/elymatos/kardec-theme/blob/master/images/banner.jpg?raw=true)
 
-# Repositório de Documentos Espíritas
+# Repositório de Documentos Espíritas para Estudo
 
 
 <!-- _class: cool-list -->
 
-1. [**Yvon Costa** - Material de Estudo do Grupo de Transição (GT)](./gt/index.html)
-1. [**UEP** - Material de Estudo do Livro Conduta Espírita](./condutaespirita/index.html)
+1. [<b>UEP</b> - **Livro Conduta Espírita**](./condutaespirita/index.html)
+1. [<b>Yvon Costa</b> - **Grupo de Transição (GT)**](./gt/index.html)
 
-> Atualização: 11.dez.2021 - Contato: [Paulo Cunha](https://github.com/cunhapaulo).
+> Atualização: 30.dez.2021 - Contato: [Paulo Cunha](https://github.com/cunhapaulo).
