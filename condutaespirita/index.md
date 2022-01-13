@@ -5,7 +5,7 @@ author      : André Luiz, pelo médium Waldo Vieira
 keywords    : Espiritismo, André Luiz, Waldo Vieira
 marp        : true
 paginate    : true
-theme       : hegel
+theme       : socrates
 math        : katex
 url         : 
 image       : 
