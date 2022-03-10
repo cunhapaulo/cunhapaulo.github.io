@@ -336,7 +336,7 @@ A insinceridade ilude, primeiramente, aquele que a promove.
 <!-- 
 [ ]------------------- [ SLIDE ] ---------------------[ ] 
 -->
-![bg right:40%](https://images.unsplash.com/photo-1536096928601-99bac26a838b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80)
+![bg right:40%](https://images.unsplash.com/photo-1524508762098-fd966ffb6ef9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60)
 
 
 # Capítulo 2 - Do Jovem
@@ -353,11 +353,189 @@ Os compromissos assumidos pelo Espírito reencarnante têm começo no momento da
 
 <!-- _class: cite -->
 
-## Foge também aos desejos da mocidade; e segue a justiça, a fé, o amor e a paz com os que, de coração puro, invocam o Senhor.
+Foge também aos desejos da mocidade; e segue a justiça, a fé, o amor e a paz com os que, de coração puro, invocam o Senhor.
 
-### Paulo. <br> (**II Timóteo, 2:22**)
+ Paulo. <br> (**II Timóteo, 2:22**)
 
 ---
+<!-- 
+############################### [ SECTION ] #################################### 
+-->
+<!-- 
+_backgroundColor: rgb(100, 159, 196); 
+_color: black; 
+_paginate: false;
+_footer: ""
+-->
+
+<!-- _class: transition -->
+
+Cap. 3 -  Do Dirigente de Reuniões Doutrinárias
+
+---
+
+<!-- 
+[ ]------------------- [ SLIDE ] ---------------------[ ] 
+-->
+![bg left:30%](https://www.portalser.org/wp-content/uploads/2019/12/A-pra%CC%81tica-espi%CC%81rita-como-funciona-a-Doutrina-Espi%CC%81rita-1024x575.jpg)
+
+
+# Capítulo 3 - Do Dirigente de Reuniões Doutrinárias
+
+- Ser atencioso, sereno e compreensivo no trato com os enfermos encarnados e desencarnados, aliando humildade e energia, tanto quanto respeito e disciplina na consecução das próprias
+tarefas.
+
+- Somente a forja do bom exemplo plasma a autoridade moral. 
+
+---
+
+
+<!-- 
+[ ]------------------- [ SLIDE ] ---------------------[ ] 
+-->
+![bg right:30%](https://www.portalser.org/wp-content/uploads/2019/12/A-pra%CC%81tica-espi%CC%81rita-como-funciona-a-Doutrina-Espi%CC%81rita-1024x575.jpg)
+
+
+# Capítulo 3 - Do Dirigente de Reuniões Doutrinárias
+
+- Observar rigorosamente o horário das sessões, com atenção e assiduidade, fugindo de realizar sessões mediúnicas inopinadamente, por simples curiosidade ou ainda para atender a solicitação
+sem objetivo justo.
+
+- Ordem mantida, rendimento avançado. 
+
+---
+
+
+<!-- 
+[ ]------------------- [ SLIDE ] ---------------------[ ] 
+-->
+![bg left:30%](https://www.portalser.org/wp-content/uploads/2019/12/A-pra%CC%81tica-espi%CC%81rita-como-funciona-a-Doutrina-Espi%CC%81rita-1024x575.jpg)
+
+
+# Capítulo 3 - Do Dirigente de Reuniões Doutrinárias
+
+- Em favor de si mesmo e dos corações que se lhe associam à experiência, não se deixar conduzir por excessiva credulidade no trabalho direcional, nem alimentar, igualmente, qualquer prevenção contra pessoas ou assuntos.
+
+- Quem se demora na margem, sofre atraso no caminho. 
+
+---
+
+<!-- 
+[ ]------------------- [ SLIDE ] ---------------------[ ] 
+-->
+![bg right:30%](https://www.portalser.org/wp-content/uploads/2019/12/A-pra%CC%81tica-espi%CC%81rita-como-funciona-a-Doutrina-Espi%CC%81rita-1024x575.jpg)
+
+
+# Capítulo 3 - Do Dirigente de Reuniões Doutrinárias
+
+- Interdizer a participação de portadores de mediunidade em desequilíbrio nas tarefas sistematizadas de assistência mediúnica, ajudando-os discretamente no reajuste.
+
+- Um doente-médium não pode ser um médium-sadio. 
+
+---
+
+
+<!-- 
+[ ]------------------- [ SLIDE ] ---------------------[ ] 
+-->
+![bg left:30%](https://www.portalser.org/wp-content/uploads/2019/12/A-pra%CC%81tica-espi%CC%81rita-como-funciona-a-Doutrina-Espi%CC%81rita-1024x575.jpg)
+
+
+# Capítulo 3 - Do Dirigente de Reuniões Doutrinárias
+
+- Colaborar para que se não criem situações constrangedoras para qualquer assistente, seja ele médium, enfermo ou acompanhante, procurando a paz de todos em todas as circunstâncias.
+
+- O proveito de uma sessão é fruto da paz naqueles que a integram. 
+
+---
+
+
+<!-- 
+[ ]------------------- [ SLIDE ] ---------------------[ ] 
+-->
+![bg right:30%](https://www.portalser.org/wp-content/uploads/2019/12/A-pra%CC%81tica-espi%CC%81rita-como-funciona-a-Doutrina-Espi%CC%81rita-1024x575.jpg)
+
+
+# Capítulo 3 - Do Dirigente de Reuniões Doutrinárias
+
+- Impedir, sem alarde, a presença de pessoas alcoolizadas ou excessivamente agitadas nas assembléias doutrinárias, excetuando-se nas tarefas programadas para tais casos.
+
+- A caridade não dispensa a prudência. 
+
+---
+
+
+<!-- 
+[ ]------------------- [ SLIDE ] ---------------------[ ] 
+-->
+![bg left:30%](https://www.portalser.org/wp-content/uploads/2019/12/A-pra%CC%81tica-espi%CC%81rita-como-funciona-a-Doutrina-Espi%CC%81rita-1024x575.jpg)
+
+
+# Capítulo 3 - Do Dirigente de Reuniões Doutrinárias
+
+- Esclarecer com bondade quantos se apresentem sob exaltação religiosa ou com excessivo zelo pela própria doutrina Espírita, à feição de fronteiriços do fanatismo.
+
+- O conselho fraterno existe como necessidade mútua. 
+
+---
+
+
+<!-- 
+[ ]------------------- [ SLIDE ] ---------------------[ ] 
+-->
+![bg right:30%](https://www.portalser.org/wp-content/uploads/2019/12/A-pra%CC%81tica-espi%CC%81rita-como-funciona-a-Doutrina-Espi%CC%81rita-1024x575.jpg)
+
+
+# Capítulo 3 - Do Dirigente de Reuniões Doutrinárias
+
+- Desaprovar o emprego de rituais, imagens ou símbolos de qualquer natureza nas sessões, assegurando a pureza e a simplicidade da prática do Espiritismo.
+  
+- Mais vale um sentimento puro que centenas de manifestações exteriores. 
+
+
+---
+
+
+<!-- 
+[ ]------------------- [ SLIDE ] ---------------------[ ] 
+-->
+![bg left:30%](https://www.portalser.org/wp-content/uploads/2019/12/A-pra%CC%81tica-espi%CC%81rita-como-funciona-a-Doutrina-Espi%CC%81rita-1024x575.jpg)
+
+
+# Capítulo 3 - Do Dirigente de Reuniões Doutrinárias
+
+- Rejeitar sempre a condição simultânea de dirigente e médium psicofônico, por não poder, desse modo, atender condignamente nem a um e nem a outro encargo.
+
+- Em qualquer atividade, a disciplina sedimenta o êxito. 
+
+---
+
+
+<!-- 
+[ ]------------------- [ SLIDE ] ---------------------[ ] 
+-->
+![bg right:30%](https://www.portalser.org/wp-content/uploads/2019/12/A-pra%CC%81tica-espi%CC%81rita-como-funciona-a-Doutrina-Espi%CC%81rita-1024x575.jpg)
+
+
+# Capítulo 3 - Do Dirigente de Reuniões Doutrinárias
+
+- Fugir de julgar-se superior somente por estar na cabina de comando.
+-  Não é a posição que exalta o trabalhador, mas sim o comportamento moral com que se conduz dentro dela. 
+
+---
+
+<!-- 
+[ ]------------------- [ SLIDE ] ---------------------[ ] 
+-->
+
+<!-- _class: cite -->
+
+“Como, pois, recebestes o Senhor Jesus-Cristo, assim também andai nele.”
+
+**Paulo**. <br> (Colossenses, capítulo 2, versículo 7.) 
+
+---
+
 
 <!-- _class: biblio -->
 
