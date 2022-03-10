@@ -32,8 +32,8 @@ h1 {
 <!-- _class: cool-list -->
 
 1. *[Deus](./1.deus.html)*
-2. *[Atributos de Deus](./2.atributos.md)*
-3. *[Prece](./3.prece.md)*
-4. *[Retornar](../index.html)*
+2. *[Atributos de Deus](./2.atributos.html)*
+3. *[Prece](./3.prece.html)*
+[Retornar](../index.html)
 
 > Última atualização: 09.mar.2022.
