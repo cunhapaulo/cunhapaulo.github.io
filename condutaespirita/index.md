@@ -367,4 +367,20 @@ Os compromissos assumidos pelo Espírito reencarnante têm começo no momento da
 
 1. ### Vieira, Waldo; Luiz (Espírito), André. **Conduta Espírita**. FEB - Edição do Kindle. 
 2. ### Imagens livres usadas dos sites [Unsplash](https://unsplash.com/) e [Picsum](https://picsum.photos/).
+   
+---
 
+<!-- 
+############################### [ SECTION ] #################################### 
+-->
+
+<!-- 
+_backgroundColor: rgb(100, 159, 196); 
+_color: black; 
+_paginate: false;
+_footer: ""
+-->
+
+<!--_class: transition -->
+
+Conduta Espírita - Introdução

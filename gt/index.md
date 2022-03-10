@@ -27,12 +27,13 @@ h1 {
 
 # Repertório de Temas para Estudo do GT
 
-##### Conteúdo Programático Completo: [(**html**)](0.conteudo.html) - [(**PDF**)](0.conteudo.pdf)
+##### Conteúdo Programático: [_HTML_](0.conteudo.html) - [_PDF_](0.conteudo.pdf)
 
 <!-- _class: cool-list -->
 
 1. *[Deus](./1.deus.html)*
 2. *[Atributos de Deus](./2.atributos.md)*
-3. *[Menu principal](../index.html)*
+3. *[Prece](./3.prece.md)*
+4. *[Retornar](../index.html)*
 
-> Última atualização: 25.nov.2021.
+> Última atualização: 09.mar.2022.

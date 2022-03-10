@@ -18,4 +18,4 @@ theme: hegel
 1. [<b>UEP</b> - **Livro Conduta Espírita**](./condutaespirita/index.html)
 1. [<b>Yvon Costa</b> - **Grupo de Transição (GT)**](./gt/index.html)
 
-> Atualização: 30.dez.2021 - Contato: [Paulo Cunha](https://github.com/cunhapaulo).
+> Atualização: 09.mar.2022 - Contato: [Paulo Cunha](https://github.com/cunhapaulo).
