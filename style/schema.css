@@ -9,9 +9,10 @@
     --border-color              : #e99211;
 
 
-    --bold-color                : rgb(175, 56, 20);
+    --bold-color                : orangered;
     --italic-color              : black;
     --italic-background-color   : rgba(255, 210, 8, 0.713);
+    
 
     --background-color          : #fdf6e3;
     --list-item-color           : rgb(50, 56, 56);
