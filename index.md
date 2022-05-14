@@ -25,12 +25,15 @@ h1 {
 
 </style>
 
-# Homepage <br> Paulo Cunha
+# Paulo Cunha´s Homepage
 
 <!-- ![bg right](https://www.laphamsquarterly.org/sites/default/files/styles/tall_rectangle_custom_user_small_2x/public/images/contributor/plato_360x450.jpg?itok=oC0U0lCq&timestamp=1414179137) -->
 ![bg right](https://cdn.britannica.com/75/177675-131-B7A64EA6/detail-Aristotle-School-of-Athens-Plato-Raphael.jpg)
 ![bg](https://ichef.bbci.co.uk/news/1024/branded_portuguese/47A7/production/_106234381_bbcbrasil_allankardec_acervodafederacaoespiritabrasileira.jpg)
+
 <!-- _class: cool-list -->
+
+## Fields of Interest:
 
 1. *[Doutrina Espírita](./espiritismo/index.html)*
 2. *[Filosofia]()*
