@@ -18,7 +18,7 @@ theme: kant
 ![bg sepia:1.0](https://ichef.bbci.co.uk/news/1024/branded_portuguese/47A7/production/_106234381_bbcbrasil_allankardec_acervodafederacaoespiritabrasileira.jpg) -->
 
 <!-- _class: cool-list -->
-![bg left:33%](fig/paulo.jpeg)
+![bg left:33%](fig/paulo-protected.jpg)
 
 ## Áreas de interesse (Fields of interest):
 
