@@ -24,8 +24,8 @@ theme: plato
 
 1. *[Doutrina Espírita](./espiritismo/index.html)*
 2. *[Filosofia]()*
-3. *[MARP Stylle](https://github.com/cunhapaulo/marpstyle)*
-4. *[Privacidade e Proteção de Dados Pessoais](./lgpd/index.html)*
+3. *[Styles for Marp](https://github.com/cunhapaulo/marpstyle)*
+4. *[LGPD](./lgpd/index.html)*
 <!-- 3. *[Who am I?](./lgpd/index.html#2])* -->
 
-> Última atualização: 14.mai.2022.
+> Última atualização: 21.nov.2022.
