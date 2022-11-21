@@ -25,7 +25,7 @@ theme: kant
 > 1. *[🌟 Doutrina Espírita (Spiritism)](./espiritismo/index.html)*
 > 2. *[💡 Filosofia (Philosophy)]()*
 > 3. *[🎀 Styles for Marp](https://github.com/cunhapaulo/marpstyle)*
-> 4. *[🔎 LGPD](./lgpd/index.html)*
+> 4. *[🪙 LGPD](./lgpd/index.html)*
 <!-- 3. *[Who am I?](./lgpd/index.html#2])* -->
 
 > Última atualização (Last update): 21.nov.2022.
