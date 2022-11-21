@@ -11,7 +11,7 @@ theme: plato
     Styles got from Juan Vera del Campo at https://github.com/Juanvvc/markdown-slides
 -->
 
-# Paulo Cunha´s Homepage
+# **Paulo Cunha**´s Homepage
 
 <!-- ![bg right](https://www.laphamsquarterly.org/sites/default/files/styles/tall_rectangle_custom_user_small_2x/public/images/contributor/plato_360x450.jpg?itok=oC0U0lCq&timestamp=1414179137) -->
 <!-- ![bg right sepia:1](https://cdn.britannica.com/75/177675-131-B7A64EA6/detail-Aristotle-School-of-Athens-Plato-Raphael.jpg)
