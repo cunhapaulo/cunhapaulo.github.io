@@ -1,10 +1,10 @@
-/* @theme pascal */
+/* @theme hume */
 
 /*
   ============================================
     Created by Paulo Cunha
     version: 1.0
-    last update: 04.dez.2022
+    last update: 16.jun.2024
   ============================================       
 */
 
@@ -16,47 +16,49 @@
 
 /* Importing Font */
 /* Font Credit: htts://https://www.cdnfonts.com/ */
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* @import url('https://fonts.cdnfonts.com/css/fira-sans'); */
+/* @import url('https://fonts.cdnfonts.com/css/fira-sans?styles=20119'); */
+/* @import url('https://fonts.cdnfonts.com/css/pt-sans-2'); */
+@import url('https://fonts.cdnfonts.com/css/open-sans');
+
 
 /***************** COMMON STRUCTURE **********************/
 
 :root {
-
-  font-family: "Fira Sans Condensed", serif;
-  font-family: "PT Serif", serif;
-  font-family: Cambria, serif;
-  font-family: "Bookerly", serif;
+  font-family: 'Open Sans', "PT Sans", 'Fira Sans', sans-serif;
 
   font-weight: initial;
+  --italic-background-color   : rgba(214, 25, 66, 0.144);
+  --italic-background-color   : rgba(8, 206, 255, 0.3);
   --italic-background-color   : rgba(8, 140, 255, 0.236);    
-  
-  background-color: rgb(235, 235, 235);
-  background-color: rgb(216, 222, 233);
+  background-color: #f3f1ec; 
 }
 
 h1 {
-  color:rgb(11, 37, 69); 
-  font-size: 30pt;
+  color:rgb(53, 80, 112);
+  color:rgb(11, 37, 69);
+  letter-spacing: 0.25pt;
   padding-bottom: 2mm;
-  letter-spacing: 0.01em;
   margin-bottom: 12mm;
 }
 
 p {
-  
   font-size: 26pt;
-  font-weight: 400;
-  letter-spacing: 0.125px;
-  color:rgb(60, 60, 76);  
-}
-
-section.titlepage .title {
-  border-bottom: 1px solid orangered;
+  font-weight: 600;
+  color:rgba(44, 44, 53, 0.814)  
 }
 
 
 section.cite {
   --strong-color        : rgba(255, 5, 5, 0.795);
+}
+
+section.titlepage {
+  background-color: #f3f1ec; 
+}
+
+section.titlepage .title {
+  border-bottom: 1px solid orangered;
 }
 
 section.titlepage .author,

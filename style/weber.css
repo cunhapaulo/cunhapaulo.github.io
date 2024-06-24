@@ -19,6 +19,7 @@
 @import url('https://fonts.cdnfonts.com/css/fira-sans-condensed?styles=19730');
 @import url('https://fonts.cdnfonts.com/css/noto-sans-sc');
 
+
 /* ---------------- TITLE PAGE ---------------- */
 section.titlepage {
   background-color: rgb(64, 81, 93);
@@ -45,16 +46,18 @@ section.titlepage .author,
   text-align: left !important;
 }
 
-section.titlepage h1 {  
+section.titlepage h1 {
   color: rgb(252, 252, 252) !important;
 }
 
-section.titlepage h2 {  
+section.titlepage h2 {
   color: rgb(190, 192, 195) !important;
 }
 
 
-section.titlepage h3, h4, h5 {  
+section.titlepage h3,
+h4,
+h5 {
   color: rgb(132, 165, 215) !important;
 }
 
@@ -66,14 +69,15 @@ section.titlepage strong {
 
 /* ----------------   ROOT PAGE ---------------- */
 :root {
-  /* font-family: 'Fira Sans Light'; */
+  /* font-family: 'Dolly';
+  font-family: 'Fira Sans Light'; */
   font-family: 'Noto Sans SC', sans-serif;
   font-weight: initial;
   color: #f4f6f8;
   /* background-color: rgba(81, 100, 113, 0.468); */
   /* background-color: rgba(81, 100, 113, 0.922); */
   background-color: rgb(81, 100, 113);
-
+  --cool-list-color: rgb(56, 69, 89);
 }
 
 a {
@@ -93,6 +97,7 @@ h1 {
   color: #83a5b8;
   border-color: #fad12b;
   margin-bottom: 3.5%;
+  letter-spacing: 0.1pt;
 }
 
 section p {
@@ -113,10 +118,11 @@ figcaption {
   font-family: "Fira Sans Condensed";
   line-height: 200%;
 }
+
 /* --------------- PAGE NUMBER --------------- */
 section::after {
   color: rgb(242, 243, 245);
-  background-color: #445f8d55;
+  background-color: #43444555;
   font-size: 0.7em;
 
   line-height: 45pt;
@@ -165,9 +171,11 @@ section.transition a {
 section.transition em {
   /* text-shadow: 6px 6px 0 rgb(207, 143, 4);*/
 }
+
 section.transition strong {
   /* text-shadow: 6px 6px 0 rgb(207, 143, 4);*/
-  color: yellow; /*rgb(247, 76, 9);*/
+  color: yellow;
+  /*rgb(247, 76, 9);*/
   font-size: 110% !important;
   font-weight: 900 !important;
   /* text-shadow: 4px 4px 0 rgb(51, 50, 49);*/
@@ -197,12 +205,12 @@ section.cite p {
   color: rgb(254, 254, 254);
   background-color: rgba(76, 93, 109, 0.352);
 
-  font-family: "Fira Sans Condensed" ;
+  font-family: "Fira Sans Condensed";
   font-size: 150%;
   letter-spacing: var(--letter-spacing);
   text-align: center;
   line-height: 1.2em;
-   
+
   padding-top: 50pt;
   padding-bottom: 50pt;
   padding-left: 100px;
@@ -239,4 +247,14 @@ section.biblio li {
   color: var(--text-color);
   font-size: 20pt !important;
   line-height: 24pt;
+}
+
+/* ------------------- BLOCK QUOTE -----------------------------*/
+/* 
+  Block quote: used for footnote
+  substitution. Use as the last  
+  element of a slide.
+*/
+section blockquote {
+  color: rgb(235, 237, 239);
 }
