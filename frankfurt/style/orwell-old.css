@@ -1,10 +1,10 @@
-/* @theme pascal */
+/* @theme orwell */
 
 /*
   ============================================
     Created by Paulo Cunha
     version: 1.0
-    last update: 04.dez.2022
+    last update: 17.mar.2025
   ============================================       
 */
 
@@ -17,29 +17,30 @@
 /***************** COMMON STRUCTURE **********************/
 
 :root {
-  /* font-family: 'Fira Sans'; */
+
+  font-family: 'Fira Sans';
   font-family: "Bookerly", serif;
 
   font-weight: 400;
-  letter-spacing: -1.0px;
+  letter-spacing: -0.9px;
   font-size: 22pt;
-  color: white;
   color:rgba(26, 43, 75, 0.814);
-  color: black;
-
   
   --italic-background-color   : rgba(206, 252, 0, 0);    
-  background-color: #b7c2da; 
+
+  background-color: #dfe6f4; 
 }
 
 h1 {
   
-  /* font-family: 'Fira Sans'; */
-  font-weight: 600;
+  font-family: 'Fira Sans';
+  font-weight: 500;
   font-size: 30pt;
-  color: rgb(52, 86, 119);
-  color:rgba(26, 43, 75, 0.814);
 
+  color: white;
+  color: rgb(90, 109, 128);
+  color: rgb(1, 81, 172);
+  color: rgb(52, 86, 119);
   
   padding-bottom: 2mm;
   margin-bottom: 12mm;
@@ -84,13 +85,13 @@ section code {
 }
 
 section.transition em{
+  
   background-color: rgb(251, 255, 0) !important;
 }
 
 
 section.transition strong {
-  color: rgba(207, 235, 121, 0.964);
-  color: rgba(230, 250, 6, 0.905);
+
   color: rgba(194, 228, 5, 0.904);
   font-weight: 1000;
   text-shadow: 2px 2px 10px rgb(101, 45, 3);

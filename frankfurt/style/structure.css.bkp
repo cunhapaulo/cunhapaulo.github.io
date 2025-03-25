@@ -3,12 +3,10 @@
 /*
   ============================================
     Created by Paulo Cunha
-    version: 1.75
-    
-    update: 06.mai.2024
-    update: 23.jun.2023 
-    update: 12.mai.2022
-    update: 30.dez.2021
+    version: 1.71
+    last: update: 23.jun.2023 
+          update: 12.mai.2022
+          update: 30.dez.2021
          
   ============================================
 
@@ -59,24 +57,6 @@ section li {
   color: val(--list-item-color);
 }
 
-section li:hover {
-  
-  /* margin-top: 1em; */
-  /* margin-bottom: 1em; */
-  /* font-size: 150% !important; */
-  /* font-weight: 600 !important; */
-  /* color: #000000 !important; */
-  /* border: 1px solid rgb(8, 8, 8); */
-  
-  background-color: rgb(250, 233, 2);
-  color: black !important;
-  background-color: rgb(208, 253, 6);
-  border-end-start-radius: 10pt;
-  border-start-end-radius: 10pt;
-  border-end-end-radius: 10pt;
-  border-start-start-radius: 10pt;
-}
-
 /* Definition for emphasis */
 section em {
   color: var(--italic-color);
@@ -96,13 +76,6 @@ section strong {
   padding-left: 5px;
   padding-right: 5px;
   font-weight: 600;
-}
-
-
-section figcaption{
-  font-size: 80%;
-  padding-top: 16px;
-  /* text-align: center; */
 }
 
 /* May append some string to page number     */
@@ -136,22 +109,18 @@ section::after {
    
 */
 section table {
+  margin-right: auto;
+  margin-left: auto;
   margin-top: 40px;
-  
-  
-  /* width: auto;  (24.01.2025 paulo.cunha) */
+  width: auto;
   border: 0;
   font-size: 24px;
-  
-    margin-right: auto !important;
-    margin-left: auto !important; 
-  
 }
 
 section table th {
   background-color: var(--table-header-color);
   color: var(--table-header-font-color);
-  border: 1;
+  border: 0;
   border-top: var(--table-border-top) solid 2px;
 }
 
@@ -160,7 +129,7 @@ section table td {
 }
 
 section table tr:nth-child(2) {
-  background-color: #c4c6c6;  
+  background-color: #c4c6c6;
 }
 
 section table tr:last-child {
@@ -172,11 +141,10 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-  color: var(--table-hover-color) !important;
-  background-color: var(--table-hover-background-color) !important;
-  font-weight: bold !important;
+  color: var(--table-hover-color);
+  background-color: var(--table-hover-background-color);
+  font-weight: bold;
 }
-
 
 /* ------------------- BLOCK QUOTE -----------------------------*/
 /* 
@@ -295,8 +263,9 @@ section.titlepage .title {
   font-weight: var(--title-font-weight);
   color: var(--title-color);
   border-bottom: 1px solid var(--border-color);
-  line-height: 1.2;
+  line-height: 1.25;
   padding-bottom: 15px;
+  /* padding-right: 10%; */
 }
 
 section.titlepage .subtitle {
@@ -337,7 +306,7 @@ section.titlepage h5 {
   font-weight: 400;
   text-align: right;
   color: var(--titlepage-color);
-  line-height: 0.45;
+  line-height: 0;
   letter-spacing: var(--letter-spacing);
 }
 
@@ -452,50 +421,6 @@ section.transition2 em {
 section.transition2 footer,
 section.transition2 header,
 section.transition2:after {
-  /* hide header, footer and pagination */
-  display: none;
-}
-
-
-/* ------------------- TRANSITION3 -----------------------------*/
-/* 
-    transition2 class: first slide in a section. Use h1 as header.
-    Use: 
-    
-    <!-- _class: transition3 --> 
-
-    # Header
-   
-*/
-section.transition3 {
-  background-color: rgb(66, 69, 71);
-  text-align: center !important;
-  font-weight: bold !important;
-  color: rgb(255, 255, 255);
-  padding-top: auto;
-  padding-buttom: auto;
-}
-
-section.transition3 h1,
-section.transition3 h2,
-section.transition3 p,
-section.transition3 a {
-  color: rgb(244, 247, 217);
-  font-size: 200%;
-  border-bottom: none;
-}
-
-section.transition3 em {
-  background-color: rgb(60, 255, 0) !important;
-}
-
-section.transition3 strong {
-  color: rgb(71, 83, 90);
-}
-
-section.transition3 footer,
-section.transition3 header,
-section.transition3:after {
   /* hide header, footer and pagination */
   display: none;
 }

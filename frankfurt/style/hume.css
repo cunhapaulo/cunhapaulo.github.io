@@ -1,10 +1,10 @@
-/* @theme pascal */
+/* @theme hume */
 
 /*
   ============================================
     Created by Paulo Cunha
     version: 1.0
-    last update: 04.dez.2022
+    last update: 27.jan.2025
   ============================================       
 */
 
@@ -17,29 +17,36 @@
 /***************** COMMON STRUCTURE **********************/
 
 :root {
-  /* font-family: 'Fira Sans'; */
   font-family: "Bookerly", serif;
+  font-family: 'Fira Sans';
 
   font-weight: 400;
-  letter-spacing: -1.0px;
+  letter-spacing: -0.9px;
   font-size: 22pt;
   color: white;
-  color:rgba(26, 43, 75, 0.814);
   color: black;
+  color:rgba(26, 43, 75, 0.814);
 
   
   --italic-background-color   : rgba(206, 252, 0, 0);    
-  background-color: #b7c2da; 
+
+
+  background-color: #ede3de; 
+  background-color: #deccc4; 
+  background-color: #d9dee9; 
+  background-color: #b4bfdb; 
 }
 
 h1 {
   
-  /* font-family: 'Fira Sans'; */
-  font-weight: 600;
+  font-family: 'Fira Sans';
+  font-weight: 500;
   font-size: 30pt;
-  color: rgb(52, 86, 119);
-  color:rgba(26, 43, 75, 0.814);
 
+  color: white;
+  color: rgb(1, 81, 172);
+  color: rgb(90, 109, 128);
+  color: rgb(52, 86, 119);
   
   padding-bottom: 2mm;
   margin-bottom: 12mm;
