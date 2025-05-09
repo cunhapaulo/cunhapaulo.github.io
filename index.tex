@@ -1,0 +1,335 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  brazilian,
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Índice}
+\else
+  \newcommand\contentsname{Índice}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Lista de Figuras}
+\else
+  \newcommand\listfigurename{Lista de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Lista de Tabelas}
+\else
+  \newcommand\listtablename{Lista de Tabelas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabela}
+\else
+  \newcommand\tablename{Tabela}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listagem}
+\newcommand*\listoflistings{\listof{codelisting}{Lista de Listagens}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Filosofia Prática e Ceticismo Moral: Sobre Kant e Hume},
+  pdfauthor={Paulo Roberto Martins Cunha},
+  pdflang={pt-Br},
+  pdfsubject={Filosofia Moral},
+  pdfkeywords={Kant, Hume, Filosofia Prática, Ceticismo Moral},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{Filosofia Prática e Ceticismo Moral: Sobre Kant e Hume}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Mestrado em Filosofia - Projeto de Pesquisa}
+\author{Paulo Roberto Martins Cunha}
+\date{2025-05-07}
+\begin{document}
+\maketitle
+
+
+\section{Projeto de Pesquisa}\label{projeto-de-pesquisa}
+
+\subsection{Delimitação do tema}\label{delimitauxe7uxe3o-do-tema}
+
+Na Segunda Secção da Fundamentação da metafísica dos costumes, em que se
+propõe a fazer a passagem do pensamento moral popular à metafísica dos
+costumes, Kant faz uma constatação que parece atingir em cheio toda
+ideia de metafísica. Ele nos diz com sinceridade:
+
+\begin{quote}
+Na realidade, é absolutamente impossível encontrar na experiência com
+perfeita certeza um único caso em que a máxima de uma ação, de resto
+conforme ao dever, se tenha baseado puramente em motivos morais e na
+representação do dever'' (Kant, p.~40)
+\end{quote}
+
+Essa é uma colocação acerca da nossa experiência moral que, em
+princípio, é a expressão clara da impossibilidade, para os homens, de
+agirem segundo princípios morais gerais, embora saibamos que a intenção
+de Kant com a sua Fundamentação é encontrar justamente algo que
+desempenhe essa função, servindo de critério puro e necessário para toda
+e qualquer avaliação do comportamento moral. Na Fundamentação, Kant
+chamará a esse princípio puro de ``autonomia da vontade''.
+
+Ocorre que o que expressa o filósofo na passagem citada é,
+indiscutivelmente, a mesma constatação que está na base de todo
+ceticismo moral. Uma das razões, só para tomar um exemplo, seria o
+desentendimento reinante acerca do que se quer dizer quando o assunto é
+a moral ou a ética. Adauto Novaes, em um livro de múltiplos autores por
+ele organizado, nos diz que existem várias teorias sobre o tema porque:
+``A palavra ética, por exemplo, não tem o mesmo sentido para todos''
+(Novaes, 2007, p.~8). E seria essa falta ou mesmo impossibilidade de se
+chegar a algum consenso a respeito do comportamento moral que produziria
+em nós quase que naturalmente o que chamaremos aqui de ceticismo moral,
+para que não se confunda, inicialmente, com o ceticismo epistemológico
+ou cognitivo. Mas é o cético Hume, que desconfiava da pureza do
+entendimento humano, quem escreve, em um tom de admiração:
+
+\begin{quote}
+Para alguns filósofos parece constituir motivo de surpresa que, sendo
+todos os homens dotados da mesma natureza e possuidores das mesmas
+faculdades, apesar disso sejam tão imensamente diferentes em suas ações
+e tendências, e que uns condenem intransigentemente o que outros
+prazerosamente procuram (Hume, 1980, p.~215)
+\end{quote}
+
+Hume se admira que ainda se encontre aqui alguma surpresa, afinal, um
+mesmo homem pode ter comportamentos contraditórios, como se nunca
+seguisse, para si mesmo, as mesmas regras ao agir. Para Hume isso é uma
+constatação, até porque a história humana é o registro de fatos e
+narrativas de ações que põem em questão a ideia de que os homens possam
+um dia encontrar um guia seguro para suas ações, como aparentemente
+fizeram com seus juízos científicos. O fato é que o homem real,
+existente, não é como o cientista real, como um Newton, por exemplo.
+
+Mesmo assim, sabendo que a Física tem uma parte empírica e real, mas,
+também, uma parte racional, Kant se pergunta se as ações humanas não
+poderiam ser estudas separando a parte empírica da parte pura. Pois
+assim poderíamos distinguir nossa reflexão sobre o homem em suas ações
+pragmáticas, que Kant chama de ``Antropologia prática'', das reflexões
+voltadas às exigências feitas às ações e que não se explicam pelo seu
+efeito imediato. E é a essa última forma de reflexão que Kant chamará de
+``Moral''. Com isso, poderíamos nos guiar não pelo que sabemos da
+história humana e dos feitos dos homens, mas o que a razão em nós nos
+diz, constantemente, que deveríamos fazer, mesmo que, pelos mais
+variados motivos, não o consigamos realizar.
+
+Por isso, o que estamos proponde analisar nesta dissertação é o
+seguinte: qual a solução kantiana para o problema do ceticismo moral, e
+qual o grau de satisfação podemos reconhecer no modo como ele trata a
+questão, na medida em que ele mesmo reconhece que, na realidade, a
+teoria é outra coisa? Por que ele se pergunta: ``Não é verdade que é da
+mais extrema necessidade elaborar um dia uma pura Filosofia moral que
+seja completamente depurada de tudo o que possa ser somente empírico e
+pertença à Antropologia?'' (Kant, 1974, p.~198).
+
+\subsection{Problema}\label{problema}
+
+\subsection{Justificativa}\label{justificativa}
+
+\subsection{Objetivos}\label{objetivos}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Gerais}: Expor a solução kantiana ao problema do ceticismo
+  moral.
+\item
+  \textbf{Específicos}: 1. Apresentar a filosofia crítica como uma
+  reação positiva ao ceticismo moderno, em especial no que tange sua
+  perspectiva moral; 2. Recensear, com o auxílio da obra de Hume, alguns
+  pontos fundamentais para a contestação da orientação racionalista e
+  idealista da moralidade; 3. Mostrar que a resposta kantiana ao
+  ``´problema de Hume'', além de seu alcance teórico, contém a chave
+  para a possibilidade lógica da moral.
+\end{enumerate}
+
+\subsection{Metodologia}\label{metodologia}
+
+\subsection{Cronograma}\label{cronograma}
+
+Este projeto de pesquisa de mestrado está previsto para ser desenvolvido
+inicialmente num período de dois anos. De acordo com o tema escolhido e
+os objetivos propostos, esperíodo inicial deve ser dividido em quatro
+sub-períodos de pesquisa, que correspondem a quatro semestres, de modo a
+compreender os seguintes campos de investigação:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{1º semestre}: Além de cursar as disciplinas para obtenção dos
+  créditos, fazer um levantamento de novos títulos e revisão
+  bibliográfica. Com isso cremos poder reforçar e consolidar a estrutura
+  do projeto.
+\item
+  \textbf{2º semestre}: Pretendemos dar continuidade ao cumprimento dos
+  créditos, se necessário, e estruturar a construção do primeiro
+  capítulo da Dissertação, cujo objetivo é apresentar os fundamentos
+  para a nossa abordagem do pensamento de Rousseau e dos primeiros
+  românticos.
+\item
+  \textbf{3º semestre}: Nossa intenção é a de reunir, sobretudo no
+  Discurso sobre as ciências e as artes e no Emílio, os elementos para
+  uma dissertação sobre as noções de subjetividade e sentimento em
+  Rousseau.
+\item
+  \textbf{4º semestre}: Neste momento nossa atenção deverá ser dirigida
+  à seleção de fragmentos de Novalis e Schlegel nos quais possamos
+  reconhecer o reflexo, por assim dizer, de uma concordância de
+  percepção do romantismo alemão com o que prenuncia Rousseau em suas
+  obras, procurando corrigir as distorções comuns com as quais se tenta
+  associar esses dois momentos da história da filosofia moderna mediados
+  pela filosofia crítica. Até o final desses quatro semestres
+  acreditamos poder reunir material suficiente para dar conta dos nossos
+  objetivos.
+\end{itemize}
+
+\subsection*{Bibliografia}\label{bibliografia}
+\addcontentsline{toc}{subsection}{Bibliografia}
+
+
+
+
+\end{document}

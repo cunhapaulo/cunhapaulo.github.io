@@ -1,0 +1,570 @@
+%%
+% Copyright (c) 2017 - 2024, Pascal Wagler;
+% Copyright (c) 2014 - 2024, John MacFarlane
+%
+% All rights reserved.
+%
+% Redistribution and use in source and binary forms, with or without
+% modification, are permitted provided that the following conditions
+% are met:
+%
+% - Redistributions of source code must retain the above copyright
+% notice, this list of conditions and the following disclaimer.
+%
+% - Redistributions in binary form must reproduce the above copyright
+% notice, this list of conditions and the following disclaimer in the
+% documentation and/or other materials provided with the distribution.
+%
+% - Neither the name of John MacFarlane nor the names of other
+% contributors may be used to endorse or promote products derived
+% from this software without specific prior written permission.
+%
+% THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+% "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+% LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+% FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+% COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+% INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+% BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+% LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+% CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+% LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+% ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+% POSSIBILITY OF SUCH DAMAGE.
+%%
+
+%%
+% This is the Eisvogel pandoc LaTeX template.
+%
+% For usage information and examples visit the official GitHub page:
+% https://github.com/Wandmalfarbe/pandoc-latex-template
+%%
+
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names,table}{xcolor}
+%
+\documentclass[
+  paper=a4,
+  twoside  ,captions=tableheading
+]{scrbook}
+\usepackage{amsmath,amssymb}
+% Use setspace anyway because we change the default line spacing.
+% The spacing is changed early to affect the titlepage and the TOC.
+\usepackage{setspace}
+\setstretch{1.2}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\definecolor{default-linkcolor}{HTML}{A50000}
+\definecolor{default-filecolor}{HTML}{A50000}
+\definecolor{default-citecolor}{HTML}{4077C0}
+\definecolor{default-urlcolor}{HTML}{4077C0}
+% load footmisc in order to customize footnotes (footmisc has to be loaded before hyperref, cf. https://tex.stackexchange.com/a/169124/144087)
+\usepackage[hang,flushmargin,bottom,multiple]{footmisc}
+\setlength{\footnotemargin}{0.8em} % set space between footnote nr and text
+\setlength{\footnotesep}{\baselineskip} % set space between multiple footnotes
+\setlength{\skip\footins}{0.3cm} % set space between page content and footnote
+\setlength{\footskip}{0.9cm} % set space between footnote and page bottom
+\usepackage[margin=2.5cm,includehead=true,includefoot=true,centering,]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+% add backlinks to footnote references, cf. https://tex.stackexchange.com/questions/302266/make-footnote-clickable-both-ways
+\usepackage{footnotebackref}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+% Make use of float-package and set default placement for figures to H.
+% The option H means 'PUT IT HERE' (as  opposed to the standard h option which means 'You may put it here if you like').
+\usepackage{float}
+\floatplacement{figure}{H}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{brazilian}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Índice}
+\else
+  \newcommand\contentsname{Índice}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Lista de Figuras}
+\else
+  \newcommand\listfigurename{Lista de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Lista de Tabelas}
+\else
+  \newcommand\listtablename{Lista de Tabelas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabela}
+\else
+  \newcommand\tablename{Tabela}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listagem}
+\newcommand*\listoflistings{\listof{codelisting}{Lista de Listagens}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Filosofia Prática e Ceticismo Moral: Sobre Kant e Hume},
+  pdfauthor={Paulo Roberto Martins Cunha},
+  pdflang={pt-Br},
+  pdfsubject={Filosofia Moral},
+  pdfkeywords={Kant, Hume, Filosofia Prática, Ceticismo Moral},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={default-filecolor},
+  citecolor={default-citecolor},
+  urlcolor={default-urlcolor},
+  breaklinks=true,
+  pdfcreator={LaTeX via pandoc with the Eisvogel template}}
+\title{Filosofia Prática e Ceticismo Moral: Sobre Kant e Hume}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Mestrado em Filosofia - Projeto de Pesquisa}
+\author{Paulo Roberto Martins Cunha}
+\date{8 de maio de 2025}
+
+
+
+%%
+%% added
+%%
+
+
+%
+% for the background color of the title page
+%
+\usepackage{pagecolor}
+\usepackage{afterpage}
+\usepackage[margin=2.5cm,includehead=true,includefoot=true,centering]{geometry}
+
+%
+% break urls
+%
+\PassOptionsToPackage{hyphens}{url}
+
+%
+% When using babel or polyglossia with biblatex, loading csquotes is recommended
+% to ensure that quoted texts are typeset according to the rules of your main language.
+%
+\usepackage{csquotes}
+
+%
+% captions
+%
+\definecolor{caption-color}{HTML}{777777}
+\usepackage[font={stretch=1.2}, textfont={color=caption-color}, position=top, skip=4mm, labelfont=bf, singlelinecheck=false, justification=centering]{caption}
+\setcapindent{0em}
+
+%
+% blockquote
+%
+\definecolor{blockquote-border}{RGB}{221,221,221}
+\definecolor{blockquote-text}{RGB}{119,119,119}
+\usepackage{mdframed}
+\newmdenv[rightline=false,bottomline=false,topline=false,linewidth=3pt,linecolor=blockquote-border,skipabove=\parskip]{customblockquote}
+\renewenvironment{quote}{\begin{customblockquote}\list{}{\rightmargin=0em\leftmargin=0em}%
+\item\relax\color{blockquote-text}\ignorespaces}{\unskip\unskip\endlist\end{customblockquote}}
+
+%
+% Source Sans Pro as the default font family
+% Source Code Pro for monospace text
+%
+% 'default' option sets the default
+% font family to Source Sans Pro, not \sfdefault.
+%
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+    \usepackage[default]{sourcesanspro}
+  \usepackage{sourcecodepro}
+  \else % if not pdftex
+    \usepackage[default]{sourcesanspro}
+  \usepackage{sourcecodepro}
+
+  % XeLaTeX specific adjustments for straight quotes: https://tex.stackexchange.com/a/354887
+  % This issue is already fixed (see https://github.com/silkeh/latex-sourcecodepro/pull/5) but the
+  % fix is still unreleased.
+  % TODO: Remove this workaround when the new version of sourcecodepro is released on CTAN.
+  \ifxetex
+    \makeatletter
+    \defaultfontfeatures[\ttfamily]
+      { Numbers   = \sourcecodepro@figurestyle,
+        Scale     = \SourceCodePro@scale,
+        Extension = .otf }
+    \setmonofont
+      [ UprightFont    = *-\sourcecodepro@regstyle,
+        ItalicFont     = *-\sourcecodepro@regstyle It,
+        BoldFont       = *-\sourcecodepro@boldstyle,
+        BoldItalicFont = *-\sourcecodepro@boldstyle It ]
+      {SourceCodePro}
+    \makeatother
+  \fi
+  \fi
+
+%
+% heading color
+%
+\definecolor{heading-color}{RGB}{40,40,40}
+\addtokomafont{section}{\color{heading-color}}
+% When using the classes report, scrreprt, book,
+% scrbook or memoir, uncomment the following line.
+%\addtokomafont{chapter}{\color{heading-color}}
+
+%
+% variables for title, author and date
+%
+\usepackage{titling}
+\title{Filosofia Prática e Ceticismo Moral: Sobre Kant e Hume}
+\author{Paulo Roberto Martins Cunha}
+\date{8 de maio de 2025}
+
+%
+% tables
+%
+
+\definecolor{table-row-color}{HTML}{F5F5F5}
+\definecolor{table-rule-color}{HTML}{999999}
+
+%\arrayrulecolor{black!40}
+\arrayrulecolor{table-rule-color}     % color of \toprule, \midrule, \bottomrule
+\setlength\heavyrulewidth{0.3ex}      % thickness of \toprule, \bottomrule
+\renewcommand{\arraystretch}{1.3}     % spacing (padding)
+
+
+%
+% remove paragraph indentation
+%
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+
+%
+%
+% Listings
+%
+%
+
+
+%
+% header and footer
+%
+\usepackage[headsepline,footsepline]{scrlayer-scrpage}
+
+\newpairofpagestyles{eisvogel-header-footer}{
+  \clearpairofpagestyles
+  \ihead*{Mestrado em Filosofia}
+  \chead*{}
+  \ohead*{Filosofia Prática e Ceticismo Moral: Sobre Kant e Hume}
+  \ifoot*{Projeto de Pesquisa}
+  \cfoot*{}
+  \ofoot*{\thepage}
+  \addtokomafont{pageheadfoot}{\upshape}
+}
+\pagestyle{eisvogel-header-footer}
+
+\deftripstyle{ChapterStyle}{}{}{}{}{\pagemark}{}
+\renewcommand*{\chapterpagestyle}{ChapterStyle}
+
+
+%%
+%% end added
+%%
+
+\begin{document}
+
+%%
+%% begin titlepage
+%%
+\begin{titlepage}
+\newgeometry{left=6cm}
+\newcommand{\colorRule}[3][black]{\textcolor[HTML]{#1}{\rule{#2}{#3}}}
+\begin{flushleft}
+\noindent
+\\[-1em]
+\color[HTML]{5F5F5F}
+\makebox[0pt][l]{\colorRule[435488]{1.3\textwidth}{4pt}}
+\par
+\noindent
+
+{
+  \setstretch{1.4}
+  \vfill
+  \noindent {\huge \textbf{\textsf{Filosofia Prática e Ceticismo Moral:
+Sobre Kant e Hume}}}
+    \vskip 1em
+  {\Large \textsf{Mestrado em Filosofia - Projeto de Pesquisa}}
+    \vskip 2em
+  \noindent {\Large \textsf{Paulo Roberto Martins Cunha}}
+  \vfill
+}
+
+
+\textsf{8 de maio de 2025}
+\end{flushleft}
+\end{titlepage}
+\restoregeometry
+\pagenumbering{arabic}
+
+%%
+%% end titlepage
+%%
+
+% \maketitle
+
+\setcounter{chapter}{1}
+\addtocounter{chapter}{-1}
+
+\renewcommand*\contentsname{Índice}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+}
+\section{Projeto de Pesquisa}\label{projeto-de-pesquisa}
+
+\subsection{Delimitação do tema}\label{delimitauxe7uxe3o-do-tema}
+
+Na Segunda Secção da Fundamentação da metafísica dos costumes, em que se
+propõe a fazer a passagem do pensamento moral popular à metafísica dos
+costumes, Kant faz uma constatação que parece atingir em cheio toda
+ideia de metafísica. Ele nos diz com sinceridade:
+
+\begin{quote}
+Na realidade, é absolutamente impossível encontrar na experiência com
+perfeita certeza um único caso em que a máxima de uma ação, de resto
+conforme ao dever, se tenha baseado puramente em motivos morais e na
+representação do dever'' (Kant, p.~40)
+\end{quote}
+
+Essa é uma colocação acerca da nossa experiência moral que, em
+princípio, é a expressão clara da impossibilidade, para os homens, de
+agirem segundo princípios morais gerais, embora saibamos que a intenção
+de Kant com a sua Fundamentação é encontrar justamente algo que
+desempenhe essa função, servindo de critério puro e necessário para toda
+e qualquer avaliação do comportamento moral. Na Fundamentação, Kant
+chamará a esse princípio puro de ``autonomia da vontade''.
+
+Ocorre que o que expressa o filósofo na passagem citada é,
+indiscutivelmente, a mesma constatação que está na base de todo
+ceticismo moral. Uma das razões, só para tomar um exemplo, seria o
+desentendimento reinante acerca do que se quer dizer quando o assunto é
+a moral ou a ética. Adauto Novaes, em um livro de múltiplos autores por
+ele organizado, nos diz que existem várias teorias sobre o tema porque:
+``A palavra ética, por exemplo, não tem o mesmo sentido para todos''
+(Novaes, 2007, p.~8). E seria essa falta ou mesmo impossibilidade de se
+chegar a algum consenso a respeito do comportamento moral que produziria
+em nós quase que naturalmente o que chamaremos aqui de ceticismo moral,
+para que não se confunda, inicialmente, com o ceticismo epistemológico
+ou cognitivo. Mas é o cético Hume, que desconfiava da pureza do
+entendimento humano, quem escreve, em um tom de admiração:
+
+\begin{quote}
+Para alguns filósofos parece constituir motivo de surpresa que, sendo
+todos os homens dotados da mesma natureza e possuidores das mesmas
+faculdades, apesar disso sejam tão imensamente diferentes em suas ações
+e tendências, e que uns condenem intransigentemente o que outros
+prazerosamente procuram (Hume, 1980, p.~215)
+\end{quote}
+
+Hume se admira que ainda se encontre aqui alguma surpresa, afinal, um
+mesmo homem pode ter comportamentos contraditórios, como se nunca
+seguisse, para si mesmo, as mesmas regras ao agir. Para Hume isso é uma
+constatação, até porque a história humana é o registro de fatos e
+narrativas de ações que põem em questão a ideia de que os homens possam
+um dia encontrar um guia seguro para suas ações, como aparentemente
+fizeram com seus juízos científicos. O fato é que o homem real,
+existente, não é como o cientista real, como um Newton, por exemplo.
+
+Mesmo assim, sabendo que a Física tem uma parte empírica e real, mas,
+também, uma parte racional, Kant se pergunta se as ações humanas não
+poderiam ser estudas separando a parte empírica da parte pura. Pois
+assim poderíamos distinguir nossa reflexão sobre o homem em suas ações
+pragmáticas, que Kant chama de ``Antropologia prática'', das reflexões
+voltadas às exigências feitas às ações e que não se explicam pelo seu
+efeito imediato. E é a essa última forma de reflexão que Kant chamará de
+``Moral''. Com isso, poderíamos nos guiar não pelo que sabemos da
+história humana e dos feitos dos homens, mas o que a razão em nós nos
+diz, constantemente, que deveríamos fazer, mesmo que, pelos mais
+variados motivos, não o consigamos realizar.
+
+Por isso, o que estamos proponde analisar nesta dissertação é o
+seguinte: qual a solução kantiana para o problema do ceticismo moral, e
+qual o grau de satisfação podemos reconhecer no modo como ele trata a
+questão, na medida em que ele mesmo reconhece que, na realidade, a
+teoria é outra coisa? Por que ele se pergunta: ``Não é verdade que é da
+mais extrema necessidade elaborar um dia uma pura Filosofia moral que
+seja completamente depurada de tudo o que possa ser somente empírico e
+pertença à Antropologia?'' (Kant, 1974, p.~198).
+
+\subsection{Problema}\label{problema}
+
+\subsection{Justificativa}\label{justificativa}
+
+\subsection{Objetivos}\label{objetivos}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Gerais}: Expor a solução kantiana ao problema do ceticismo
+  moral.
+\item
+  \textbf{Específicos}: 1. Apresentar a filosofia crítica como uma
+  reação positiva ao ceticismo moderno, em especial no que tange sua
+  perspectiva moral; 2. Recensear, com o auxílio da obra de Hume, alguns
+  pontos fundamentais para a contestação da orientação racionalista e
+  idealista da moralidade; 3. Mostrar que a resposta kantiana ao
+  ``´problema de Hume'', além de seu alcance teórico, contém a chave
+  para a possibilidade lógica da moral.
+\end{enumerate}
+
+\subsection{Metodologia}\label{metodologia}
+
+\subsection{Cronograma}\label{cronograma}
+
+Este projeto de pesquisa de mestrado está previsto para ser desenvolvido
+inicialmente num período de dois anos. De acordo com o tema escolhido e
+os objetivos propostos, esperíodo inicial deve ser dividido em quatro
+sub-períodos de pesquisa, que correspondem a quatro semestres, de modo a
+compreender os seguintes campos de investigação:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{1º semestre}: Além de cursar as disciplinas para obtenção dos
+  créditos, fazer um levantamento de novos títulos e revisão
+  bibliográfica. Com isso cremos poder reforçar e consolidar a estrutura
+  do projeto.
+\item
+  \textbf{2º semestre}: Pretendemos dar continuidade ao cumprimento dos
+  créditos, se necessário, e estruturar a construção do primeiro
+  capítulo da Dissertação, cujo objetivo é apresentar os fundamentos
+  para a nossa abordagem do pensamento de Rousseau e dos primeiros
+  românticos.
+\item
+  \textbf{3º semestre}: Nossa intenção é a de reunir, sobretudo no
+  Discurso sobre as ciências e as artes e no Emílio, os elementos para
+  uma dissertação sobre as noções de subjetividade e sentimento em
+  Rousseau.
+\item
+  \textbf{4º semestre}: Neste momento nossa atenção deverá ser dirigida
+  à seleção de fragmentos de Novalis e Schlegel nos quais possamos
+  reconhecer o reflexo, por assim dizer, de uma concordância de
+  percepção do romantismo alemão com o que prenuncia Rousseau em suas
+  obras, procurando corrigir as distorções comuns com as quais se tenta
+  associar esses dois momentos da história da filosofia moderna mediados
+  pela filosofia crítica. Até o final desses quatro semestres
+  acreditamos poder reunir material suficiente para dar conta dos nossos
+  objetivos.
+\end{itemize}
+
+\subsection*{Bibliografia}\label{bibliografia}
+\addcontentsline{toc}{subsection}{Bibliografia}
+
+\end{document}
