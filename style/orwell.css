@@ -57,7 +57,7 @@
   --strong-font-weight: 600;
   
   /*!--  BOLD  */
-  --bold-color: rgb(255, 8x, 0);
+  --bold-color: rgb(255, 8, 0);
   --bold-color: #e70000;
 
   /*!--  ITALIC */
@@ -79,11 +79,11 @@
   /*!--  CODE */
   --code-background-color: rgba(206, 252, 0, 0.493);
   --code-font-family: inherit;
-  --code-font-color: #0a0a0a;
+  --code-font-color: rgb(10, 10, 10);
   --code-font-size: inherit;
   --code-font-weight: 600;
-  --code-padding-left: 10px;
-  --code-padding-right: 10px;
+  --code-padding-left: 16px;
+  --code-padding-right: 16px;
   --code-border-radius: 13pt;
 
   /*!--  LIST ITEM <LI> */
