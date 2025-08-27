@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes do site</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&family=Zilla+Slab:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #d71d25 0%, #a3141a 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Zilla Slab', serif;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .font-section {
+            margin: 50px 0;
+            padding: 30px;
+            border-radius: 10px;
+            background: #f8f9fa;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .font-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .font-name {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #d71d25;
+        }
+
+        .font-origin {
+            font-style: italic;
+            color: #6c757d;
+        }
+
+        .font-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .font-example {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .font-light {
+            font-weight: 300;
+        }
+
+        .font-regular {
+            font-weight: 400;
+        }
+
+        .font-bold {
+            font-weight: 600;
+        }
+
+        .font-italic {
+            font-style: italic;
+        }
+
+        .sample-text {
+            font-size: 1.5rem;
+            margin: 15px 0;
+            min-height: 80px;
+        }
+
+        .font-info {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .character-set {
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .characters {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+
+        .usage {
+            margin-top: 40px;
+            padding: 30px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .usage h2 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-family: 'Zilla Slab', serif;
+        }
+
+        .usage-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .usage-example {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #2c3e50;
+            color: #ecf0f1;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .font-examples {
+                grid-template-columns: 1fr;
+            }
+
+            .font-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .font-name {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Paulo Cunha´s Web Site</h1>
+            <p class="subtitle">Uma análise das tipografias utilizadas em um site oficial e suas origens</p>
+        </header>
+
+        <div class="content">
+            <div class="intro">
+                <p>O site utiliza uma combinação tipográfica distinta que reflete sua identidade
+                    como empresa de software técnico e científico. As fontes escolhidas transmitem autoridade, clareza e
+                    precisão.</p>
+            </div>
+
+            <div class="font-section">
+                <div class="font-header">
+                    <h2 class="font-name">Source Sans Pro</h2>
+                    <p class="font-origin">Criada por Paul D. Hunt, Adobe Systems</p>
+                </div>
+
+                <p>A Source Sans Pro é a principal fonte sem serifa usada no site para textos
+                    corporativos, menus e conteúdo geral.</p>
+
+                <div class="font-examples">
+                    <div class="font-example">
+                        <h3>Light</h3>
+                        <div class="sample-text font-light">Site: Compute answers using Web Site´s
+                            breakthrough technology & knowledgebase</div>
+                    </div>
+
+                    <div class="font-example">
+                        <h3>Regular</h3>
+                        <div class="sample-text font-regular">Site: Compute answers using Web Site´s
+                            breakthrough technology & knowledgebase</div>
+                    </div>
+
+                    <div class="font-example">
+                        <h3>Bold</h3>
+                        <div class="sample-text font-bold">Site: Compute answers using Web Site´s
+                            breakthrough technology & knowledgebase</div>
+                    </div>
+                </div>
+
+                <div class="font-info">
+                    <p><strong>Origem:</strong> Desenvolvida por Paul D. Hunt para a Adobe Systems, foi a primeira fonte
+                        de código aberto da Adobe. Lançada em 2012, é uma família tipográfica completa que inclui
+                        estilos condensados e itálicos.</p>
+                    <p><strong>Uso no site:</strong> Utilizada para textos corporativos, menus de navegação, descrições
+                        de produtos e conteúdo geral do site.</p>
+                </div>
+
+                <div class="character-set">
+                    <h3>Conjunto de caracteres</h3>
+                    <div class="characters">
+                        Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+                    </div>
+                    <div class="characters">
+                        0123456789 !@#$%^&*(){}[];:',.?
+                    </div>
+                </div>
+            </div>
+
+            <div class="font-section">
+                <div class="font-header">
+                    <h2 class="font-name">Zilla Slab</h2>
+                    <p class="font-origin">Desenvolvida pela Typotheque para a Fundação Mozilla</p>
+                </div>
+
+                <p>A Zilla Slab é frequentemente usada para títulos e elementos de destaque no site da Internet
+                    , proporcionando um contraste eficaz com a Source Sans Pro.</p>
+
+                <div class="font-examples">
+                    <div class="font-example">
+                        <h3>Light</h3>
+                        <div class="sample-text" style="font-family: 'Zilla Slab', serif; font-weight: 300;">Internet
+                            : Modern Technical Computing</div>
+                    </div>
+
+                    <div class="font-example">
+                        <h3>Regular</h3>
+                        <div class="sample-text" style="font-family: 'Zilla Slab', serif; font-weight: 400;">Internet
+                            : Modern Technical Computing</div>
+                    </div>
+
+                    <div class="font-example">
+                        <h3>Bold</h3>
+                        <div class="sample-text" style="font-family: 'Zilla Slab', serif; font-weight: 600;">Internet
+                            : Modern Technical Computing</div>
+                    </div>
+                </div>
+
+                <div class="font-info">
+                    <p><strong>Origem:</strong> Desenvolvida pela Typotheque para a Fundação Mozilla, a Zilla Slab é uma
+                        fonte slab serif moderna que combina clareza e personalidade. Foi criada como uma evolução da
+                        fonte Zelda, usada anteriormente pela Mozilla.</p>
+                    <p><strong>Uso no site:</strong> Utilizada principalmente para títulos, cabeçalhos e chamadas de
+                        destaque, criando hierarquia visual e ênfase no conteúdo importante.</p>
+                </div>
+
+                <div class="character-set">
+                    <h3>Conjunto de caracteres</h3>
+                    <div class="characters" style="font-family: 'Zilla Slab', serif;">
+                        Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+                    </div>
+                    <div class="characters" style="font-family: 'Zilla Slab', serif;">
+                        0123456789 !@#$%^&*(){}[];:',.?
+                    </div>
+                </div>
+            </div>
+
+            <div class="usage">
+                <h2>Uso no Site da Internet</h2>
+                <p>As fontes são aplicadas estrategicamente para criar uma identidade visual coesa e profissional:</p>
+
+                <div class="usage-examples">
+                    <div class="usage-example">
+                        <h3>Títulos e Cabeçalhos</h3>
+                        <p>Zilla Slab é usada para títulos principais e seções, transmitindo autoridade e estabilidade.
+                        </p>
+                    </div>
+
+                    <div class="usage-example">
+                        <h3>Corpo de Texto</h3>
+                        <p>Source Sans Pro é utilizada para parágrafos e textos longos, garantindo legibilidade ideal.
+                        </p>
+                    </div>
+
+                    <div class="usage-example">
+                        <h3>Interface de Usuário</h3>
+                        <p>Elementos de navegação, botões e formulários usam Source Sans Pro para clareza e
+                            consistência.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Análise tipográfica do site | Fontes: Source Sans Pro e Zilla Slab</p>
+            <p>© 2023 - Estudo de Caso de Tipografia</p>
+        </footer>
+    </div>
+</body>
+
+</html>
