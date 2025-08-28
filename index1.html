@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Profissional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #182c3f;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #777;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            background-color: var(--dark-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav li {
+            padding: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        section:nth-child(even) {
+            background-color: white;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-category h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .skill-item {
+            margin-bottom: 1rem;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background-color: #e9e9e9;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-level {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .interest-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .interest-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .languages-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .language-card {
+            flex: 1;
+            min-width: 200px;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .language-name {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .language-level {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .github-container {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .github-stats {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            min-width: 120px;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .github-btn {
+            display: inline-block;
+            background-color: var(--dark-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 1rem;
+        }
+
+        .github-btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .social-links {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="https://placehold.co/150x150/3498db/FFFFFF?text=Foto" alt="Foto de perfil" class="profile-img">
+            <h1>Paulo Cunha</h1>
+            <p class="tagline">Filosofia | Direito</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#interesses">Interesses Acadêmicos</a></li>
+            <li><a href="#idiomas">Idiomas</a></li>
+            <li><a href="#github">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Olá! Sou um profissional dedicado com experiência em desenvolvimento web e uma paixão por criar
+                        soluções inovadoras. Com formação em Ciência da Computação, tenho me especializado em front-end
+                        e UX/UI design.</p>
+                    <p>Atualmente, estou focado em expandir meus conhecimentos em frameworks modernos como React e
+                        Vue.js, além de me aprofundar em técnicas de desenvolvimento responsivo e acessibilidade web.
+                    </p>
+                    <p>Minha abordagem combina criatividade e habilidades técnicas para entregar produtos que não apenas
+                        funcionam perfeitamente, mas também proporcionam excelentes experiências ao usuário.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Desenvolvimento Front-end</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>HTML5</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>CSS3</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>JavaScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>React</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Desenvolvimento Back-end</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Node.js</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>PHP</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Banco de Dados</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interesses">
+        <div class="container">
+            <h2>Interesses Acadêmicos</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Inteligência Artificial</h3>
+                    <p>Estudo de algoritmos de machine learning e suas aplicações no desenvolvimento web.</p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Desenvolvimento Responsivo</h3>
+                    <p>Técnicas avançadas de CSS e frameworks para criação de interfaces adaptáveis.</p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>UX/UI Design</h3>
+                    <p>Pesquisa e implementação de interfaces intuitivas e experiências de usuário excepcionais.</p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Segurança Web</h3>
+                    <p>Melhores práticas e técnicas para desenvolvimento de aplicações web seguras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="idiomas">
+        <div class="container">
+            <h2>Idiomas</h2>
+            <div class="languages-container">
+                <div class="language-card">
+                    <div class="language-name">Português</div>
+                    <div class="language-level">Nativo</div>
+                </div>
+
+                <div class="language-card">
+                    <div class="language-name">Inglês</div>
+                    <div class="language-level">Avançado</div>
+                </div>
+
+                <div class="language-card">
+                    <div class="language-name">Espanhol</div>
+                    <div class="language-level">Intermediário</div>
+                </div>
+
+                <div class="language-card">
+                    <div class="language-name">Francês</div>
+                    <div class="language-level">Básico</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="github">
+        <div class="container">
+            <h2>GitHub</h2>
+            <div class="github-container">
+                <p>Confira meus projetos e contribuições no GitHub. Estou sempre trabalhando em novos projetos e aberto
+                    a colaborações.</p>
+
+                <div class="github-stats">
+                    <div class="stat">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Repositórios</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Seguidores</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">56</div>
+                        <div class="stat-label">Commits</div>
+                    </div>
+                </div>
+
+                <a href="https://github.com/cunhapaulo" class="github-btn" target="_blank">
+                    <i class="fab fa-github"></i> Visite Meu GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Seu Nome. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p>Email: cunha.paulo@gmail.com | Telefone: (11) 99999-9999</p>
+        </div>
+    </footer>
+</body>
+
+</html>
