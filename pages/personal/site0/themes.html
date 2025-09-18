@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MarpX — Temas</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Open Sans', sans-serif
+        }
+
+        .swatch {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb
+        }
+    </style>
+</head>
+
+<body>
+    <header style="padding:1rem 0;border-bottom:1px solid #e5e7eb">
+        <div
+            style="max-width:1120px;margin:0 auto;padding:0 1rem;display:flex;justify-content:space-between;align-items:center">
+            <a href="/index.html" style="text-decoration:none;color:#111;font-weight:600">MarpX</a>
+            <nav><a href="/docs.html" style="margin-right:1rem">Docs</a><a href="/themes.html"
+                    style="margin-right:1rem">Temas</a><a href="/examples.html">Exemplos</a></nav>
+        </div>
+    </header>
+    <main style="max-width:1120px;margin:0 auto;padding:1rem">
+        <h1>Temas & CSS</h1>
+        <p>Paletas, tipografia e tokens.</p>
+        <h2>Tokens</h2>
+        <pre>:root{--marpx-theme-font-family:"Fira Sans",serif;--marpx-theme-color:#002b36;--marpx-theme-background-color:#ececec;--marpx-theme-font-color:#343e52}</pre>
+        <h2>Paleta</h2>
+        <div style="display:flex;gap:.5rem">
+            <div class="swatch" style="background:#0a2a43"></div>
+            <div class="swatch" style="background:#0a6ecd"></div>
+            <div class="swatch" style="background:#ececec"></div>
+            <div class="swatch" style="background:#343e52"></div>
+            <div class="swatch" style="background:#5d616d"></div>
+        </div>
+    </main>
+    <footer style="padding:1rem 0;border-top:1px solid #e5e7eb;text-align:center;color:#64748b">© 2025 MarpX</footer>
+</body>
+
+</html>

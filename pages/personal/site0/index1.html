@@ -1,0 +1,568 @@
+import React, { useEffect, useRef, useState } from "react";
+import { Menu, Search, ChevronDown, Github, Star, Download, Moon, Sun, ExternalLink, BookOpen, Sparkles, Layers, Command, FileText, Terminal, Code2, Globe2, MessagesSquare, ShieldCheck, Library, Newspaper } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
+
+/**
+ * MarpX — Website institucional (single-file)
+ * Modelo visual inspirado em state.gov (tipologia de governo: cabeçalho forte, herói com busca,
+ * navegação por tópicos, destaques em cartões, grade de "Notícias/Atualizações" e rodapé em colunas).
+ *
+ * Notas de uso:
+ * - Este componente pressupõe TailwindCSS + shadcn/ui instalados no projeto.
+ * - Exporte-o como a página inicial (ex.: app/page.tsx no Next.js) ou importe onde desejar.
+ * - Links externos apontam para o repositório GitHub do MarpX.
+ */
+
+// Paleta sóbria inspirada em portais governamentais
+const brand = {
+  primary: "#0a2a43", // azul-marinho institucional
+  accent: "#0a6ecd",  // azul destaque
+  light: "#f1f5f9",   // cinza-azulado claro
+  dark: "#0b1726",    // quase preto azulado
+};
+
+const navItems = [
+  {
+    label: "Projeto",
+    items: [
+      { label: "Visão geral", href: "#projeto" },
+      { label: "Roadmap", href: "#roadmap" },
+      { label: "Licença", href: "https://github.com/cunhapaulo/MarpX/blob/main/LICENSE" },
+    ],
+  },
+  {
+    label: "Documentação",
+    items: [
+      { label: "Introdução", href: "#docs" },
+      { label: "Temas & CSS", href: "#temas" },
+      { label: "Exemplos", href: "#exemplos" },
+    ],
+  },
+  {
+    label: "Download",
+    items: [
+      { label: "Releases", href: "https://github.com/cunhapaulo/MarpX/releases" },
+      { label: "Clonar repositório", href: "https://github.com/cunhapaulo/MarpX" },
+    ],
+  },
+  {
+    label: "Comunidade",
+    items: [
+      { label: "Issues & Discussões", href: "https://github.com/cunhapaulo/MarpX/issues" },
+      { label: "Contribuir", href: "#contribuir" },
+      { label: "Códigos de conduta", href: "https://github.com/cunhapaulo/MarpX/blob/main/CODE_OF_CONDUCT.md" },
+    ],
+  },
+];
+
+const updates = [
+  {
+    title: "MarpX 0.3 — Paleta institucional e tokens de tema",
+    date: "2025-08-30",
+    href: "https://github.com/cunhapaulo/MarpX/releases",
+    summary:
+      "Novos CSS custom properties (tokens) para tipografia, cores e legendas (Fig./Tab.), alinhados a padrões de slides institucionais.",
+  },
+  {
+    title: "Exemplos HTML atualizados e componentes de figura",
+    date: "2025-07-14",
+    href: "https://github.com/cunhapaulo/MarpX/tree/main/examples/html",
+    summary:
+      "Modelos prontos para uso com figcaption, contadores e fluxos de texto, visando consistência editorial.",
+  },
+  {
+    title: "Guia de contribuição revisado",
+    date: "2025-06-20",
+    href: "https://github.com/cunhapaulo/MarpX/blob/main/CONTRIBUTING.md",
+    summary:
+      "Processo simplificado para abertura de PRs e padronização de commits.",
+  },
+];
+
+function useDarkMode() {
+  const [darkMode, setDarkMode] = useState(false);
+  useEffect(() => {
+    const root = document.documentElement;
+    if (darkMode) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  }, [darkMode]);
+  return { darkMode, setDarkMode };
+}
+
+function SkipLink() {
+  return (
+    <a
+      href="#conteudo"
+      className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 px-3 py-2 rounded"
+    >
+      Pular para o conteúdo
+    </a>
+  );
+}
+
+function TopBanner() {
+  return (
+    <div className="w-full bg-[var(--brand-primary)] text-white py-2 text-sm">
+      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <Globe2 className="w-4 h-4" />
+          <span>Site oficial do projeto MarpX</span>
+        </div>
+        <div className="hidden sm:flex items-center gap-4 opacity-90">
+          <a className="hover:underline" href="#acessibilidade">Acessibilidade</a>
+          <a className="hover:underline" href="#politicas">Políticas</a>
+          <a className="hover:underline" href="#contato">Contato</a>
+        </div>
+      </div>
+      <style>{`:root{--brand-primary:${brand.primary};--brand-accent:${brand.accent}}`}</style>
+    </div>
+  );
+}
+
+function NavBar() {
+  const [open, setOpen] = useState(false);
+  const [openMenuIdx, setOpenMenuIdx] = useState<number | null>(null);
+  return (
+    <header className="sticky top-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+      <TopBanner />
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex items-center justify-between py-4">
+          <a href="#" className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-lg bg-[var(--brand-accent)] grid place-items-center text-white font-bold">MX</div>
+            <div>
+              <div className="text-lg font-semibold tracking-tight">MarpX</div>
+              <div className="text-xs text-slate-500 -mt-1">Slides institucionais com Marp + CSS</div>
+            </div>
+          </a>
+          <nav className="hidden lg:flex items-center gap-6">
+            {navItems.map((group, idx) => (
+              <div
+                key={group.label}
+                className="relative"
+                onMouseEnter={() => setOpenMenuIdx(idx)}
+                onMouseLeave={() => setOpenMenuIdx(null)}
+              >
+                <button className="flex items-center gap-1 text-sm font-medium hover:text-[var(--brand-accent)]">
+                  {group.label}
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                {openMenuIdx === idx && (
+                  <div className="absolute left-0 mt-2 w-64 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-xl p-2">
+                    {group.items.map((it) => (
+                      <a
+                        key={it.label}
+                        href={it.href}
+                        className="block rounded-lg px-3 py-2 text-sm hover:bg-slate-50 dark:hover:bg-slate-800"
+                      >
+                        {it.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+            <a href="https://github.com/cunhapaulo/MarpX" className="inline-flex items-center gap-2 text-sm">
+              <Github className="w-4 h-4" /> Repositório
+            </a>
+            <ThemeToggle />
+          </nav>
+          <Button
+            variant="outline"
+            onClick={() => setOpen(!open)}
+            className="lg:hidden"
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+          >
+            <Menu className="w-5 h-5" />
+          </Button>
+        </div>
+      </div>
+      {open && <MobileMenu />}
+    </header>
+  );
+}
+
+function MobileMenu() {
+  return (
+    <div id="mobile-nav" className="lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+      <div className="max-w-7xl mx-auto px-4 py-4 grid gap-4">
+        {navItems.map((group) => (
+          <details key={group.label} className="group">
+            <summary className="cursor-pointer list-none flex items-center justify-between py-2 text-sm font-semibold">
+              {group.label}
+              <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
+            </summary>
+            <div className="pl-3 grid">
+              {group.items.map((it) => (
+                <a key={it.label} href={it.href} className="py-2 text-sm text-slate-600 hover:text-[var(--brand-accent)]">
+                  {it.label}
+                </a>
+              ))}
+            </div>
+          </details>
+        ))}
+        <a href="https://github.com/cunhapaulo/MarpX" className="flex items-center gap-2 text-sm">
+          <Github className="w-4 h-4" /> Repositório
+        </a>
+        <ThemeToggle mobile />
+      </div>
+    </div>
+  );
+}
+
+function ThemeToggle({ mobile = false }: { mobile?: boolean }) {
+  const { darkMode, setDarkMode } = useDarkMode();
+  return (
+    <Button
+      variant={mobile ? "outline" : "ghost"}
+      className="inline-flex items-center gap-2"
+      onClick={() => setDarkMode(!darkMode)}
+      aria-label={darkMode ? "Ativar tema claro" : "Ativar tema escuro"}
+    >
+      {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+      <span className="text-sm">{darkMode ? "Claro" : "Escuro"}</span>
+    </Button>
+  );
+}
+
+function Hero() {
+  const formRef = useRef<HTMLFormElement | null>(null);
+  return (
+    <section className="relative overflow-hidden">
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-[var(--brand-primary)]"/>
+      <div className="relative max-w-7xl mx-auto px-4 py-16 sm:py-20">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
+          <div className="text-white">
+            <Badge className="bg-white/10 backdrop-blur border border-white/20 mb-4">Projeto comunitário</Badge>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
+              MarpX — Slides institucionais, claros e consistentes
+            </h1>
+            <p className="mt-4 text-white/90 max-w-2xl">
+              Um conjunto de temas, componentes e convenções CSS para produzir apresentações
+              com <em>Marp</em>, padronizando tipografia, cores e legendas (figuras/tabelas),
+              inspirado em boas práticas editoriais.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Button asChild className="bg-[var(--brand-accent)] hover:opacity-90">
+                <a href="https://github.com/cunhapaulo/MarpX" target="_blank" rel="noreferrer">
+                  <Download className="w-4 h-4 mr-2" /> Acessar no GitHub
+                </a>
+              </Button>
+              <Button asChild variant="secondary">
+                <a href="#docs"><BookOpen className="w-4 h-4 mr-2"/> Documentação</a>
+              </Button>
+              <Button asChild variant="outline" className="border-white text-white hover:bg-white/10">
+                <a href="#exemplos">
+                  <Sparkles className="w-4 h-4 mr-2" /> Exemplos
+                </a>
+              </Button>
+            </div>
+            <div className="mt-6 flex items-center gap-4 text-white/80 text-sm">
+              <div className="flex items-center gap-1"><Star className="w-4 h-4"/> Estrelas no GitHub</div>
+              <div className="flex items-center gap-1"><ShieldCheck className="w-4 h-4"/> Licença aberta</div>
+            </div>
+          </div>
+
+          <div className="bg-white/95 dark:bg-slate-900/95 rounded-2xl p-6 shadow-lg border border-white/30 dark:border-slate-700">
+            <p className="text-sm text-slate-600 dark:text-slate-300 mb-2">Pesquisar na documentação</p>
+            <form
+              ref={formRef}
+              className="flex gap-2"
+              action="https://github.com/cunhapaulo/MarpX/search"
+              method="GET"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Input name="q" placeholder="Digite um termo (ex.: figcaption, tema, CSS)" className="bg-white dark:bg-slate-950"/>
+              <Button type="submit" className="bg-[var(--brand-accent)]"><Search className="w-4 h-4 mr-2"/>Buscar</Button>
+            </form>
+            <div className="mt-4 text-xs text-slate-500 dark:text-slate-400">
+              Dica: use filtros do GitHub, p.ex. <code>path:examples</code>, <code>path:themes</code>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Pill({ icon: Icon, title, text, href }: any) {
+  return (
+    <a href={href} className="group">
+      <Card className="h-full border-slate-200 dark:border-slate-800 hover:shadow-md transition">
+        <CardHeader>
+          <div className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800 grid place-items-center mb-2">
+            <Icon className="w-6 h-6 text-[var(--brand-accent)]" />
+          </div>
+          <CardTitle className="text-lg">{title}</CardTitle>
+          <CardDescription>{text}</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="inline-flex items-center gap-2 text-sm text-[var(--brand-accent)]">
+            Acessar <ExternalLink className="w-3 h-3" />
+          </div>
+        </CardContent>
+      </Card>
+    </a>
+  );
+}
+
+function TopicGrid() {
+  return (
+    <section id="projeto" className="max-w-7xl mx-auto px-4 py-14">
+      <div className="grid md:grid-cols-3 gap-6">
+        <Pill icon={Layers} title="Visão geral" text="O que é o MarpX, objetivos e princípios editoriais." href="#docs" />
+        <Pill icon={FileText} title="Documentação" text="Como estruturar slides, cabeçalhos, legendas e numeração." href="#docs" />
+        <Pill icon={Command} title="Tokens de tema" text="CSS custom properties para cores, tipografia e espaçamentos." href="#temas" />
+      </div>
+    </section>
+  );
+}
+
+function Spotlight() {
+  return (
+    <section id="docs" className="bg-[color:var(--brand-light,#f1f5f9)] dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="grid lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-semibold">Documentação essencial</h2>
+            <p className="mt-3 text-slate-600 dark:text-slate-300">
+              Comece instalando os temas, configure variáveis e utilize componentes prontos para
+              <em>figcaption</em> e <em>table caption</em>. A orientação segue uma lógica de portal institucional,
+              com clareza, legibilidade e consistência visual.
+            </p>
+            <ul className="mt-6 space-y-3 text-slate-700 dark:text-slate-300">
+              <li className="flex gap-3"><BookOpen className="w-5 h-5 mt-0.5"/> Guia: estrutura de slides, seções e hierarquia de títulos.</li>
+              <li className="flex gap-3"><Code2 className="w-5 h-5 mt-0.5"/> Snippets CSS: tokens de cor, fonte e contadores para figuras/tabelas.</li>
+              <li className="flex gap-3"><Terminal className="w-5 h-5 mt-0.5"/> Workflow: geração com Marp/CLI e exportação para PDF/HTML.</li>
+            </ul>
+            <div className="mt-6 flex gap-3">
+              <Button asChild className="bg-[var(--brand-accent)]">
+                <a href="https://github.com/cunhapaulo/MarpX#readme" target="_blank" rel="noreferrer">Abrir README</a>
+              </Button>
+              <Button asChild variant="outline">
+                <a href="https://github.com/cunhapaulo/MarpX/tree/main/examples" target="_blank" rel="noreferrer">Ver exemplos</a>
+              </Button>
+            </div>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Card className="border-slate-200 dark:border-slate-800">
+              <CardHeader>
+                <CardTitle className="text-base">Tokens & Cores</CardTitle>
+                <CardDescription>Custom properties para padronizar a identidade visual.</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-5 gap-2">
+                  {[brand.primary, brand.accent, "#ececec", "#343e52", "#5d616d"].map((c) => (
+                    <div key={c} className="aspect-square rounded-lg border" style={{ background: c }} />
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border-slate-200 dark:border-slate-800">
+              <CardHeader>
+                <CardTitle className="text-base">Legendas tipificadas</CardTitle>
+                <CardDescription>"Fig." e "Tab." com numeração automática.</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <figure className="rounded-lg border p-3 text-sm">
+                  <div className="h-20 bg-slate-100 dark:bg-slate-800 rounded"/>
+                  <figcaption className="mt-2 text-slate-600 dark:text-slate-400">
+                    <strong>Fig. 1</strong> — Exemplo de figura com legenda padronizada.
+                  </figcaption>
+                </figure>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ThemesSection() {
+  return (
+    <section id="temas" className="max-w-7xl mx-auto px-4 py-16">
+      <div className="flex items-center justify-between">
+        <h2 className="text-2xl sm:text-3xl font-semibold">Temas & Identidade</h2>
+        <Button asChild variant="ghost"><a href="https://github.com/cunhapaulo/MarpX/tree/main/themes" target="_blank" rel="noreferrer">Abrir pasta <ExternalLink className="w-4 h-4 ml-1"/></a></Button>
+      </div>
+      <p className="mt-3 text-slate-600 dark:text-slate-300 max-w-3xl">
+        Aplique a paleta e a tipografia recomendadas, preserve contrastes e garanta acessibilidade.
+        Os temas incluem variáveis de cor, estilos de título e padrões de espaçamento que espelham portais institucionais.
+      </p>
+      <div className="mt-6 grid md:grid-cols-3 gap-6">
+        {[
+          { name: "Clássico", desc: "Aparência limpa para relatórios e discursos.", demo: "#ececec" },
+          { name: "Governo", desc: "Sotaque azul-marinho, ênfase em clareza.", demo: brand.primary },
+          { name: "Acadêmico", desc: "Tipografia legível e subtítulos discretos.", demo: "#343e52" },
+        ].map((t) => (
+          <Card key={t.name} className="border-slate-200 dark:border-slate-800 overflow-hidden">
+            <div className="h-24" style={{ background: t.demo }} />
+            <CardHeader>
+              <CardTitle className="text-base">{t.name}</CardTitle>
+              <CardDescription>{t.desc}</CardDescription>
+            </CardHeader>
+          </Card>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function ExamplesSection() {
+  return (
+    <section id="exemplos" className="bg-[color:var(--brand-light,#f1f5f9)] dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800">
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="flex items-center justify-between">
+          <h2 className="text-2xl sm:text-3xl font-semibold">Exemplos prontos</h2>
+          <Button asChild variant="ghost"><a href="https://github.com/cunhapaulo/MarpX/tree/main/examples" target="_blank" rel="noreferrer">Ver repositório <ExternalLink className="w-4 h-4 ml-1"/></a></Button>
+        </div>
+        <div className="mt-6 grid md:grid-cols-3 gap-6">
+          {[
+            { icon: Library, title: "Modelo institucional", text: "Slides para comunicados oficiais e relatórios." },
+            { icon: Newspaper, title: "Briefing executivo", text: "Estrutura enxuta com métricas e destaques." },
+            { icon: MessagesSquare, title: "Seminário acadêmico", text: "Citações, figuras e bibliografia.", },
+          ].map((e, i) => (
+            <Card key={i} className="border-slate-200 dark:border-slate-800">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800 grid place-items-center mb-2">
+                  <e.icon className="w-6 h-6 text-[var(--brand-accent)]" />
+                </div>
+                <CardTitle className="text-base">{e.title}</CardTitle>
+                <CardDescription>{e.text}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button asChild variant="outline"><a href="https://github.com/cunhapaulo/MarpX/tree/main/examples" target="_blank" rel="noreferrer">Abrir exemplo</a></Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function UpdatesSection() {
+  return (
+    <section id="atualizacoes" className="max-w-7xl mx-auto px-4 py-16">
+      <div className="flex items-center justify-between">
+        <h2 className="text-2xl sm:text-3xl font-semibold">Atualizações</h2>
+        <Button asChild variant="ghost"><a href="https://github.com/cunhapaulo/MarpX/releases" target="_blank" rel="noreferrer">Ver todas <ExternalLink className="w-4 h-4 ml-1"/></a></Button>
+      </div>
+      <div className="mt-6 grid md:grid-cols-3 gap-6">
+        {updates.map((u) => (
+          <Card key={u.title} className="border-slate-200 dark:border-slate-800 h-full">
+            <CardHeader>
+              <CardTitle className="text-base">{u.title}</CardTitle>
+              <CardDescription>{new Date(u.date).toLocaleDateString()}</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">{u.summary}</p>
+              <Button asChild variant="secondary"><a href={u.href} target="_blank" rel="noreferrer">Detalhes</a></Button>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function CTASection() {
+  return (
+    <section id="contribuir" className="relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-accent)]" aria-hidden />
+      <div className="relative max-w-7xl mx-auto px-4 py-14">
+        <div className="grid lg:grid-cols-2 gap-10 items-center text-white">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-semibold">Contribua e faça parte</h2>
+            <p className="mt-3 text-white/90">
+              Abra issues, proponha melhorias e compartilhe exemplos. O foco é elevar a qualidade
+              das apresentações institucionais em ambientes públicos e acadêmicos.
+            </p>
+          </div>
+          <div className="flex gap-3">
+            <Button asChild className="bg-black text-white">
+              <a href="https://github.com/cunhapaulo/MarpX" target="_blank" rel="noreferrer"><Github className="w-4 h-4 mr-2"/> GitHub</a>
+            </Button>
+            <Button asChild variant="secondary">
+              <a href="https://github.com/cunhapaulo/MarpX/blob/main/CONTRIBUTING.md" target="_blank" rel="noreferrer">Guia de contribuição</a>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 mt-16">
+      <div className="max-w-7xl mx-auto px-4 py-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-lg bg-[var(--brand-accent)] grid place-items-center text-white font-bold">MX</div>
+            <div className="text-lg font-semibold">MarpX</div>
+          </div>
+          <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">
+            Padrões de slides institucionais com Marp. Projeto aberto e colaborativo.
+          </p>
+        </div>
+        <div>
+          <h3 className="font-semibold mb-3">Projeto</h3>
+          <ul className="space-y-2 text-sm">
+            <li><a className="hover:underline" href="#projeto">Visão geral</a></li>
+            <li><a className="hover:underline" href="#docs">Documentação</a></li>
+            <li><a className="hover:underline" href="#temas">Temas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-semibold mb-3">Recursos</h3>
+          <ul className="space-y-2 text-sm">
+            <li><a className="hover:underline" href="https://github.com/cunhapaulo/MarpX/tree/main/examples" target="_blank" rel="noreferrer">Exemplos</a></li>
+            <li><a className="hover:underline" href="https://github.com/cunhapaulo/MarpX/releases" target="_blank" rel="noreferrer">Releases</a></li>
+            <li><a className="hover:underline" href="https://github.com/cunhapaulo/MarpX/issues" target="_blank" rel="noreferrer">Issues</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-semibold mb-3">Institucional</h3>
+          <ul className="space-y-2 text-sm">
+            <li><a className="hover:underline" href="#acessibilidade">Acessibilidade</a></li>
+            <li><a className="hover:underline" href="#politicas">Políticas</a></li>
+            <li><a className="hover:underline" href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <div className="border-t border-slate-200 dark:border-slate-800 py-6 text-center text-xs text-slate-500">
+        © {new Date().getFullYear()} MarpX — Projeto comunitário. Este site não é afiliado ao U.S. Department of State.
+      </div>
+    </footer>
+  );
+}
+
+export default function MarpXSite() {
+  return (
+    <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100">
+      <SkipLink />
+      <NavBar />
+      <main id="conteudo">
+        <Hero />
+        <TopicGrid />
+        <Spotlight />
+        <ThemesSection />
+        <ExamplesSection />
+        <UpdatesSection />
+        <CTASection />
+      </main>
+      <Footer />
+    </div>
+  );
+}
