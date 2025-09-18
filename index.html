@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MarpX - Slides Profissionais com Marp</title>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&amp;family=Zilla+Slab:wght@300;400;600&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&amp;family=Zilla+Slab:wght@300;400;600&amp;display=swap"
+        rel="stylesheet">
     <style>
         /* Reset e estilos base */
         * {
@@ -13,29 +16,29 @@
             box-sizing: border-box;
             font-family: 'Source Sans Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             color: #333;
             line-height: 1.6;
             background-color: #f8f9fa;
         }
-        
+
         a {
             text-decoration: none;
             color: #0056b3;
         }
-        
+
         a:hover {
             text-decoration: underline;
         }
-        
+
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 25px;
         }
-        
+
         /* Header */
         header {
             background-color: #1a3a5f;
@@ -43,39 +46,45 @@
             padding: 10px 0;
             border-bottom: 2px solid #0e2647;
         }
-        
+
         .header-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding-bottom: 10px;
         }
-        
+
         .logo {
+            font-family: 'Segoe UI';
             font-size: 1.85rem;
             font-weight: bold;
-            color: white;
+            color: rgb(152, 169, 243);
+            color: #ff7505;
+            background-color: #0a1c33;
+            padding: 8px;
+            border: none;
+            border-radius: 16px;
         }
-        
+
         .search-form {
             display: flex;
         }
-        
+
         .search-form input {
             padding: 8px;
             border: none;
             border-radius: 6px 0 0 6px;
         }
-        
+
         .search-form button {
             padding: 8px 12px;
-            background: #fa5c00;
+            background: #ff7505;
             color: white;
             border: none;
             border-radius: 0 6px 6px 0;
             cursor: pointer;
         }
-        
+
         nav ul {
             display: flex;
             list-style: none;
@@ -83,69 +92,70 @@
             margin-top: 10px;
             border-radius: 8px;
         }
-        
+
         nav ul li {
             position: relative;
         }
-        
+
         nav ul li a {
             display: block;
             color: white;
             padding: 12px 20px;
-            transition: background 0.3s;
+            transition: background 0.6s;
             font-weight: 600;
             font-size: 1.25rem;
 
         }
-        
-        nav ul li:hover > a {
+
+        nav ul li:hover>a {
             background: #0a1c33;
         }
-        
+
         /* Dropdown menu */
         .dropdown {
             position: absolute;
             background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             width: 200px;
             display: none;
             z-index: 100;
         }
-        
+
         .dropdown li {
             width: 100%;
         }
-        
+
         .dropdown li a {
             color: #333;
             padding: 10px 15px;
         }
-        
+
         nav ul li:hover .dropdown {
             display: block;
         }
-        
+
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(26, 58, 95, 0.8), rgba(26, 58, 95, 0.8)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231a3a5f"/><path d="M0 0L100 100" stroke="%230e2647" stroke-width="2"/><path d="M100 0L0 100" stroke="%230e2647" stroke-width="2"/></svg>');
+            /* background: linear-gradient(rgba(26, 58, 95, 0.8), rgba(26, 58, 95, 0.8)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231a3a5f"/><path d="M0 0L100 100" stroke="%230e2647" stroke-width="2"/><path d="M100 0L0 100" stroke="%230e2647" stroke-width="2"/></svg>'); */
+            background: linear-gradient(rgba(11, 7, 250, 0.486), rgba(0, 0, 0, 0.8)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231a3a5f"/><path d="M0 0L100 100" stroke="%230e2647" stroke-width="2"/><path d="M100 0L0 100" stroke="%230e2647" stroke-width="2"/></svg>');
             background-size: cover;
             color: white;
             text-align: center;
             padding: 80px 20px;
             margin-bottom: 40px;
         }
-        
+
         .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
-        
+
         .hero p {
             font-size: 1.2rem;
             max-width: 700px;
             margin: 0 auto 30px;
         }
-        
+
         .btn {
             display: inline-block;
             background: #0e2647;
@@ -155,60 +165,60 @@
             font-weight: bold;
             transition: background 0.3s;
         }
-        
+
         .btn:hover {
             background: #0a1c33;
             text-decoration: none;
         }
-        
+
         /* Features Section */
         .features {
             padding: 50px 0;
         }
-        
+
         .section-title {
             text-align: center;
             margin-bottom: 40px;
             color: #1a3a5f;
             font-size: 2rem;
         }
-        
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-        
+
         .feature-card {
             background: white;
-            border-radius: 5px;
+            border-radius: 8px;
             padding: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: transform .30s;
         }
-        
+
         .feature-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
         }
-        
+
         .feature-card h3 {
             color: #1a3a5f;
             margin-bottom: 15px;
         }
-        
+
         /* How It Works */
         .how-it-works {
             background-color: #e9ecef;
             padding: 50px 0;
         }
-        
+
         .steps {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
         }
-        
+
         .step {
             background: white;
             border-radius: 5px;
@@ -216,9 +226,9 @@
             width: 100%;
             max-width: 350px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        
+
         .step-number {
             display: inline-block;
             width: 40px;
@@ -229,42 +239,42 @@
             line-height: 40px;
             margin-bottom: 15px;
         }
-        
+
         /* Footer */
         footer {
             background: #1a3a5f;
             color: white;
             padding: 40px 0 20px;
         }
-        
+
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-bottom: 30px;
         }
-        
+
         .footer-section h3 {
             margin-bottom: 15px;
             font-size: 1.2rem;
         }
-        
+
         .footer-section ul {
             list-style: none;
         }
-        
+
         .footer-section ul li {
             margin-bottom: 10px;
         }
-        
+
         .footer-section a {
             color: #ccc;
         }
-        
+
         .footer-section a:hover {
             color: white;
         }
-        
+
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
@@ -272,44 +282,45 @@
             color: #ccc;
             font-size: 0.9rem;
         }
-        
+
         /* Responsividade */
         @media (max-width: 768px) {
             .header-top {
                 flex-direction: column;
                 align-items: flex-start;
             }
-            
+
             .search-form {
                 margin-top: 15px;
                 width: 100%;
             }
-            
+
             .search-form input {
                 flex-grow: 1;
             }
-            
+
             nav ul {
                 flex-direction: column;
             }
-            
+
             .dropdown {
                 position: static;
                 width: 100%;
                 display: none;
                 box-shadow: none;
             }
-            
+
             nav ul li:hover .dropdown {
                 display: none;
             }
-            
+
             .features-grid {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -343,8 +354,9 @@
     <section class="hero">
         <div class="container">
             <h1>MarpX - Slides Profissionais com Marp</h1>
-            <p>MarpX é uma extensão poderosa do Marp que permite criar apresentações impressionantes usando a tipografia e recursos semelhantes ao LaTeX.</p>
-            <a href="https://github.com/cunhapaulo/MarpX" class="btn">Ver no GitHub</a>
+            <p>MarpX é uma extensão poderosa do Marp que permite criar apresentações impressionantes usando a tipografia
+                e recursos semelhantes ao LaTeX.</p>
+            <a href="https://github.com/cunhapaulo/MarpX" target="_blank" class="btn">Ver no GitHub</a>
         </div>
     </section>
 
@@ -354,16 +366,39 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <h3>Suporte Completo ao LaTeX</h3>
-                    <p>Use todos os recursos do LaTeX em suas apresentações, incluindo equações complexas, símbolos matemáticos e notações científicas.</p>
+                    <p>Use todos os recursos do LaTeX em suas apresentações, incluindo equações complexas, símbolos
+                        matemáticos e notações científicas.</p>
                 </div>
                 <div class="feature-card">
                     <h3>Temas Personalizáveis</h3>
-                    <p>Escolha entre diversos temas profissionais ou crie o seu próprio para atender às necessidades da sua instituição ou empresa.</p>
+                    <p>Escolha entre diversos temas profissionais ou crie o seu próprio para atender às necessidades da
+                        sua instituição ou empresa.</p>
                 </div>
                 <div class="feature-card">
                     <h3>Exportação para Múltiplos Formatos</h3>
-                    <p>Exporte suas apresentações para PDF, PowerPoint, HTML e outros formatos com preservação total da qualidade.</p>
+                    <p>Exporte suas apresentações para PDF, PowerPoint, HTML e outros formatos com preservação total da
+                        qualidade.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Exemplos de Modelos de Slides</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3><a href="https://cunhapaulo.github.io/marpx/examples/g%C3%B6del.html" target="_blank">Theme Gödel</a></h3>
+                    <p><img src="https://github.com/cunhapaulo/MarpX/raw/main/examples/front-slide/g%C3%B6del.png"
+                            width="450" /> </p>
+                </div>
+                <div class="feature-card">
+                    <h3><a href="https://cunhapaulo.github.io/marpx/examples/galileo.html" target="_blank">Theme Galileo</a></h3>
+                    <p><img src="https://github.com/cunhapaulo/MarpX/raw/main/examples/front-slide/galileo.png"
+                            width="450" /> </p>
+                </div>
+
+
             </div>
         </div>
     </section>
@@ -401,7 +436,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Sobre o MarpX</h3>
-                    <p>MarpX é um pacote de slides open-source que estende as funcionalidades do Marp com suporte avançado ao LaTeX para criação de apresentações acadêmicas e profissionais.</p>
+                    <p>MarpX é um pacote de slides open-source que estende as funcionalidades do Marp com suporte
+                        avançado ao LaTeX para criação de apresentações acadêmicas e profissionais.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Links Rápidos</h3>
@@ -427,4 +463,5 @@
         </div>
     </footer>
 </body>
+
 </html>
