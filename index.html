@@ -1,546 +1,426 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio Profissional</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>MarpX - Slides Profissionais com Marp</title>
     <style>
-        :root {
-            --primary-color: #182c3f;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --text-color: #333;
-            --text-light: #777;
-        }
-
+        /* Reset e estilos base */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
+        
         body {
-            background-color: #f9f9f9;
-            color: var(--text-color);
+            color: #333;
             line-height: 1.6;
+            background-color: #f8f9fa;
         }
-
+        
+        a {
+            text-decoration: none;
+            color: #0056b3;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
-
+        
+        /* Header */
         header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background-color: #1a3a5f;
             color: white;
-            padding: 2rem 0;
-            text-align: center;
+            padding: 10px 0;
+            border-bottom: 2px solid #0e2647;
         }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            margin-bottom: 1rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .tagline {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 1rem;
-        }
-
-        nav {
-            background-color: var(--dark-color);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-
-        nav li {
-            padding: 1rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--secondary-color);
-        }
-
-        section {
-            padding: 4rem 0;
-        }
-
-        section:nth-child(even) {
-            background-color: white;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--secondary-color);
-        }
-
-        .about-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-
-        .skill-category {
-            flex: 1;
-            min-width: 250px;
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .skill-category h3 {
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .skill-item {
-            margin-bottom: 1rem;
-        }
-
-        .skill-name {
+        
+        .header-top {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 0.5rem;
+            align-items: center;
+            padding-bottom: 10px;
         }
-
-        .skill-bar {
-            height: 8px;
-            background-color: #e9e9e9;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .skill-level {
-            height: 100%;
-            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
-        }
-
-        .interests-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .interest-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .interest-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .interest-icon {
-            font-size: 2.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-        }
-
-        .languages-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-
-        .language-card {
-            flex: 1;
-            min-width: 200px;
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .language-name {
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
-        }
-
-        .language-level {
-            color: var(--text-light);
-            font-style: italic;
-        }
-
-        .github-container {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .github-stats {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .stat {
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            min-width: 120px;
-        }
-
-        .stat-number {
+        
+        .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: var(--secondary-color);
-        }
-
-        .github-btn {
-            display: inline-block;
-            background-color: var(--dark-color);
             color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            margin-top: 1rem;
         }
-
-        .github-btn:hover {
-            background-color: var(--primary-color);
+        
+        .search-form {
+            display: flex;
         }
-
-        footer {
-            background-color: var(--dark-color);
+        
+        .search-form input {
+            padding: 8px;
+            border: none;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        .search-form button {
+            padding: 8px 12px;
+            background: #0e2647;
+            color: white;
+            border: none;
+            border-radius: 0 3px 3px 0;
+            cursor: pointer;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            background-color: #0e2647;
+            margin-top: 10px;
+            border-radius: 3px;
+        }
+        
+        nav ul li {
+            position: relative;
+        }
+        
+        nav ul li a {
+            display: block;
+            color: white;
+            padding: 12px 20px;
+            transition: background 0.3s;
+        }
+        
+        nav ul li:hover > a {
+            background: #0a1c33;
+        }
+        
+        /* Dropdown menu */
+        .dropdown {
+            position: absolute;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            width: 200px;
+            display: none;
+            z-index: 100;
+        }
+        
+        .dropdown li {
+            width: 100%;
+        }
+        
+        .dropdown li a {
+            color: #333;
+            padding: 10px 15px;
+        }
+        
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 58, 95, 0.8), rgba(26, 58, 95, 0.8)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231a3a5f"/><path d="M0 0L100 100" stroke="%230e2647" stroke-width="2"/><path d="M100 0L0 100" stroke="%230e2647" stroke-width="2"/></svg>');
+            background-size: cover;
             color: white;
             text-align: center;
-            padding: 2rem 0;
+            padding: 80px 20px;
+            margin-bottom: 40px;
         }
-
-        .social-links {
-            margin: 1rem 0;
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
-
-        .social-links a {
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #0e2647;
             color: white;
-            font-size: 1.5rem;
-            margin: 0 0.5rem;
-            transition: color 0.3s;
+            padding: 12px 25px;
+            border-radius: 3px;
+            font-weight: bold;
+            transition: background 0.3s;
         }
-
-        .social-links a:hover {
-            color: var(--secondary-color);
+        
+        .btn:hover {
+            background: #0a1c33;
+            text-decoration: none;
         }
-
+        
+        /* Features Section */
+        .features {
+            padding: 50px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1a3a5f;
+            font-size: 2rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 5px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            color: #1a3a5f;
+            margin-bottom: 15px;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            background-color: #e9ecef;
+            padding: 50px 0;
+        }
+        
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .step {
+            background: white;
+            border-radius: 5px;
+            padding: 20px;
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #1a3a5f;
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a3a5f;
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: #ccc;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2c4d75;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsividade */
         @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .search-form {
+                margin-top: 15px;
+                width: 100%;
+            }
+            
+            .search-form input {
+                flex-grow: 1;
+            }
+            
             nav ul {
                 flex-direction: column;
-                align-items: center;
             }
-
-            h1 {
-                font-size: 2rem;
+            
+            .dropdown {
+                position: static;
+                width: 100%;
+                display: none;
+                box-shadow: none;
             }
-
-            .profile-img {
-                width: 120px;
-                height: 120px;
+            
+            nav ul li:hover .dropdown {
+                display: none;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
-
 <body>
     <header>
         <div class="container">
-            <img src="https://placehold.co/150x150/3498db/FFFFFF?text=Foto" alt="Foto de perfil" class="profile-img">
-            <h1>Paulo Cunha</h1>
-            <p class="tagline">Filosofia | Direito</p>
+            <div class="header-top">
+                <a href="#" class="logo">MarpX</a>
+                <form class="search-form">
+                    <input type="text" placeholder="Buscar no site...">
+                    <button type="submit">Pesquisar</button>
+                </form>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li>
+                        <a href="#">Recursos ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="#">LaTeX em Slides</a></li>
+                            <li><a href="#">Temas Personalizados</a></li>
+                            <li><a href="#">Exportação para PDF</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Documentação</a></li>
+                    <li><a href="#">Exemplos</a></li>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#interesses">Interesses Acadêmicos</a></li>
-            <li><a href="#idiomas">Idiomas</a></li>
-            <li><a href="#github">GitHub</a></li>
-        </ul>
-    </nav>
-
-    <section id="sobre">
+    <section class="hero">
         <div class="container">
-            <h2>Sobre Mim</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Olá! Sou um profissional dedicado com experiência em desenvolvimento web e uma paixão por criar
-                        soluções inovadoras. Com formação em Ciência da Computação, tenho me especializado em front-end
-                        e UX/UI design.</p>
-                    <p>Atualmente, estou focado em expandir meus conhecimentos em frameworks modernos como React e
-                        Vue.js, além de me aprofundar em técnicas de desenvolvimento responsivo e acessibilidade web.
-                    </p>
-                    <p>Minha abordagem combina criatividade e habilidades técnicas para entregar produtos que não apenas
-                        funcionam perfeitamente, mas também proporcionam excelentes experiências ao usuário.</p>
+            <h1>MarpX - Slides Profissionais com Marp</h1>
+            <p>MarpX é uma extensão poderosa do Marp que permite criar apresentações impressionantes usando a tipografia e recursos semelhantes ao LaTeX.</p>
+            <a href="https://github.com/cunhapaulo/MarpX" class="btn">Ver no GitHub</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Recursos Principais</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Suporte Completo ao LaTeX</h3>
+                    <p>Use todos os recursos do LaTeX em suas apresentações, incluindo equações complexas, símbolos matemáticos e notações científicas.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Temas Personalizáveis</h3>
+                    <p>Escolha entre diversos temas profissionais ou crie o seu próprio para atender às necessidades da sua instituição ou empresa.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Exportação para Múltiplos Formatos</h3>
+                    <p>Exporte suas apresentações para PDF, PowerPoint, HTML e outros formatos com preservação total da qualidade.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="habilidades">
+    <section class="how-it-works">
         <div class="container">
-            <h2>Habilidades</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Desenvolvimento Front-end</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>HTML5</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 95%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>CSS3</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>JavaScript</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>React</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 80%;"></div>
-                        </div>
-                    </div>
+            <h2 class="section-title">Como Usar o MarpX</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Instalação</h3>
+                    <p>Instale o MarpX através do npm ou baixe diretamente do GitHub.</p>
                 </div>
-
-                <div class="skill-category">
-                    <h3>Desenvolvimento Back-end</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Node.js</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Python</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 70%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>PHP</span>
-                            <span>65%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 65%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Banco de Dados</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 80%;"></div>
-                        </div>
-                    </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Criação</h3>
+                    <p>Escreva sua apresentação em Markdown com suporte a sintaxe LaTeX.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="interesses">
-        <div class="container">
-            <h2>Interesses Acadêmicos</h2>
-            <div class="interests-grid">
-                <div class="interest-card">
-                    <div class="interest-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Inteligência Artificial</h3>
-                    <p>Estudo de algoritmos de machine learning e suas aplicações no desenvolvimento web.</p>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Personalização</h3>
+                    <p>Aplique temas e ajuste o design conforme necessário.</p>
                 </div>
-
-                <div class="interest-card">
-                    <div class="interest-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Desenvolvimento Responsivo</h3>
-                    <p>Técnicas avançadas de CSS e frameworks para criação de interfaces adaptáveis.</p>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Exportação</h3>
+                    <p>Exporte para o formato desejado e compartilhe sua apresentação.</p>
                 </div>
-
-                <div class="interest-card">
-                    <div class="interest-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>UX/UI Design</h3>
-                    <p>Pesquisa e implementação de interfaces intuitivas e experiências de usuário excepcionais.</p>
-                </div>
-
-                <div class="interest-card">
-                    <div class="interest-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Segurança Web</h3>
-                    <p>Melhores práticas e técnicas para desenvolvimento de aplicações web seguras.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="idiomas">
-        <div class="container">
-            <h2>Idiomas</h2>
-            <div class="languages-container">
-                <div class="language-card">
-                    <div class="language-name">Português</div>
-                    <div class="language-level">Nativo</div>
-                </div>
-
-                <div class="language-card">
-                    <div class="language-name">Inglês</div>
-                    <div class="language-level">Avançado</div>
-                </div>
-
-                <div class="language-card">
-                    <div class="language-name">Espanhol</div>
-                    <div class="language-level">Intermediário</div>
-                </div>
-
-                <div class="language-card">
-                    <div class="language-name">Francês</div>
-                    <div class="language-level">Básico</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="github">
-        <div class="container">
-            <h2>GitHub</h2>
-            <div class="github-container">
-                <p>Confira meus projetos e contribuições no GitHub. Estou sempre trabalhando em novos projetos e aberto
-                    a colaborações.</p>
-
-                <div class="github-stats">
-                    <div class="stat">
-                        <div class="stat-number">24</div>
-                        <div class="stat-label">Repositórios</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">12</div>
-                        <div class="stat-label">Seguidores</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">56</div>
-                        <div class="stat-label">Commits</div>
-                    </div>
-                </div>
-
-                <a href="https://github.com/cunhapaulo" class="github-btn" target="_blank">
-                    <i class="fab fa-github"></i> Visite Meu GitHub
-                </a>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Seu Nome. Todos os direitos reservados.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sobre o MarpX</h3>
+                    <p>MarpX é um pacote de slides open-source que estende as funcionalidades do Marp com suporte avançado ao LaTeX para criação de apresentações acadêmicas e profissionais.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Documentação</a></li>
+                        <li><a href="#">Exemplos</a></li>
+                        <li><a href="#">Contribuir</a></li>
+                        <li><a href="#">Reportar Problema</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">E-mail</a></li>
+                    </ul>
+                </div>
             </div>
-            <p>Email: cunha.paulo@gmail.com | Telefone: (11) 99999-9999</p>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MarpX. Desenvolvido por Paulo Cunha. Este projeto é licenciado sob a MIT License.</p>
+            </div>
         </div>
     </footer>
 </body>
-
 </html>
