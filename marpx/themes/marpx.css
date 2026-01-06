@@ -1404,6 +1404,15 @@ section.quote {
   background-color: var(--marpx-quote-background-color) !important;
 }
 
+section.quote h1 {
+
+  position: relative;
+  top: -100px;
+  height: 0px;
+  text-align: center;
+  
+}
+
 section.quote p {
   color: var(--marpx-quote-font-color);
   /* background-color: var(--marpx-quote-paragraph-background-color); */
@@ -1411,7 +1420,7 @@ section.quote p {
   letter-spacing: -0.23pt;
   font-size: 1.4em !important;
   text-align: center;
-  line-height: 1.05em;
+  line-height: 1.10em;
   font-family: var(--marpx-quote-font-family) !important;
   /*  font-style: oblique; */
   padding-top: auto;
@@ -1435,6 +1444,11 @@ section.quote.dark {
   background-color: var(--marpx-quote_dark-color-background) !important;
 }
 
+/* Alternative style (used to be quote2, now quote dark) */
+section.quote.dark h1 {
+  color: var(--bluishCyan-100) !important;
+}
+
 section.quote.dark p {
   color: var(--marpx-quote_dark-font-color) !important;
   font-family: var(--marpx-quote_dark-font) !important;
@@ -1443,7 +1457,7 @@ section.quote.dark p {
   background-color: var(--marpx-quote_dark-color-paragraph-background);
   letter-spacing: 0.1pt;
   text-align: center;
-  line-height: 1.09em;
+  line-height: 1.10em;
   padding-top: auto;
   padding-bottom: auto;
   padding-left: 85px;
