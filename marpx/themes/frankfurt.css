@@ -89,9 +89,9 @@ section {
 }
 
 section code:not(pre code) {
-  color: hsl(0, 0%, 0%);
+  /* color: hsl(0, 0%, 0%); */
   border: 0px solid #0a0a00ff;
-  background: hsl(45, 100%, 56%) !important;
+  background: #ffd044ff !important;
   /* background: initial; */
   border-radius: 10px;
   padding: 6px 10px;
