@@ -88,12 +88,13 @@ section {
   display: inline-block;   /* garante o retângulo ao redor da palavra */
 }
 
-section code {
-  border: 0.5px solid #222;
-  border-radius: 8px;
-  /* top, right, bottom, left,  */
-  padding: 1px 10px 8px 12px !important;
-  /* color: #222222; */
-  font-size: 1em;
+section code:not(pre code) {
+  color: hsl(358, 82%, 21%);
+  border: 0px solid #0a0a00ff;
+  background: hsl(45, 100%, 56%) !important;
+  /* background: initial; */
+  border-radius: 10px;
+  padding: 6px 10px;
+  /* font-size: 1em; */
   display: inline-block;
 }
