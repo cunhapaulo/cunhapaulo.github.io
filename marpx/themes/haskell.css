@@ -184,7 +184,7 @@ bbox {
   margin: 10px auto;          /* espaçamento externo */
   display: inline-block;      /* garante que a caixa se ajuste ao conteúdo */
   border-radius: 10px;          /* cantos arredondados (opcional) */
-  background-color: #cfeafad0;
+  background-color: hsla(0, 0%, 100%, 0.514);
   /* cor de fundo (opcional) */
   text-align: center;
   /* centraliza o conteúdo dentro da caixa */
