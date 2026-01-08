@@ -165,12 +165,12 @@ section code:not(pre code) {
 
 box {
 
-  border: 1px solid black;  /* cria a borda */
+  border: 0px solid black;  /* cria a borda */
   padding: 10px;              /* espaçamento interno */
   margin: 10px auto;          /* espaçamento externo */
   display: inline-block;      /* garante que a caixa se ajuste ao conteúdo */
   border-radius: 10px;          /* cantos arredondados (opcional) */
-  background-color: #fdfdfdd0;
+  background-color: hsla(0, 0%, 100%, 0.425);
   /* cor de fundo (opcional) */
   text-align: center;
   /* centraliza o conteúdo dentro da caixa */
@@ -184,7 +184,7 @@ bbox {
   margin: 10px auto;          /* espaçamento externo */
   display: inline-block;      /* garante que a caixa se ajuste ao conteúdo */
   border-radius: 10px;          /* cantos arredondados (opcional) */
-  background-color: hsla(0, 0%, 100%, 0.514);
+  background-color: hsla(0, 0%, 100%, 0.836);
   /* cor de fundo (opcional) */
   text-align: center;
   /* centraliza o conteúdo dentro da caixa */
