@@ -27,7 +27,7 @@
 *    marpx.css - MarpX base-theme configuration ORIGINAL
 *    Paulo Cunha (cunha.paulo@gmail.com)
 *    Created: jul.2025
-*    Last update: 21.aug.2025
+*    Last update: 12.jan.2026
 *
 * ================================================================================ */
 
@@ -935,6 +935,12 @@ section.toc a {
   /* font-weight: 600; */
 }
 
+/* paulo.cunha 12.01.2026 */
+section.toc li {
+  /* Espaço de 20 pixels entre cada item */
+  margin-bottom: 10px; 
+}
+
 section.toc li::marker {
   color: var(--marpx-calc-toc-marker-color);
   font-weight: bold;
@@ -1135,14 +1141,11 @@ section.logos>div.additional-logos>p>img {
 ?-----------------------< BLANK / NOBRAND SLIDE >----------------------- 
 !================================================================================
 */
+
 section.blank,
 section.nobrand {
   background: none;
   background-color: #ffffff;
-}
-
-section.blank {
-  padding: 68pt 80pt 68pt 80pt;
 }
 
 section.blank>h1 {
