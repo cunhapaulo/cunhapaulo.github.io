@@ -6,7 +6,7 @@
   ],
   "settings": {
     "markdown.marp.themes": [
-      "./marpx.css",
+      "https://cunhapaulo.github.io/marpx/themes/marpx.css",
       "https://cunhapaulo.github.io/marpx/themes/copernicus.css",
       "https://cunhapaulo.github.io/marpx/themes/einstein.css",
       "https://cunhapaulo.github.io/marpx/themes/frankfurt.css",
