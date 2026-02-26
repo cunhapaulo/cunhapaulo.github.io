@@ -1,7 +1,7 @@
 ---
 marp: true
 theme: hobbes
-# size: banner
+size: mobile
 ---
 
 # Viagem **São Paulo (março 2026)**
@@ -24,9 +24,7 @@ theme: hobbes
 
 </center>
 
----
-
-![bg h:95%](./bagagem.jpeg)
+![](./bagagem.jpeg)
 
 ---
 
