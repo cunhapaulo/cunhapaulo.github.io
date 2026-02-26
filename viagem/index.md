@@ -26,6 +26,7 @@ size: mobile
 
 ![](./bagagem.jpeg)
 
+
 ---
 
 # Dia \#01 : **28.fev.2026 - sábado**
