@@ -4,7 +4,7 @@ theme: hobbes
 size: mobile
 ---
 
-# Viagem **São Paulo (março 2026)**
+# Viagem <br>**São Paulo (março 2026)**
 
 - *Participantes*: Paulo, Mara, Gabriel e Felipe.
 
