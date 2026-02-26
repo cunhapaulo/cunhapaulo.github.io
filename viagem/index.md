@@ -6,6 +6,8 @@ size: mobile
 
 # Viagem **São Paulo (março 2026)**
 
+- *Participantes*: Paulo, Mara, Gabriel e Felipe.
+
 <center>
 
 |        PARTIDA:         |       sábado       |        28.fev.2026        |
@@ -30,3 +32,10 @@ size: mobile
 ---
 
 # Dia \#01 : **28.fev.2026 - sábado**
+
+|         CHEGADA:          |      domingo       |       15.mar.2026       |
+| :-----------------------: | :----------------: | :---------------------: |
+|                           |                    |                         |
+| **São Paulo** (Guarulhos) | Localizador LATAM: | **Belém** (Val-de-cães) |
+|        **_7h15_**         |      `GSJZVP`      |       **_10h50_**       |
+|                           |                    |                         |
