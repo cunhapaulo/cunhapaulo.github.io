@@ -1,0 +1,1572 @@
+/* *================================================================================ 
+*
+*    MIT License
+*
+*    Copyright (c) 2025 Paulo Cunha - MarpX
+*
+*    Permission is hereby granted, free of charge, to any person obtaining a copy
+*    of this software and associated documentation files (the "Software"), to deal
+*    in the Software without restriction, including without limitation the rights
+*    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+*    copies of the Software, and to permit persons to whom the Software is
+*    furnished to do so, subject to the following conditions:
+*
+*    The above copyright notice and this permission notice shall be included in all
+*    copies or substantial portions of the Software.
+*
+*    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+*    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+*    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+*    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+*    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+*    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+*    SOFTWARE.
+*
+* ================================================================================
+*
+*    marpx.css - MarpX base-theme configuration
+*    Paulo Cunha (cunha.paulo@gmail.com)
+*    Created: jul.2025
+*    Last update: 21.aug.2025
+*
+* ================================================================================ */
+
+/* 
+* @theme marpx
+*
+* @auto-scaling true
+* @size 16:9 1280px 720px
+* @size 4:3 960px 720px
+* @size A4 210mm 297mm
+* @size fullHD 1920px 1080px
+* @size banner 1600px 13000px
+*
+*/
+
+@import "default";
+
+/**>--------------------------------------------------------------*/
+/**--   Fonts from Google Fonts                                >--*/
+/**--   https://fonts.google.com/specimen/Fira+Sans?query=fira >--*/
+/**--                                                          >--*/
+/**--   Styles: Thin, ExtraLight, Light, Regular, Medium,      >--*/
+/**--           SemiBold, Bold, ExtraBold, Black               >--*/
+/**>--------------------------------------------------------------*/
+
+@import url("https://fonts.cdnfonts.com/css/fira-sans-condensed?styles=19730");
+@import url("https://fonts.cdnfonts.com/css/charter-itc-tt");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&family=Zilla+Slab:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900");
+/* @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800'); */
+
+:root {
+
+  /** -----------------------<------------------------>---------------------- */
+  /** WARNING: The parameter (container-type: normal) was used to allow       */
+  /**          the numbering of figures and tables. Be warned that it may     */
+  /**          produce side effects in browsers other than Chrome!            */
+  /** -----------------------<------------------------>---------------------- */
+
+  container-type: normal;
+  counter-reset: figure_cnt table_cnt;
+
+  --marpx-color-light-grey: #a6a6a6;
+  --marpx-color-dark-grey: #000000;
+
+  /*------------< Palete >---------------------------------*/
+
+  /* Bluish cyan */
+  --bluishCyan-100: #61d9ff;
+  --bluishCyan-200: #00c8ff;
+  --bluishCyan-300: #00a0d2;
+  --bluishCyan-400: #24b1d1;
+  --bluishCyan-500: #01bbf0;
+  --bluishCyan-600: #0ca1cc;
+  --bluishCyan-700: #0073aa;
+  --bluishCyan-800: #4680c7;
+
+  /* Gray */
+  --gray-50: #ffffff;
+  --gray-100: #faf7f7;
+  --gray-200: #fafafa;
+  --gray-300: #f5f5f5;
+  --gray-350: #d8dee9;
+  --gray-400: #eae8e3;
+  --gray-450: #515458;
+  --gray-500: #242424;
+  --gray-600: #1b1e21;
+  --gray-700: #161514;
+  --gray-800: #121212;
+  --gray-900: #0a0a0a;
+  --gray-1000: #3e3f42; 
+  --gray-1100: #E4E3DF;
+
+  /* Blue */
+  --blue-100: #55acee;
+  --blue-200: #3e8ed0;
+  --blue-300: #215987;
+  --blue-400: #1d2733;
+  --blue-500: #00204a;
+  --blue-600: #123A53;
+
+  /* Orange */
+  --orange-100: #ffbd6d;
+  --orange-200: #de7f2b;
+  --orange-300: #ff8f07;
+  --orange-400: #c3732c;
+  --orange-500: #ff7c00;
+
+  /* Scarlet */
+  --scarlet-100: #e36ca3;
+  --scarlet-200: #cd6799;
+  --scarlet-300: #d16098;
+  --scarlet-400: #eb2889;
+
+  /* Scarlet red */
+  --scarletRed-100: #ff6d70;
+  --scarletRed-200: #ff3860;
+  --scarletRed-300: #e81c4f;
+  --scarletRed-400: #fc0c18;
+  --scarletRed-500: #d1002a;
+  --scarletRed-600: #ff0033;
+  --scarletRed-700: #c92828;
+
+  /* Blue violet */
+  --blueViolet-50: #4f6cee;
+  --blueViolet-100: #485fc7;
+  --blueViolet-200: #3b5998;
+  --blueViolet-300: #004fff;
+  --blueViolet-400: #071636;
+  --blueViolet-500: #040d21;
+  --blueViolet-550: #002238;
+  --blueViolet-600: #98a5e6;
+  --blueViolet-700: #e2e8f6;
+  --blueViolet-800: #d9dfea;
+
+  /* Khaki */
+  --khaki-100: #ffe08a;
+  --khaki-200: #fee16d;
+  --khaki-300: #ffc524;
+  --khaki-400: #fdcc08;
+  --khaki-500: #ffbf00;
+  --khaki-600: #daa60b;
+  --khaki-700: #e77b00;
+  --khaki-800: #3e3f42;
+  --khaki-850: #848482;
+  --khaki-900: #ff3300;
+
+  /* Vermilion */
+  --vermilion-100: #ffa08e;
+  --vermilion-200: #f88f7b;
+  --vermilion-300: #ff470f;
+  --vermilion-400: #da5656;
+
+  /* Greenish cyan */
+  --greenishCyan-100: #51e2c4;
+  --greenishCyan-200: #00d1b2;
+  --greenishCyan-300: #006b5b;
+
+  /* Purple */
+  --purple-100: #b86bff;
+  --purple-200: #8605ff;
+
+  /* Teal */
+  --teal-100: #48c78e;
+
+  /* Violet */
+  --violet-100: #e6e6fa;
+  --violet-200: #161c4f;
+
+  /* Yellow */
+  --yellow-100: #f7df1e;
+  --yellow-200: #a69308;
+  --yellow-300: #e5ff00;
+  --yellow-400: #ffff00;
+
+  /* Bluish green */
+  --bluishGreen-100: #65d277;
+  --bluishGreen-200: #24ff70;
+
+  /* Olive */
+  --olive-100: #ade960;
+
+  /* Lime */
+  --lime-100: #d4ee9b;
+
+  /* Purple magenta */
+  --purpleMagenta-100: #a44eca;
+
+  /* Purple violet */
+  --purpleViolet-100: #bdaaf6;
+
+  /* Red */
+  --red-100: #f95347;
+
+  /*------------< Overall theme parameters >---------------------------------*/
+
+  --marpx-theme-font-family: "Fira Sans Light", Faustina, Bookerly, Lora, sans-serif;
+  --marpx-theme-font-size: 22pt;
+  --marpx-theme-letter-spacing: -0.0125px;
+  --marpx-theme-figure-captiontext: "Figure ";
+  --marpx-theme-figure-captiontext-color: var(--scarletRed-500);
+
+  --marpx-theme-table-captiontext: "Table ";
+  --marpx-theme-table-captiontext-color: var(--scarletRed-500);
+
+  --marpx-theme-brandlogo: " - Created with Marp e MarpX.";
+
+  --marpx-theme-color: #3e6ceb;
+  --marpx-theme-h1-color: var(--blueViolet-500);
+  --marpx-theme-h1-bold-color: #ff3c00;
+  --marpx-theme-h2-color: var(--blueViolet-300);
+  --marpx-theme-marker-color: color-mix(
+    in srgb,
+    var(--marpx-theme-color),
+    white 25%
+  );
+  --marpx-theme-font-color: #000000;
+  --marpx-theme-background-color: #ffffff;
+  --marpx-theme-bold-color: #f8150d;
+  --marpx-theme-chapter-color: #9aade2;
+  --marpx-theme-subtitle-color: #5d616d;
+  --marpx-theme-code-color: #e9e9e9;
+  --marpx-theme-highlight-color: #ffff00;
+  --marpx-theme-footnote-mark-color: #ff0000;
+  --marpx-theme-toc-color: #4562bb;
+  --marpx-theme-toc-background-color: #f6f6f6;
+
+  /*-------------------< TITLE SLIDE >-----------------------------*/
+
+  /* fonts sizes */
+  --marpx-title_academic-title-size: 145%;
+  --marpx-title_academic-subtitle-size: 95%;
+  --marpx-title_academic-author-size: 105%;
+  --marpx-title_academic-date-size: 95%;
+  --marpx-title_academic-institute-size: 95%;
+
+  /* inter character space */
+  --marpx-title_academic-letter-spacing: 0.125px;
+
+  /* font weights */
+  --marpx-title_academic-title-font-weight: 600;
+  --marpx-title_academic-subtitle-font-weight: 300;
+
+  /* colors in style */
+  /* --marpx-title_academic-title-color: #002b36; */
+  --marpx-title_academic-title-color: #003c4b;
+  --marpx-title_academic-subtitle-color: #ababac;
+  --marpx-title_academic-author-color: #f8150d;
+  --marpx-title_academic-font-color: #242d31;
+  --marpx-title_academic-background-color: #faf7f7;
+  --marpx-title_academic-border-color: #364269;
+
+  /*------------< Parameters used in `REFERENCES` >---------------------------------*/
+
+  --marpx-references-bold-color: #3e6ceb;
+  --marpx-references-background-color: #eff4fa;
+  --marpx-references-header-color: #539dd3;
+
+  /*------------< Parameters used in `QUOTE` >---------------------------------*/
+
+  --marpx-quote-font-family: Bookerly, Faustina, Times, serif;
+  --marpx-quote-background-color: #ffffff;
+  --marpx-quote-paragraph-background-color: #ffffff;
+  --marpx-quote-bold-color: #6462f1;
+
+  /*-< quote dark >-*/
+
+  --marpx-quote_dark-font: Faustina, Bookerly, Times, serif;
+  --marpx-quote_dark-font-color: #222230;
+  --marpx-quote_dark-color-background: #9aade2;
+  --marpx-quote_dark-color-paragraph-background: #9aade2;
+  --marpx-quote_dark-bold-color: #f8f8f7;
+
+  /*------------< Parameters used in `TABLE` >---------------------------------*/
+
+  --marpx-table-font-size: 22px;
+  --marpx-table-font-color: var(--marpx-theme-font-color);
+  --marpx-table-font-family: inherit;
+  --marpx-table-header-background-color: #151d33;
+  --marpx-table-header-color-color: white;
+  --marpx-table-border-top-color: rgb(255, 73, 1);
+  --marpx-table-border-bottom-color: #cac9c5f8;
+  --marpx-table-nth-child-color-color: #f5f5f5;
+  --marpx-table-hover-color: #474619;
+  --marpx-table-hover-background-color: #eaf779;
+
+  --marpx-calc-toc-font-color: color-mix(
+    in srgb,
+    var(--marpx-theme-toc-color),
+    white 35%
+  );
+  --marpx-calc-toc-marker-color: color-mix(
+    in srgb,
+    var(--marpx-theme-toc-color),
+    black 30%
+  );
+  --marpx-calc-toc-hover-color: color-mix(
+    in srgb,
+    var(--marpx-theme-toc-color),
+    gray 40%
+  );
+  --marpx-calc-toc-hoover-background-color: color-mix(
+    in srgb,
+    var(--marpx-theme-toc-color),
+    white 85%
+  );
+}
+
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+
+img[alt~="end-bg"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+img[alt~="title-bg"] {
+  position: absolute;
+  top: 0;
+  left: 65.3%;
+  z-index: -2;
+}
+
+section {
+  /* Until aug.2025 it works only with Chrome */
+  --page-number: attr(data-marpit-pagination);
+  /* Until aug.2025 it works only with Chrome */
+  --page-number-total: attr(data-marpit-pagination-total);
+
+  font-weight: 400;
+  font-family: var(--marpx-theme-font-family);
+  font-size: var(--marpx-theme-font-size);
+  letter-spacing: var(--marpx-theme-letter-spacing);
+  color: var(--marpx-theme-font-color);
+  background: var(--marpx-theme-background-color);
+  padding: 145px 80px 68px 80px;
+  background-size: contain;
+}
+
+section::after {
+  background-color: #ffffffbd;
+  border-radius: 100px;
+  bottom: 22px;
+  color: var(--marpx-theme-color);
+  content: attr(data-marpit-pagination) "/" attr(data-marpit-pagination-total);
+  font-size: 14pt;
+  left: 50px;
+  margin: 0;
+  padding: 2px 8px;
+  position: absolute;
+}
+
+header {
+  position: absolute;
+  bottom: 29px;
+
+  margin: 0px;
+  padding: 0px;
+  text-align: end;
+  left: 130px;
+  color: var(--marpx-theme-color);
+  font-weight: 700;
+  font-size: 10.5pt;
+  vertical-align: bottom;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+footer {
+  position: absolute;
+  color: var(--marpx-color-light-grey);
+  font-size: 8pt;
+  font-weight: 700;
+  margin: 0px;
+  padding: 0px;
+  top: auto;
+  right: auto;
+  left: 130px;
+  bottom: 16px;
+}
+
+footer::before {
+  content: "©️ ";
+}
+
+/* BRAND LOGO */
+footer::after {
+  content: var(--marpx-theme-brandlogo);
+}
+
+h1 {
+  top: 20px;
+  position: absolute;
+  color: var(--marpx-theme-h1-color);
+  font-size: 36pt;
+  font-weight: 700;
+  height: 130px;
+  max-width: calc(100% - 160px);
+
+  /* border-bottom: 1px solid #fd0d0d; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+h1[data-auto-scaling] {
+  display: unset;
+  position: unset;
+}
+
+h2 {
+  color: var(--marpx-theme-h2-color);
+}
+
+h2,
+h3 {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+h1 > strong::before,
+h1 > strong::after,
+h1 > em::before,
+h1 > em::after,
+h2 > strong::before,
+h2 > strong::after,
+h2 > em::before,
+h2 > em::after,
+h3 > strong::before,
+h3 > strong::after,
+h3 > em::before,
+h3 > em::after {
+  content: "\00a0";
+}
+
+h1 > strong,
+h2 > strong,
+h3 > strong,
+h4 > strong {
+  color: var(--marpx-theme-h1-bold-color);
+  font-weight: bold !important;
+}
+
+li::marker {
+  color: var(--marpx-theme-marker-color);
+}
+
+section > video {
+  max-height: 100%;
+}
+
+section > figure {
+  margin: 0;
+  margin-bottom: 10px;
+  max-height: calc(100% - 48px);
+}
+
+section > figure.center {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+  max-height: calc(100% - 48px);
+}
+
+/* 
+!================================================================================
+?-----------------------< <FOOTNOTE> >----------------------- 
+!================================================================================
+*/
+section sup,
+footnote li::marker,
+.footnote li::marker {
+  color: var(--marpx-theme-footnote-mark-color);
+}
+
+footnote {
+  border-top: 0.1em solid #555;
+  border-left: 0;
+  font-size: 60%;
+  margin-top: auto;
+}
+
+footnote > ol {
+  margin-bottom: 0;
+}
+
+/* 
+!================================================================================
+?-----------------------< SLIDE LAYOUTS >----------------------- 
+!================================================================================
+*/
+section > div.multicolumn,
+section.multicolumn {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+}
+
+section > div.multicolumn.vcenter,
+section.multicolumn.vcenter {
+  align-items: center;
+}
+
+/* The layout for all slides is set to appear in column mode. */
+section.cols {
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+}
+
+/* The following is a layout for individual column areas in normal slides. */
+section > div.cols {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+}
+
+/* It is optional to use the same column behavior. */
+/*.cols > .col { */
+.cols > div {
+  flex: 1 1 0;
+}
+
+/* The objective is to display multiple rows in a single column. */
+section.rows {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+section > div.rows {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+/* grid layouts */
+section > div.grid-tlr,
+section.grid-tlr {
+  display: grid;
+  grid-template-areas: "top top" "left right";
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 10px;
+}
+
+section > div.grid-lrb,
+section.grid-lrb {
+  display: grid;
+  grid-template-areas: "left right" "bottom bottom";
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 10px;
+}
+
+.gtop {
+  grid-area: top;
+}
+
+.gbot {
+  grid-area: bottom;
+}
+
+.glft {
+  grid-area: left;
+}
+
+.grgt {
+  grid-area: right;
+}
+
+/* adjust h1 for the flex elements */
+section.multicolumn > h1,
+section.cols > h1,
+section.rows > h1,
+section.grid > h1 {
+  margin-left: 80px;
+}
+
+/* 
+!================================================================================
+?-----------------------< TITLE >----------------------- 
+!================================================================================
+*/
+section.title,
+section.title-bg {
+  padding-left: 80px;
+  background-color: var(--marpx-title_academic-background-color);
+}
+
+section.title > h1,
+section.title-bg > h1 {
+  position: absolute;
+  top: 34%;
+  margin: 0px;
+  height: 28%;
+
+  padding: 0px;
+  font-size: 42pt;
+  /* font-size: var(--marpx-title_academic-title-size); */
+  line-height: normal;
+  color: var(--marpx-title_academic-title-color);
+  font-weight: 700;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+section.title > h2,
+section.title-bg > h2 {
+  position: absolute;
+  top: 65.27%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 30pt;
+  color: var(--marpx-title_academic-subtitle-color);
+  font-weight: 700;
+}
+
+section.title-bg::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+section.title::after,
+section.title-bg::after {
+  opacity: 0;
+}
+
+section.title > header,
+section.title-bg > header {
+  position: absolute;
+  bottom: 140px;
+  margin: 0px;
+  padding: 0px;
+  left: 80px;
+  font-size: 20pt;
+  color: var(--marpx-color-dark-grey);
+  font-weight: 200;
+}
+
+section.title > footer,
+section.title-bg > footer {
+  opacity: 0;
+}
+
+/* 
+!================================================================================
+$?-----------------------< TITLE ACADEMIC >----------------------- 
+!================================================================================
+*/
+
+section.title-academic {
+  background-color: var(--marpx-title_academic-background-color) !important;
+  background-image: none;
+  z-index: -5;
+}
+
+section.title-academic .title,
+section.title-academic > h1 {
+  width: 95%;
+  padding-bottom: 15px !important;
+  /* distance from the title to the underline below it */
+
+  line-height: 1.05 !important;
+  font-size: var(--marpx-title_academic-title-size);
+  letter-spacing: var(--marpx-title_academic-letter-spacing);
+  font-weight: var(--marpx-title_academic-title-font-weight);
+  color: var(--marpx-title_academic-title-color);
+  border-bottom: 1px solid var(--marpx-title_academic-border-color) !important;
+}
+
+section.title-academic .title > strong {
+  /* color: var(--marpx-theme-h1-bold-color) !important; */
+  color: red !important;
+  font-weight: bold;
+}
+
+section.title-academic > h1 {
+  top: 25pt;
+  height: 0%;
+  position: relative;
+  font-weight: var(--marpx-title_academic-title-font-weight);
+  letter-spacing: var(--marpx-title_academic-letter-spacing);
+}
+
+section.title-academic .subtitle,
+section.title-academic > h2 {
+  color: var(--marpx-title_academic-subtitle-color);
+
+  font-size: var(--marpx-title_academic-subtitle-size);
+  font-weight: var(--marpx-title_academic-subtitle-font-weight);
+
+  line-height: 1.2;
+  letter-spacing: var(--marpx-title_academic-letter-spacing);
+
+  padding-top: 10px;
+  padding-bottom: 120px;
+}
+
+section.title-academic > h2 {
+  top: 18pt;
+  width: 95% !important;
+  position: relative;
+}
+
+section.title-academic .author,
+section.title-academic > h3 {
+  color: var(--marpx-title_academic-author-color) !important;
+  font-size: var(--marpx-title_academic-author-size);
+  font-weight: bold !important;
+}
+
+section.title-academic .date,
+section.title-academic > h4 {
+  font-size: var(--marpx-title_academic-date-size);
+}
+
+section.title-academic .organization,
+section.title-academic > h5 {
+  font-size: var(--marpx-title_academic-institute-size);
+}
+
+section.title-academic .author,
+section.title-academic .date,
+section.title-academic .organization,
+section.title-academic h3,
+section.title-academic h4,
+section.title-academic h5 {
+  font-weight: 400;
+  text-align: left;
+  color: var(--marpx-title_academic-font-color);
+  line-height: 1.25;
+  letter-spacing: var(--marpx-title_academic-letter-spacing);
+}
+
+/* Omits page number in Title Page Slide */
+section.title-academic footer,
+section.title-academic header,
+section.title-academic:after {
+  /* hide header, footer and pagination */
+  display: none;
+}
+
+/* 
+!================================================================================
+?-----------------------< CHAPTER >----------------------- 
+!================================================================================
+*/
+section.chapter {
+  padding-left: 80px;
+  background-image: none;
+  background-color: var(--marpx-theme-chapter-color);
+}
+
+/* 
+!================================================================================
+?-----------------------< CHAPTER ALTERNATIVE >----------------------- 
+!================================================================================
+*/
+section.chapter-alt {
+  padding-left: 80px;
+  background-image: none;
+  background-color: white;
+}
+
+section.chapter-alt > h1 {
+  top: 38px;
+  position: absolute;
+  color: white;
+  font-size: 64pt;
+  font-weight: 700;
+  height: 47.5%;
+  width: 60%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* 
+!================================================================================
+?-----------------------< CHAPTER AND SECTION >----------------------- 
+!================================================================================
+*/
+/* Autor, Akad. Grad */
+section.chapter-alt > header,
+section.chapter > header {
+  opacity: 0;
+}
+
+/* Datum */
+section.chapter-alt > footer,
+section.chapter > footer {
+  opacity: 0;
+}
+
+section.chapter > h1 {
+  position: absolute;
+  top: 38px;
+  color: white;
+  font-size: 54pt;
+  font-weight: 700;
+  height: 47.5%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+section.chapter-alt > h1::after,
+section.chapter > h1::after {
+  background: none repeat scroll 0 0 white;
+  bottom: 10px;
+  left: -50px;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 8px;
+  width: 200px;
+}
+
+section.chapter-alt > h2,
+section.chapter > h2 {
+  position: absolute;
+  top: 53.5%;
+  color: white;
+  font-size: 28pt;
+  font-weight: 700;
+}
+
+section.chapter-alt::after,
+section.chapter::after {
+  opacity: 0;
+}
+
+/* 
+!================================================================================
+?-----------------------< Table of Contents (TOC) >----------------------- 
+!================================================================================
+*/
+section.toc {
+  padding-left: 450px;
+  padding-top: 50px;
+  font-size: 24pt;
+  flex-flow: nowrap;
+  background-color: var(--marpx-theme-toc-background-color);
+}
+
+section.toc a {
+  color: var(--marpx-calc-toc-font-color) !important;
+  /* font-weight: 600; */
+}
+
+section.toc li::marker {
+  color: var(--marpx-calc-toc-marker-color);
+  font-weight: bold;
+}
+
+section.toc a:hover {
+  font-size: 1em;
+  font-weight: bold;
+
+  color: var(--marpx-calc-toc-hover-color) !important;
+  background-color: var(--marpx-calc-toc-hoover-background-color);
+
+  border-radius: 8px;
+  padding: 10px 10px;
+  text-decoration-line: none;
+}
+
+section.toc::before {
+  position: absolute;
+
+  left: 0px;
+  top: 0px;
+  margin: 0px;
+  padding-top: 30px;
+
+  width: 33%;
+  /* height: 86.11%; */
+  height: 100%;
+
+  text-align: center;
+  font-size: 48pt;
+  font-weight: 700;
+
+  color: white;
+  background-color: var(--marpx-theme-toc-color);
+  content: "Agenda";
+}
+
+section[lang|="en"].toc::before {
+  content: "Contents";
+}
+
+section[lang|="pt"].toc::before {
+  content: "Conteúdo";
+}
+
+section[lang|="de"].toc::before {
+  content: "Inhalt";
+}
+
+section[lang|="es"].toc::before {
+  content: "Contenido";
+}
+
+section[lang|="fr"].toc::before {
+  content: "Contenu";
+}
+
+section[lang|="it"].toc::before {
+  content: "Contenuto";
+}
+
+section[lang|="ru"].toc::before {
+  content: "Содержание";
+}
+
+section[lang|="ja"].toc::before {
+  content: "目次";
+}
+
+section[lang|="zh"].toc::before {
+  content: "内容";
+}
+
+/* 
+!================================================================================
+?-----------------------< THANKS >----------------------- 
+!================================================================================
+*/
+section.end,
+section.end-bg {
+  color: white;
+  background-color: var(--marpx-theme-color);
+  padding-right: 515px;
+  padding-left: 90px;
+  padding-top: 185px;
+  font-size: 14pt;
+  /* white link color */
+  --color-accent-fg: white;
+  --fgColor-accent: white;
+}
+
+section.end > h1,
+section.end-bg > h1 {
+  color: white;
+  font-size: 60pt;
+  height: 152px;
+  align-items: flex-end;
+}
+
+section.end > h2,
+section.end-bg > h2 {
+  color: white;
+}
+
+section.end-bg::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* no footer */
+section.end-bg::after,
+section.end-bg > header,
+section.end-bg > footer,
+section.end::after,
+section.end > header,
+section.end > footer {
+  visibility: hidden;
+}
+
+/* 
+!================================================================================
+?-----------------------< TOTAL PAGES >----------------------- 
+!================================================================================
+*/
+section.totalpages::after {
+  color: var(--marpx-theme-color);
+  font-size: 14pt;
+  content: attr(data-marpit-pagination) "/" attr(data-marpit-pagination-total);
+  position: absolute;
+  padding: 0px;
+  padding-bottom: 24px;
+  left: 10px;
+  width: 100px;
+  margin: 0px;
+}
+
+/* 
+!================================================================================
+?-----------------------< TITLE COPYRIGHT >----------------------- 
+!================================================================================
+*/
+section.copyright > footer {
+  opacity: 100%;
+  bottom: 1%;
+  left: 1%;
+}
+
+/* 
+!================================================================================
+?-----------------------< TITLE ADDITIONAL-LOGOS >----------------------- 
+!================================================================================
+*/
+section.logos > div.additional-logos {
+  background-color: #ffffff;
+  display: block;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+  height: 20%;
+  max-height: 100%;
+  min-width: 61%;
+  width: 61%;
+  max-width: 61%;
+}
+
+section.logos > div.additional-logos > p {
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  margin: 0;
+  max-width: inherit;
+  height: 100%;
+  max-height: inherit;
+  align-items: center;
+  align-content: center;
+}
+
+section.logos > div.additional-logos > p > img {
+  flex: 1;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  max-width: inherit;
+  max-height: inherit;
+  object-fit: contain;
+  background-color: #ffffff;
+}
+
+/* 
+!================================================================================
+?-----------------------< BLANK / NOBRAND SLIDE >----------------------- 
+!================================================================================
+*/
+section.blank,
+section.nobrand {
+  background: none;
+  background-color: #ffffff;
+}
+
+section.blank {
+  padding: 68pt 80pt 68pt 80pt;
+}
+
+section.blank > h1 {
+  visibility: hidden;
+}
+
+section.blank > header,
+section.nobrand > header {
+  visibility: hidden;
+}
+
+section.blank > footer,
+section.nobrand > footer {
+  visibility: hidden;
+}
+
+section.blank::after,
+section.nobrand::after {
+  visibility: hidden;
+}
+
+/* 
+!================================================================================
+?-----------------------< CALLOUTS >----------------------- 
+!================================================================================
+*/
+div.callout {
+  overflow: hidden;
+  border-style: solid;
+  border-width: 1.25px;
+  border-radius: 6px;
+  margin: 12px 0;
+  /* top+bottom right+left */
+  padding: 8px 8px 8px 16px;
+  mix-blend-mode: darken;
+}
+
+div.callout > h1 {
+  position: relative;
+  font-size: 18pt;
+  font-weight: 700;
+  padding: 0px 0px 8pt 0px;
+  margin-top: 0px;
+  margin-bottom: 12px;
+  justify-content: flex-start;
+  height: unset;
+}
+
+div.callout > ul,
+div.callout > ol,
+div.callout > p {
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+
+div.callout.slim {
+  margin: 8px 0;
+  padding: 6px 6px 6px 12px;
+  font-size: 14pt;
+}
+
+div.callout.slim > h1 {
+  font-size: 16pt;
+  padding: 0px 0px 0pt 0px;
+}
+
+div.callout > h1::before {
+  margin-right: 4pt;
+}
+
+div.callout > h1,
+div.callout.info > h1 {
+  color: #4b96e7;
+}
+
+div.callout,
+div.callout.info {
+  background-color: #e9f2fc;
+  border-color: #82a8d1;
+}
+
+div.callout.warning > h1 {
+  color: #e67300;
+}
+
+div.callout.warning {
+  background-color: #fff2e6;
+  border-color: #c99e73;
+}
+
+div.callout.note > h1 {
+  color: #086ddd;
+}
+
+div.callout.note {
+  background-color: #e6f1fe;
+  border-color: #88a2be;
+}
+
+div.callout.abstract > h1 {
+  color: #16c4c2;
+}
+
+div.callout.abstract {
+  background-color: #e8fcfc;
+  border-color: #4a8a89;
+}
+
+div.callout.todo > h1 {
+  color: #4b96e7;
+}
+
+div.callout.todo {
+  background-color: #e9f2fc;
+  border-color: #7694b4;
+}
+
+div.callout.tip > h1 {
+  color: #16c4c2;
+}
+
+div.callout.tip {
+  background-color: #e8fcfc;
+  border-color: #279795;
+}
+
+div.callout.success > h1 {
+  color: #22c061;
+}
+
+div.callout.success {
+  background-color: #e1fdec;
+  border-color: #4aa06b;
+}
+
+div.callout.question > h1 {
+  color: #e5b92a;
+}
+
+div.callout.question {
+  background-color: #fcf8e8;
+  border-color: #ccb875;
+}
+
+div.callout.failure > h1 {
+  color: #ff001e;
+}
+
+div.callout.failure {
+  background-color: #fde8ea;
+  border-color: #b14d4d;
+}
+
+div.callout.danger > h1,
+div.callout.danger strong {
+  color: #fccaca;
+}
+
+div.callout.danger {
+  background-color: #bd3540;
+  border-color: #b80202;
+  color: #ffffff;
+}
+
+div.callout.bug > h1 {
+  color: #ff9100;
+}
+
+div.callout.bug {
+  color: #030303;
+  background-color: #f8fa91;
+  border-color: #c09e05;
+}
+
+div.callout.example > h1 {
+  color: #7852ee;
+}
+
+div.callout.example {
+  background-color: #ede8fd;
+  border-color: #9d8ec7;
+}
+
+div.callout.quote > h1 {
+  color: #a7a7a7;
+}
+
+div.callout.quote {
+  background-color: #f2f2f2;
+  border-color: #949393;
+}
+
+/* 
+!================================================================================
+?-----------------------< BESPOKE PROGRESS BAR >----------------------- 
+!================================================================================
+*/
+@import url("data:text/css, .bespoke-marp-parent { top: 0 !important; } .bespoke-progress-parent { position: absolute; bottom: 0 !important; z-index:100; background:none !important; height:3px !important; }");
+
+/*
+!================================================================================
+?-----------------------< FIGCAPTION and TABCAPTION >----------------------- 
+!================================================================================
+*/
+figcaption,
+tabcaption,
+.figcaption,
+.tabcaption {
+  font-family: "Fira Sans";
+  font-size: 14pt;
+  font-weight: normal;
+  color: var(--marpx-theme-font-color);
+  text-align: center;
+}
+
+figcaption::before,
+.figcaption::before {
+  counter-increment: figure_cnt;
+  font-weight: bold;
+  color: var(--marpx-theme-figure-captiontext-color);
+  content: var(--marpx-theme-figure-captiontext) var(--page-number) "."
+    counter(figure_cnt) ": ";
+}
+
+tabcaption::before,
+.tabcaption::before {
+  counter-increment: table_cnt;
+  font-weight: bold;
+  color: var(--marpx-theme-table-captiontext-color);
+  content: var(--marpx-theme-table-captiontext) var(--page-number) "."
+    counter(table_cnt) ": ";
+}
+
+.highlight {
+  padding: 0.2em 0.3em;
+  background-color: var(--marpx-theme-highlight-color);
+}
+
+section code:not(pre code) {
+  font-family: inherit;
+  background-color: var(--marpx-theme-highlight-color);
+  font-weight: bold;
+  border-radius: 11px 11px 11px 11px;
+}
+
+section strong {
+  color: var(--marpx-theme-bold-color);
+}
+
+/*
+!================================================================================
+?-----------------------< QUOTE (UNIFIED) >----------------------- 
+!================================================================================
+*/
+
+section.quote {
+  background-color: var(--marpx-quote-background-color) !important;
+}
+
+section.quote p {
+  color: #222230 !important;
+  background-color: var(--marpx-quote-paragraph-background-color);
+  letter-spacing: -0.23pt;
+  font-size: 1.4em !important;
+  text-align: center;
+  line-height: 1.15em;
+  font-family: var(--marpx-quote-font-family) !important;
+  /*  font-style: oblique; */
+  padding-top: auto;
+  padding-bottom: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+section.quote strong {
+  font-style: italic;
+  color: var(--marpx-quote-bold-color) !important;
+}
+
+section.quote footer,
+section.quote header {
+  display: none;
+}
+
+/* Alternative style (used to be quote2, now quote dark) */
+section.quote.dark {
+  background-color: var(--marpx-quote_dark-color-background) !important;
+}
+
+section.quote.dark p {
+  color: var(--marpx-quote_dark-font-color) !important;
+  font-family: var(--marpx-quote_dark-font) !important;
+  font-weight: normal;
+  font-size: 34pt !important;
+  background-color: var(--marpx-quote_dark-color-paragraph-background);
+  letter-spacing: 0.1pt;
+  text-align: center;
+  line-height: 1.09em;
+  padding-top: auto;
+  padding-bottom: auto;
+  padding-left: 85px;
+  padding-right: 85px;
+}
+
+section.quote.dark strong {
+  color: var(--marpx-quote_dark-bold-color) !important;
+  font-style: normal;
+}
+
+/*
+!================================================================================
+?-----------------------< TABLES >----------------------- 
+!================================================================================
+*/
+
+section table {
+  font-size: var(--marpx-table-font-size);
+  font-family: var(--marpx-table-font-family) !important;
+  color: var(--marpx-table-font-color);
+}
+
+section table th {
+  background-color: var(--marpx-table-header-background-color);
+  color: var(--marpx-table-header-color-color);
+  border-top: var(--marpx-table-border-top-color) solid 2px;
+  border-bottom: var(--marpx-table-border-bottom-color) solid 2px;
+  border-width: initial;
+}
+
+section table td {
+  border: 1px solid var(--marpx-table-border-bottom-color);
+  border-left: 0;
+  border-right: 0;
+}
+
+section table tr:nth-child(even) {
+  background-color: var(--marpx-table-nth-child-color-color);
+}
+
+section table tr:last-child {
+  border-bottom: var(--marpx-table-border-bottom-color) solid 1px;
+}
+
+tr:hover {
+  color: var(--marpx-table-hover-color) !important;
+  background: var(--marpx-table-hover-background-color) !important;
+  /* font-weight: bold !important; */
+}
+
+/*
+!================================================================================
+?-----------------------< REFERENCES >----------------------- 
+!================================================================================
+*/
+section.references {
+  background: var(--marpx-references-background-color);
+  color: #303235;
+  font-family: "Fira Sans Light", sans-serif;
+  padding: 150px 48px;
+  line-height: 1.15;
+}
+
+section.references li {
+  margin-bottom: 0.7em !important;
+  /* ajuste o valor conforme desejar */
+}
+
+section.references strong {
+  color: var(--marpx-references-bold-color);
+  font-family: "Fira Sans Regular", sans-serif;
+}
+
+section.references h1,
+section.references h2 {
+  color: var(--marpx-references-header-color);
+  margin-bottom: 16px;
+  font-family: "Fira Sans Regular", sans-serif;
+  /* border-bottom: 1px solid #0606ee; */
+}
+
+section.references .multicolumn {
+  display: grid;
+  column-gap: 18px;
+  /* Align items to the top */
+  align-items: start;
+}
+
+section.references .multicolumn > div {
+  padding: 0 0px;
+  /* Ensures content is aligned with the top */
+  vertical-align: top;
+}
+
+section.references,
+/* section.references *, */
+section.references .multicolumn>div,
+section.references .multicolumn>div * {
+  font-size: 15pt !important;
+  font-weight: 600 !important;
+  box-sizing: border-box;
+}
+
+/*
+!================================================================================
+?-----------------------< BLACK-SLIDE & SLIDE BLACK>----------------------- 
+!================================================================================
+*/
+
+section.slide.black,
+section.black-slide {
+  background-color: black !important;
+}
+
+section.slide.black > h1,
+section.black-slide > h1 {
+  color: white;
+}
+
+section.slide.black figcaption,
+section.slide.black .figcaption,
+section.black-slide figcaption,
+section.black-slide .figcaption {
+  color: white !important;
+}
+
+section.slide.black figcaption::before,
+section.slide.black .figcaption::before,
+section.black-slide figcaption::before,
+section.black-slide .figcaption::before {
+  color: rgb(245, 76, 76) !important;
+}
+
+/*
+!================================================================================
+?-----------------------< WHITE-SLIDE & SLIDE WHITE>----------------------- 
+!================================================================================
+*/
+section.slide.white,
+section.white-slide {
+  background-color: white !important;
+}
+
+section.slide.white > h1,
+section.white-slide > h1 {
+  color: black;
+}
+
+section.slide.white figcaption,
+section.slide.white .figcaption,
+section.white-slide figcaption,
+section.white-slide .figcaption {
+  color: black !important;
+}
+
+/*
+section.slide.white figcaption::before,
+section.slide.white .figcaption::before,
+section.white-slide figcaption::before,
+section.white-slide .figcaption::before {
+  color: red !important;
+} */
+
+/*
+!================================================================================
+?-----------------------< BOX >----------------------- 
+!================================================================================
+*/
+
+box {
+
+  border: 1px solid black;    /* cria a borda */
+  padding: 25px;              /* espaçamento interno */
+  margin: 50px auto;          /* espaçamento externo */
+  display: inline-block;      /* garante que a caixa se ajuste ao conteúdo */
+  border-radius: 6px;         /* cantos arredondados (opcional) */
+  background-color: #f0f0f0;/* cor de fundo (opcional) */
+  text-align: center;         /* centraliza o conteúdo dentro da caixa */
+}
+
+.box {
+
+  border: 1px solid black;    /* cria a borda */
+  padding: 10px;              /* espaçamento interno */
+  /* margin: 50px auto;          espaçamento externo */
+  display: inline-block;      /* garante que a caixa se ajuste ao conteúdo */
+  border-radius: 6px;         /* cantos arredondados (opcional) */
+  background-color: #f0f0f0;/* cor de fundo (opcional) */
+  text-align: center;         /* centraliza o conteúdo dentro da caixa */
+}
