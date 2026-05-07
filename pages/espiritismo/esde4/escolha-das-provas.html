@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Há trinta anos desfrutei o convívio d.md</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+	<style>
+		/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+		/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+		body {
+			font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+			font-size: var(--vscode-markdown-font-size, 18px);
+			padding: 0px 26px;
+			line-height: var(--vscode-markdown-line-height, 28px);
+			word-wrap: break-word;
+			color:#000000;
+			background-color: #ececec;
+		}
+
+		#code-csp-warning {
+			position: fixed;
+			top: 0;
+			right: 0;
+			color: white;
+			margin: 16px;
+			text-align: center;
+			font-size: 12px;
+			font-family: sans-serif;
+			background-color: #444444;
+			cursor: pointer;
+			padding: 6px;
+			box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+		}
+
+		#code-csp-warning:hover {
+			text-decoration: none;
+			background-color: #007acc;
+			box-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
+		}
+
+		body.scrollBeyondLastLine {
+			margin-bottom: calc(100vh - 22px);
+		}
+
+		body.showEditorSelection .code-line {
+			position: relative;
+		}
+
+		body.showEditorSelection .code-active-line:before,
+		body.showEditorSelection .code-line:hover:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -12px;
+			height: 100%;
+		}
+
+		body.showEditorSelection li.code-active-line:before,
+		body.showEditorSelection li.code-line:hover:before {
+			left: -30px;
+		}
+
+		.vscode-light.showEditorSelection .code-active-line:before {
+			border-left: 3px solid rgba(0, 0, 0, 0.15);
+		}
+
+		.vscode-light.showEditorSelection .code-line:hover:before {
+			border-left: 3px solid rgba(0, 0, 0, 0.40);
+		}
+
+		.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+			border-left: none;
+		}
+
+		.vscode-dark.showEditorSelection .code-active-line:before {
+			border-left: 3px solid rgba(255, 255, 255, 0.4);
+		}
+
+		.vscode-dark.showEditorSelection .code-line:hover:before {
+			border-left: 3px solid rgba(255, 255, 255, 0.60);
+		}
+
+		.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+			border-left: none;
+		}
+
+		.vscode-high-contrast.showEditorSelection .code-active-line:before {
+			border-left: 3px solid rgba(255, 160, 0, 0.7);
+		}
+
+		.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+			border-left: 3px solid rgba(255, 160, 0, 1);
+		}
+
+		.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+			border-left: none;
+		}
+
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		a:focus,
+		input:focus,
+		select:focus,
+		textarea:focus {
+			outline: 1px solid -webkit-focus-ring-color;
+			outline-offset: -1px;
+		}
+
+		hr {
+			border: 0;
+			height: 2px;
+			border-bottom: 2px solid;
+		}
+
+		h1 {
+			padding-bottom: 0.3em;
+			line-height: 1.2;
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+		}
+
+		h1,
+		h2,
+		h3 {
+			font-weight: normal;
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+
+		table>thead>tr>th {
+			text-align: left;
+			border-bottom: 1px solid;
+		}
+
+		table>thead>tr>th,
+		table>thead>tr>td,
+		table>tbody>tr>th,
+		table>tbody>tr>td {
+			padding: 5px 10px;
+		}
+
+		table>tbody>tr+tr>td {
+			border-top: 1px solid;
+		}
+
+		blockquote {
+			margin: 0 7px 0 5px;
+			padding: 0 16px 0 10px;
+			border-left-width: 5px;
+			border-left-style: solid;
+		}
+
+		code {
+			font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+			font-size: 1em;
+			line-height: 1.357em;
+		}
+
+		body.wordWrap pre {
+			white-space: pre-wrap;
+		}
+
+		pre:not(.hljs),
+		pre.hljs code>div {
+			padding: 16px;
+			border-radius: 3px;
+			overflow: auto;
+		}
+
+		pre code {
+			color: var(--vscode-editor-foreground);
+			tab-size: 4;
+		}
+
+		/** Theming */
+
+		.vscode-light pre {
+			background-color: rgba(220, 220, 220, 0.4);
+		}
+
+		.vscode-dark pre {
+			background-color: rgba(10, 10, 10, 0.4);
+		}
+
+		.vscode-high-contrast pre {
+			background-color: rgb(0, 0, 0);
+		}
+
+		.vscode-high-contrast h1 {
+			border-color: rgb(0, 0, 0);
+		}
+
+		.vscode-light table>thead>tr>th {
+			border-color: rgba(0, 0, 0, 0.69);
+		}
+
+		.vscode-dark table>thead>tr>th {
+			border-color: rgba(255, 255, 255, 0.69);
+		}
+
+		.vscode-light h1,
+		.vscode-light hr,
+		.vscode-light table>tbody>tr+tr>td {
+			border-color: rgba(0, 0, 0, 0.18);
+		}
+
+		.vscode-dark h1,
+		.vscode-dark hr,
+		.vscode-dark table>tbody>tr+tr>td {
+			border-color: rgba(255, 255, 255, 0.18);
+		}
+	</style>
+
+	<style>
+		/* Tomorrow Theme */
+		/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+		/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+		/* Tomorrow Comment */
+		.hljs-comment,
+		.hljs-quote {
+			color: #8e908c;
+		}
+
+		/* Tomorrow Red */
+		.hljs-variable,
+		.hljs-template-variable,
+		.hljs-tag,
+		.hljs-name,
+		.hljs-selector-id,
+		.hljs-selector-class,
+		.hljs-regexp,
+		.hljs-deletion {
+			color: #c82829;
+		}
+
+		/* Tomorrow Orange */
+		.hljs-number,
+		.hljs-built_in,
+		.hljs-builtin-name,
+		.hljs-literal,
+		.hljs-type,
+		.hljs-params,
+		.hljs-meta,
+		.hljs-link {
+			color: #f5871f;
+		}
+
+		/* Tomorrow Yellow */
+		.hljs-attribute {
+			color: #eab700;
+		}
+
+		/* Tomorrow Green */
+		.hljs-string,
+		.hljs-symbol,
+		.hljs-bullet,
+		.hljs-addition {
+			color: #718c00;
+		}
+
+		/* Tomorrow Blue */
+		.hljs-title,
+		.hljs-section {
+			color: #4271ae;
+		}
+
+		/* Tomorrow Purple */
+		.hljs-keyword,
+		.hljs-selector-tag {
+			color: #8959a8;
+		}
+
+		.hljs {
+			display: block;
+			overflow-x: auto;
+			color: #4d4d4c;
+			padding: 0.5em;
+		}
+
+		.hljs-emphasis {
+			font-style: italic;
+		}
+
+		.hljs-strong {
+			font-weight: bold;
+		}
+	</style>
+
+	<style>
+		/*
+ * Markdown PDF CSS
+ */
+
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+			padding: 0 12px;
+		}
+
+		pre {
+			background-color: #f8f8f8;
+			border: 1px solid #cccccc;
+			border-radius: 3px;
+			overflow-x: auto;
+			white-space: pre-wrap;
+			overflow-wrap: break-word;
+		}
+
+		pre:not(.hljs) {
+			padding: 23px;
+			line-height: 19px;
+		}
+
+		blockquote {
+			background: rgba(127, 127, 127, 0.1);
+			border-color: rgba(0, 122, 204, 0.5);
+		}
+
+		.emoji {
+			height: 1.4em;
+		}
+
+		code {
+			font-size: 14px;
+			line-height: 19px;
+		}
+
+		/* for inline code */
+		:not(pre):not(.hljs)>code {
+			color: #C9AE75;
+			/* Change the old color so it seems less like an error */
+			font-size: inherit;
+		}
+
+		/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+		.page {
+			page-break-after: always;
+		}
+	</style>
+
+	<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+
+<body>
+	<script>
+		mermaid.initialize({
+			startOnLoad: true,
+			theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+				? 'dark'
+				: 'default'
+		});
+	</script>
+	<h2 id="estudo-sistematizadoda-doutrina-espírita-tomo-iii--módulo-i--vida-no-mundo-espiritual">Estudo
+		Sistematizadoda Doutrina Espírita <br>TOMO III – MÓDULO I – Vida no Mundo Espiritual</h2>
+	<h2 id="roteiro-10--escolhas-das-provas-p-130">ROTEIRO 10 – Escolhas das provas (p. 130)</h2>
+	<blockquote>
+		<p>XAVIER, Francisco Cândido. <strong>Ação e reação</strong>. Pelo Espírito André Luiz. 30. ed. 13. imp.
+			Brasília, DF: FEB, 2020. <em>cap. 18 – Resgates coletivos</em>.</p>
+	</blockquote>
+	<p>– Há trinta anos, desfrutei o convívio de dois benfeitores, a cuja abnegação muito devo neste pouso de luz.
+		Ascânio e Lucas, assistentes respeitados na Esfera Superior, integravam-nos a equipe de mentores valorosos e
+		amigos... Quando os conheci em pessoa, já haviam despendido vários lustros no amparo aos irmãos transviados e
+		sofredores. Cultos e enobrecidos, eram companheiros infatigáveis em nossas melhores realizações. Acontece,
+		porém, que depois de largos decênios de luta, nos prélios da fraternidade santificante, suspirando pelo ingresso
+		nas esferas mais elevadas, para que se lhes expandissem os ideais de santidade e beleza, não demonstravam a
+		necessária condição específica para o voo anelado. Totalmente absortos no entusiasmo de ensinar o caminho do bem
+		aos semelhantes, não cogitavam de qualquer mergulho no pretérito, por isso que, muitas vezes, quando nos
+		fascinamos pelo esplendor dos cimos, nem sempre nos sobra disposição para qualquer vistoria aos nevoeiros do
+		vale... Dessa forma, passaram a desejar ardentemente a ascensão, sentindo-se algo desencantados pela ausência de
+		apoio das autoridades que lhes não reconheciam o mérito imprescindível. Dilatava-se o impasse, quando um deles
+		solicitou o pronunciamento da Direção Geral a que nos achamos submissos. O requerimento encontrou curso normal
+		até que, em determinada fase, ambos foram chamados a exame devido. A posição imprópria que lhes era
+		característica foi carinhosamente analisada por técnicos do Plano Superior, que lhes reconduziram a memória a
+		períodos mais recuados no tempo. Diversas fichas de observação foram extraídas do campo mnemônico, à maneira das
+		radioscopias dos atuais serviços médicos no mundo e, por intermédio delas, importantes conclusões surgiram à
+		tona... Em verdade, Ascânio e Lucas possuíam créditos extensos, adquiridos em quase cinco séculos sucessivos de
+		aprendizado digno, somando as cinco existências últimas nos círculos da carne e as estações de serviço
+		espiritual, nas vizinhanças da arena física; no entanto, quando a gradativa auscultação lhes alcançou as
+		atividades do século XV, algo surgiu que lhes impôs dolorosa meditação... Arrebatadas ao arquivo da memória e a
+		doer-lhes profundamente no Espírito, depois da operação magnética a que nos referimos, reapareceram nas fichas
+		mencionadas as cenas de ominoso delito por ambos cometido, em 1429, logo após a libertação de Orléans, quando
+		formavam no exército de Joana d’Arc... Famintos de influência junto aos irmãos de armas, não hesitaram em
+		assassinar dois companheiros, precipitando-os do alto de uma fortaleza no território de Gâtinais, sobre fossos
+		imundos, embriagando-se nas honrarias que lhes valeram, mais tarde, torturantes remorsos além do sepulcro.
+		Chegados a esse ponto da inquietante investigação, pela respeitabilidade de que se revestiam, foram inquiridos
+		pelos poderes competentes se desejavam ou não prosseguir na sondagem singular, ao que responderam negativamente,
+		preferindo liquidar a dívida, antes de novas imersões nos depósitos da subconsciência. Desse modo, em vez de
+		continuarem insistindo na elevação a níveis mais altos, suplicaram, ao revés, o retorno ao campo dos homens, no
+		qual acabam de pagar o débito a que aludimos.</p>
+	<p>– Como? – indagou Hilário, intrigado.</p>
+	<p>– Já que podiam escolher o gênero de provação, em vista dos recursos morais amealhados no mundo íntimo – informou
+		o orientador –, optaram por tarefas no campo da aeronáutica, a cuja evolução ofereceram as suas vidas. Há dois
+		meses regressaram às nossas linhas de ação, depois de haverem sofrido a mesma queda mortal que infligiram aos
+		companheiros de luta no século XV.</p>
+	<p>– E o nosso caro instrutor visitou-os nos preparativos da reencarnação agora terminada? – inquiri com respeito.
+	</p>
+	<p>– Sim, por várias vezes os avistei, antes da partida. Associavam-se a grande comunidade de Espíritos amigos, em
+		departamento específico de reencarnação, no qual centenas de entidades, com dívidas mais ou menos semelhantes às
+		de- les também se preparavam para o retorno à carne, abraçando, assim, trabalho redentor em resgates coletivos.
+	</p>
+	<p>– E todos podiam selecionar o gênero de luta em que saldariam as suas contas?
+		– perguntei, ainda, com natural interesse.</p>
+	<p>– Nem todos – disse Druso, convicto. – Aqueles que possuíam grandes créditos morais, qual acontecia aos
+		benfeitores a que me reporto, dispunham desse direito. Assim é que a muitos vi, habilitando-se para sofrer a
+		morte violenta, em favor do progresso da aeronáutica e da engenharia, da navegação marítima e dos transportes
+		terrestres, da ciência médica e da indústria em geral, verificando, no entanto, que a maioria, por força dos
+		débitos contraídos e consoante os ditames da própria cons- ciência, não alcançava semelhante prerrogativa,
+		cabendo-lhe aceitar sem discutir amargas provas, na infância, na mocidade ou na velhice, em acidentes diversos,
+		desde a mutilação primária até a morte, de modo a redimir-se de faltas graves.</p>
+
+</body>
+
+</html>
