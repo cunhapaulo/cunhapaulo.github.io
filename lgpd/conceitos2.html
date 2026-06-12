@@ -1,0 +1,1306 @@
+<!DOCTYPE html><html><head>
+      <title>conceitos</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\paulo.cunha\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.30\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-details{margin:0;padding:0;border:none}.markdown-preview .md-toc summary.md-toc-link-wrapper{cursor:pointer;list-style-position:outside}.markdown-preview .md-toc summary.md-toc-link-wrapper::marker{font-size:.85em}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='0']{margin-left:12px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='1']{margin-left:28px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='2']{margin-left:44px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='3']{margin-left:60px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='4']{margin-left:76px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='5']{margin-left:80px}.markdown-preview a.tag,.markdown-preview a.tag:active,.markdown-preview a.tag:link,.markdown-preview a.tag:visited,.markdown-preview span.tag:not(.token){display:inline-block;background-color:var(--vscode-badge-background,rgba(127,127,127,.18));color:var(--vscode-badge-foreground,currentColor);border-radius:2em;font-size:.85em;font-weight:500;padding:.05em .55em;line-height:1.5;white-space:nowrap;text-decoration:none;text-shadow:none;box-shadow:none;transition:background-color .12s ease,opacity .12s ease}.markdown-preview a.tag{cursor:pointer}.markdown-preview a.tag:focus,.markdown-preview a.tag:hover{background-color:var(--vscode-badge-background,rgba(127,127,127,.32));color:var(--vscode-badge-foreground,currentColor);opacity:.85;text-decoration:none;outline:0}.markdown-preview .wikilink-embed-content{border-left:3px solid var(--vscode-textBlockQuote-border,rgba(128,128,128,.3));background:var(--vscode-textBlockQuote-background,rgba(128,128,128,.05));margin:.5em 0;padding:.5em .75em;border-radius:0 3px 3px 0}.markdown-preview .wikilink-embed-content.wikilink-embed-error{border-left-color:var(--vscode-errorForeground,#cf222e);color:var(--vscode-errorForeground,#cf222e);font-style:italic;opacity:.8}.markdown-preview .wikilink-embed-content h1:first-child,.markdown-preview .wikilink-embed-content h2:first-child,.markdown-preview .wikilink-embed-content h3:first-child,.markdown-preview .wikilink-embed-content h4:first-child,.markdown-preview .wikilink-embed-content h5:first-child,.markdown-preview .wikilink-embed-content h6:first-child{margin-top:.25em}.markdown-preview .wikilink-embed-content .wikilink-embed-content{margin:.25em 0;padding:.25em .5em}.markdown-preview .block-id{display:none}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:var(--vscode-scrollbarSlider-background,rgba(150,150,150,.66));border:4px solid var(--vscode-scrollbarSlider-background,rgba(150,150,150,.66));background-clip:content-box}.scrollbar-style::-webkit-scrollbar-thumb:hover{background-color:var(--vscode-scrollbarSlider-hoverBackground,rgba(120,120,120,.66))}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:var(--vscode-scrollbarSlider-background,rgba(150,150,150,.66));border:4px solid var(--vscode-scrollbarSlider-background,rgba(150,150,150,.66));background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb:hover{background-color:var(--vscode-scrollbarSlider-hoverBackground,rgba(120,120,120,.66))}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-details{margin:0;padding:0;border:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='0']{padding-left:0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='1']{padding-left:16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='2']{padding-left:32px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='3']{padding-left:48px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='4']{padding-left:64px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='5']{padding-left:80px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  background-color: white;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. -->
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="conceitos-fundamentais-da-lgpd">Conceitos Fundamentais da LGPD </h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Nº</th>
+<th>Conceito fundamental</th>
+<th>Explicação técnica</th>
+<th style="text-align:center">Localização na LGPD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td><strong>Finalidade geral da LGPD</strong></td>
+<td>A LGPD disciplina o tratamento de dados pessoais, inclusive em meios digitais, por pessoas naturais ou jurídicas, públicas ou privadas, com o objetivo de proteger os direitos fundamentais de liberdade, privacidade e livre desenvolvimento da personalidade da pessoa natural.</td>
+<td style="text-align:center">Art. 1º</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td><strong>Proteção da privacidade</strong></td>
+<td>A privacidade é um dos fundamentos centrais da disciplina de proteção de dados pessoais. A lei busca impedir o uso indevido, abusivo ou desnecessário de informações relacionadas às pessoas naturais.</td>
+<td style="text-align:center">Art. 2º, I</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td><strong>Autodeterminação informativa</strong></td>
+<td>Representa o direito de a pessoa natural ter controle sobre seus dados pessoais, sabendo como, por que, por quem e para quais finalidades são tratados.</td>
+<td style="text-align:center">Art. 2º, II</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td><strong>Liberdade de expressão, informação, comunicação e opinião</strong></td>
+<td>A proteção de dados deve coexistir com liberdades comunicativas e informacionais, evitando que a LGPD seja aplicada de modo a restringir indevidamente direitos fundamentais.</td>
+<td style="text-align:center">Art. 2º, III</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td><strong>Inviolabilidade da intimidade, honra e imagem</strong></td>
+<td>A lei reconhece que o tratamento inadequado de dados pessoais pode violar a esfera íntima, a reputação e a imagem da pessoa natural.</td>
+<td style="text-align:center">Art. 2º, IV</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td><strong>Desenvolvimento econômico, tecnológico e inovação</strong></td>
+<td>A LGPD não impede o uso legítimo de dados; ela busca compatibilizar proteção de direitos fundamentais com inovação, economia digital e desenvolvimento tecnológico.</td>
+<td style="text-align:center">Art. 2º, V</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td><strong>Livre iniciativa, livre concorrência e defesa do consumidor</strong></td>
+<td>A proteção de dados também tem dimensão econômica e consumerista, impondo limites ao uso abusivo de dados em relações de mercado.</td>
+<td style="text-align:center">Art. 2º, VI</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td><strong>Direitos humanos, dignidade e cidadania</strong></td>
+<td>A LGPD insere a proteção de dados no campo dos direitos fundamentais, vinculando seu tratamento à dignidade da pessoa humana e ao exercício da cidadania.</td>
+<td style="text-align:center">Art. 2º, VII</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td><strong>Âmbito de aplicação territorial</strong></td>
+<td>A LGPD aplica-se ao tratamento realizado no Brasil, ao tratamento voltado à oferta de bens ou serviços a pessoas localizadas no território nacional e aos dados coletados no Brasil.</td>
+<td style="text-align:center">Art. 3º</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td><strong>Hipóteses de não aplicação da LGPD</strong></td>
+<td>A lei não se aplica, por exemplo, ao tratamento realizado por pessoa natural para fins exclusivamente particulares e não econômicos, nem a tratamentos para fins jornalísticos, artísticos, acadêmicos, segurança pública, defesa nacional, segurança do Estado ou investigação penal, observadas regras específicas.</td>
+<td style="text-align:center">Art. 4º</td>
+</tr>
+<tr>
+<td style="text-align:right">11</td>
+<td><strong>Dado pessoal</strong></td>
+<td>Informação relacionada a pessoa natural identificada ou identificável. Abrange dados diretos, como nome e CPF, e dados indiretos, quando permitam identificar alguém.</td>
+<td style="text-align:center">Art. 5º, I</td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td><strong>Dado pessoal sensível</strong></td>
+<td>Dado pessoal sobre origem racial ou étnica, convicção religiosa, opinião política, filiação sindical ou a organização religiosa, filosófica ou política, dado referente à saúde ou vida sexual, dado genético ou biométrico vinculado a pessoa natural.</td>
+<td style="text-align:center">Art. 5º, II</td>
+</tr>
+<tr>
+<td style="text-align:right">13</td>
+<td><strong>Dado anonimizado</strong></td>
+<td>Dado relativo a titular que não possa ser identificado, considerando a utilização de meios técnicos razoáveis e disponíveis na ocasião do tratamento.</td>
+<td style="text-align:center">Art. 5º, III</td>
+</tr>
+<tr>
+<td style="text-align:right">14</td>
+<td><strong>Banco de dados</strong></td>
+<td>Conjunto estruturado de dados pessoais, estabelecido em um ou mais locais, em suporte eletrônico ou físico.</td>
+<td style="text-align:center">Art. 5º, IV</td>
+</tr>
+<tr>
+<td style="text-align:right">15</td>
+<td><strong>Titular</strong></td>
+<td>Pessoa natural a quem se referem os dados pessoais objeto de tratamento. Somente pessoas naturais são titulares de dados pessoais para fins da LGPD.</td>
+<td style="text-align:center">Art. 5º, V</td>
+</tr>
+<tr>
+<td style="text-align:right">16</td>
+<td><strong>Controlador</strong></td>
+<td>Pessoa natural ou jurídica, de direito público ou privado, a quem competem as decisões referentes ao tratamento de dados pessoais. É quem define finalidades, meios essenciais e hipóteses de tratamento.</td>
+<td style="text-align:center">Art. 5º, VI</td>
+</tr>
+<tr>
+<td style="text-align:right">17</td>
+<td><strong>Operador</strong></td>
+<td>Pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de dados pessoais em nome do controlador. Atua conforme as instruções do controlador.</td>
+<td style="text-align:center">Art. 5º, VII</td>
+</tr>
+<tr>
+<td style="text-align:right">18</td>
+<td><strong>Encarregado pelo tratamento de dados pessoais</strong></td>
+<td>Pessoa indicada pelo controlador e pelo operador para atuar como canal de comunicação entre controlador, titulares e Autoridade Nacional de Proteção de Dados.</td>
+<td style="text-align:center">Art. 5º, VIII; Art. 41</td>
+</tr>
+<tr>
+<td style="text-align:right">19</td>
+<td><strong>Agentes de tratamento</strong></td>
+<td>São o controlador e o operador. A correta identificação desses papéis é indispensável para atribuição de responsabilidades.</td>
+<td style="text-align:center">Art. 5º, IX</td>
+</tr>
+<tr>
+<td style="text-align:right">20</td>
+<td><strong>Tratamento de dados pessoais</strong></td>
+<td>Toda operação realizada com dados pessoais, incluindo coleta, produção, recepção, classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento, armazenamento, eliminação, avaliação, modificação, comunicação, transferência, difusão ou extração.</td>
+<td style="text-align:center">Art. 5º, X</td>
+</tr>
+<tr>
+<td style="text-align:right">21</td>
+<td><strong>Anonimização</strong></td>
+<td>Utilização de meios técnicos razoáveis e disponíveis para impedir que um dado seja associado, direta ou indiretamente, a uma pessoa natural.</td>
+<td style="text-align:center">Art. 5º, XI</td>
+</tr>
+<tr>
+<td style="text-align:right">22</td>
+<td><strong>Consentimento</strong></td>
+<td>Manifestação livre, informada e inequívoca pela qual o titular concorda com o tratamento de seus dados pessoais para uma finalidade determinada.</td>
+<td style="text-align:center">Art. 5º, XII; Art. 7º, I; Art. 8º</td>
+</tr>
+<tr>
+<td style="text-align:right">23</td>
+<td><strong>Bloqueio</strong></td>
+<td>Suspensão temporária de qualquer operação de tratamento, mediante guarda do dado pessoal ou do banco de dados.</td>
+<td style="text-align:center">Art. 5º, XIII</td>
+</tr>
+<tr>
+<td style="text-align:right">24</td>
+<td><strong>Eliminação</strong></td>
+<td>Exclusão de dado ou conjunto de dados armazenados em banco de dados, independentemente do procedimento empregado.</td>
+<td style="text-align:center">Art. 5º, XIV</td>
+</tr>
+<tr>
+<td style="text-align:right">25</td>
+<td><strong>Transferência internacional de dados</strong></td>
+<td>Transferência de dados pessoais para país estrangeiro ou organismo internacional do qual o país seja membro.</td>
+<td style="text-align:center">Art. 5º, XV; Arts. 33 a 36</td>
+</tr>
+<tr>
+<td style="text-align:right">26</td>
+<td><strong>Uso compartilhado de dados</strong></td>
+<td>Comunicação, difusão, transferência internacional, interconexão de dados pessoais ou tratamento compartilhado de bancos de dados por órgãos, entidades ou pessoas, públicas ou privadas, com autorização específica e para finalidades determinadas.</td>
+<td style="text-align:center">Art. 5º, XVI</td>
+</tr>
+<tr>
+<td style="text-align:right">27</td>
+<td><strong>Relatório de Impacto à Proteção de Dados Pessoais – RIPD</strong></td>
+<td>Documentação do controlador que descreve processos de tratamento que podem gerar riscos às liberdades civis e aos direitos fundamentais, bem como medidas, salvaguardas e mecanismos de mitigação de risco.</td>
+<td style="text-align:center">Art. 5º, XVII; Art. 38</td>
+</tr>
+<tr>
+<td style="text-align:right">28</td>
+<td><strong>Órgão de pesquisa</strong></td>
+<td>Órgão ou entidade da administração pública direta ou indireta, ou pessoa jurídica de direito privado sem fins lucrativos, legalmente constituída no Brasil, voltada à pesquisa básica ou aplicada de caráter histórico, científico, tecnológico ou estatístico.</td>
+<td style="text-align:center">Art. 5º, XVIII</td>
+</tr>
+<tr>
+<td style="text-align:right">29</td>
+<td><strong>Autoridade Nacional de Proteção de Dados – ANPD</strong></td>
+<td>Órgão da administração pública responsável por zelar, implementar e fiscalizar o cumprimento da LGPD em todo o território nacional.</td>
+<td style="text-align:center">Art. 5º, XIX; Arts. 55-A e seguintes</td>
+</tr>
+<tr>
+<td style="text-align:right">30</td>
+<td><strong>Princípio da boa-fé</strong></td>
+<td>O tratamento de dados deve ser orientado por lealdade, correção, transparência e respeito ao titular.</td>
+<td style="text-align:center">Art. 6º, caput</td>
+</tr>
+<tr>
+<td style="text-align:right">31</td>
+<td><strong>Princípio da finalidade</strong></td>
+<td>O tratamento deve ocorrer para propósitos legítimos, específicos, explícitos e informados ao titular, sem possibilidade de tratamento posterior incompatível com essas finalidades.</td>
+<td style="text-align:center">Art. 6º, I</td>
+</tr>
+<tr>
+<td style="text-align:right">32</td>
+<td><strong>Princípio da adequação</strong></td>
+<td>O tratamento deve ser compatível com as finalidades informadas ao titular, considerando o contexto em que os dados foram coletados.</td>
+<td style="text-align:center">Art. 6º, II</td>
+</tr>
+<tr>
+<td style="text-align:right">33</td>
+<td><strong>Princípio da necessidade</strong></td>
+<td>O tratamento deve limitar-se ao mínimo necessário para a realização de suas finalidades, abrangendo apenas dados pertinentes, proporcionais e não excessivos.</td>
+<td style="text-align:center">Art. 6º, III</td>
+</tr>
+<tr>
+<td style="text-align:right">34</td>
+<td><strong>Princípio do livre acesso</strong></td>
+<td>O titular deve poder consultar, de forma facilitada e gratuita, a forma e a duração do tratamento, bem como a integralidade de seus dados pessoais.</td>
+<td style="text-align:center">Art. 6º, IV</td>
+</tr>
+<tr>
+<td style="text-align:right">35</td>
+<td><strong>Princípio da qualidade dos dados</strong></td>
+<td>Os dados devem ser exatos, claros, relevantes e atualizados, conforme a necessidade e a finalidade do tratamento.</td>
+<td style="text-align:center">Art. 6º, V</td>
+</tr>
+<tr>
+<td style="text-align:right">36</td>
+<td><strong>Princípio da transparência</strong></td>
+<td>O titular deve receber informações claras, precisas e facilmente acessíveis sobre o tratamento e sobre os agentes envolvidos, observados os segredos comercial e industrial.</td>
+<td style="text-align:center">Art. 6º, VI</td>
+</tr>
+<tr>
+<td style="text-align:right">37</td>
+<td><strong>Princípio da segurança</strong></td>
+<td>Devem ser utilizadas medidas técnicas e administrativas aptas a proteger os dados pessoais contra acessos não autorizados e situações acidentais ou ilícitas.</td>
+<td style="text-align:center">Art. 6º, VII; Art. 46</td>
+</tr>
+<tr>
+<td style="text-align:right">38</td>
+<td><strong>Princípio da prevenção</strong></td>
+<td>Exige a adoção de medidas para prevenir a ocorrência de danos em virtude do tratamento de dados pessoais.</td>
+<td style="text-align:center">Art. 6º, VIII</td>
+</tr>
+<tr>
+<td style="text-align:right">39</td>
+<td><strong>Princípio da não discriminação</strong></td>
+<td>Proíbe tratamento de dados para fins discriminatórios, ilícitos ou abusivos.</td>
+<td style="text-align:center">Art. 6º, IX</td>
+</tr>
+<tr>
+<td style="text-align:right">40</td>
+<td><strong>Princípio da responsabilização e prestação de contas</strong></td>
+<td>O agente de tratamento deve demonstrar que adotou medidas eficazes para cumprir a LGPD e comprovar a observância das normas de proteção de dados.</td>
+<td style="text-align:center">Art. 6º, X</td>
+</tr>
+<tr>
+<td style="text-align:right">41</td>
+<td><strong>Bases legais para tratamento de dados pessoais comuns</strong></td>
+<td>O tratamento de dados pessoais somente pode ocorrer se houver fundamento legal, como consentimento, obrigação legal ou regulatória, execução de políticas públicas, estudos por órgão de pesquisa, execução de contrato, exercício regular de direitos, proteção da vida, tutela da saúde, legítimo interesse ou proteção do crédito.</td>
+<td style="text-align:center">Art. 7º</td>
+</tr>
+<tr>
+<td style="text-align:right">42</td>
+<td><strong>Consentimento como base legal</strong></td>
+<td>Quando utilizado, o consentimento deve ser livre, informado, inequívoco e vinculado a finalidade determinada; autorizações genéricas são inválidas.</td>
+<td style="text-align:center">Art. 7º, I; Art. 8º</td>
+</tr>
+<tr>
+<td style="text-align:right">43</td>
+<td><strong>Cumprimento de obrigação legal ou regulatória</strong></td>
+<td>Permite o tratamento quando necessário ao cumprimento de dever imposto por lei ou regulamento ao controlador.</td>
+<td style="text-align:center">Art. 7º, II; Art. 11, II, “a”</td>
+</tr>
+<tr>
+<td style="text-align:right">44</td>
+<td><strong>Execução de políticas públicas</strong></td>
+<td>Autoriza tratamento de dados pela administração pública quando necessário à execução de políticas públicas previstas em leis, regulamentos, contratos, convênios ou instrumentos congêneres.</td>
+<td style="text-align:center">Art. 7º, III; Art. 11, II, “b”; Art. 23</td>
+</tr>
+<tr>
+<td style="text-align:right">45</td>
+<td><strong>Estudos por órgão de pesquisa</strong></td>
+<td>Permite o tratamento para realização de estudos por órgão de pesquisa, garantida, sempre que possível, a anonimização dos dados pessoais.</td>
+<td style="text-align:center">Art. 7º, IV; Art. 11, II, “c”</td>
+</tr>
+<tr>
+<td style="text-align:right">46</td>
+<td><strong>Execução de contrato</strong></td>
+<td>Autoriza o tratamento quando necessário à execução de contrato ou de procedimentos preliminares relacionados a contrato do qual o titular seja parte.</td>
+<td style="text-align:center">Art. 7º, V</td>
+</tr>
+<tr>
+<td style="text-align:right">47</td>
+<td><strong>Exercício regular de direitos</strong></td>
+<td>Permite tratamento de dados para defesa ou exercício de direitos em processo judicial, administrativo ou arbitral.</td>
+<td style="text-align:center">Art. 7º, VI; Art. 11, II, “d”</td>
+</tr>
+<tr>
+<td style="text-align:right">48</td>
+<td><strong>Proteção da vida ou da incolumidade física</strong></td>
+<td>Autoriza o tratamento quando necessário para proteger a vida ou a integridade física do titular ou de terceiro.</td>
+<td style="text-align:center">Art. 7º, VII; Art. 11, II, “e”</td>
+</tr>
+<tr>
+<td style="text-align:right">49</td>
+<td><strong>Tutela da saúde</strong></td>
+<td>Permite tratamento realizado por profissionais de saúde, serviços de saúde ou autoridade sanitária, nos termos da lei.</td>
+<td style="text-align:center">Art. 7º, VIII; Art. 11, II, “f”</td>
+</tr>
+<tr>
+<td style="text-align:right">50</td>
+<td><strong>Legítimo interesse</strong></td>
+<td>Autoriza o tratamento quando necessário para atender interesses legítimos do controlador ou de terceiro, desde que não prevaleçam direitos e liberdades fundamentais do titular.</td>
+<td style="text-align:center">Art. 7º, IX; Art. 10</td>
+</tr>
+<tr>
+<td style="text-align:right">51</td>
+<td><strong>Proteção do crédito</strong></td>
+<td>Permite tratamento de dados para proteção do crédito, observada a legislação pertinente.</td>
+<td style="text-align:center">Art. 7º, X</td>
+</tr>
+<tr>
+<td style="text-align:right">52</td>
+<td><strong>Tratamento de dados pessoais sensíveis</strong></td>
+<td>O tratamento de dados sensíveis possui regime mais restritivo e somente pode ocorrer nas hipóteses específicas do art. 11, com ou sem consentimento, conforme o caso.</td>
+<td style="text-align:center">Art. 11</td>
+</tr>
+<tr>
+<td style="text-align:right">53</td>
+<td><strong>Dados sensíveis e prevenção à fraude</strong></td>
+<td>A LGPD admite tratamento de dados sensíveis para prevenção à fraude e segurança do titular em processos de identificação e autenticação de cadastro em sistemas eletrônicos, resguardados direitos fundamentais.</td>
+<td style="text-align:center">Art. 11, II, “g”</td>
+</tr>
+<tr>
+<td style="text-align:right">54</td>
+<td><strong>Vedação de comunicação ou uso compartilhado abusivo de dados sensíveis de saúde</strong></td>
+<td>A LGPD impõe restrições ao uso compartilhado de dados sensíveis referentes à saúde com objetivo de obter vantagem econômica, ressalvadas hipóteses legais específicas.</td>
+<td style="text-align:center">Art. 11, §§ 4º e 5º</td>
+</tr>
+<tr>
+<td style="text-align:right">55</td>
+<td><strong>Dados anonimizados e reidentificação</strong></td>
+<td>Dados anonimizados não são considerados dados pessoais, salvo quando o processo de anonimização puder ser revertido por meios próprios ou por esforços razoáveis.</td>
+<td style="text-align:center">Art. 12</td>
+</tr>
+<tr>
+<td style="text-align:right">56</td>
+<td><strong>Perfil comportamental</strong></td>
+<td>Dados utilizados para formação de perfil comportamental de pessoa natural identificada podem ser considerados dados pessoais.</td>
+<td style="text-align:center">Art. 12, § 2º</td>
+</tr>
+<tr>
+<td style="text-align:right">57</td>
+<td><strong>Tratamento de dados de crianças e adolescentes</strong></td>
+<td>Deve ser realizado em seu melhor interesse. Em regra, o tratamento de dados de crianças exige consentimento específico e em destaque dado por pelo menos um dos pais ou responsável legal, salvo exceções legais.</td>
+<td style="text-align:center">Art. 14</td>
+</tr>
+<tr>
+<td style="text-align:right">58</td>
+<td><strong>Término do tratamento</strong></td>
+<td>O tratamento deve terminar quando a finalidade for alcançada, os dados deixarem de ser necessários, terminar o período de tratamento, houver comunicação do titular em caso de revogação do consentimento, ou houver determinação da ANPD.</td>
+<td style="text-align:center">Art. 15</td>
+</tr>
+<tr>
+<td style="text-align:right">59</td>
+<td><strong>Conservação após o término do tratamento</strong></td>
+<td>Após o término, os dados devem ser eliminados, salvo hipóteses como cumprimento de obrigação legal ou regulatória, estudo por órgão de pesquisa, transferência a terceiro ou uso exclusivo do controlador, vedado o acesso por terceiros e desde que anonimizados quando possível.</td>
+<td style="text-align:center">Art. 16</td>
+</tr>
+<tr>
+<td style="text-align:right">60</td>
+<td><strong>Direitos do titular</strong></td>
+<td>O titular tem direito à confirmação de tratamento, acesso, correção, anonimização, bloqueio, eliminação, portabilidade, informação sobre compartilhamento, informação sobre consentimento, revogação do consentimento, oposição e revisão de decisões automatizadas.</td>
+<td style="text-align:center">Arts. 17 a 22</td>
+</tr>
+<tr>
+<td style="text-align:right">61</td>
+<td><strong>Confirmação e acesso aos dados</strong></td>
+<td>O titular pode obter confirmação da existência de tratamento e acesso aos seus dados pessoais.</td>
+<td style="text-align:center">Art. 18, I e II; Art. 19</td>
+</tr>
+<tr>
+<td style="text-align:right">62</td>
+<td><strong>Correção de dados</strong></td>
+<td>O titular pode solicitar correção de dados incompletos, inexatos ou desatualizados.</td>
+<td style="text-align:center">Art. 18, III</td>
+</tr>
+<tr>
+<td style="text-align:right">63</td>
+<td><strong>Anonimização, bloqueio ou eliminação</strong></td>
+<td>O titular pode solicitar anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com a LGPD.</td>
+<td style="text-align:center">Art. 18, IV</td>
+</tr>
+<tr>
+<td style="text-align:right">64</td>
+<td><strong>Portabilidade</strong></td>
+<td>O titular pode solicitar a portabilidade de seus dados a outro fornecedor de serviço ou produto, observada regulamentação da ANPD e segredos comercial e industrial.</td>
+<td style="text-align:center">Art. 18, V</td>
+</tr>
+<tr>
+<td style="text-align:right">65</td>
+<td><strong>Informação sobre compartilhamento</strong></td>
+<td>O titular tem direito de saber com quais entidades públicas e privadas o controlador compartilhou seus dados.</td>
+<td style="text-align:center">Art. 18, VII</td>
+</tr>
+<tr>
+<td style="text-align:right">66</td>
+<td><strong>Revogação do consentimento</strong></td>
+<td>O titular pode revogar o consentimento, mediante manifestação expressa, por procedimento gratuito e facilitado.</td>
+<td style="text-align:center">Art. 18, IX; Art. 8º, § 5º</td>
+</tr>
+<tr>
+<td style="text-align:right">67</td>
+<td><strong>Oposição ao tratamento</strong></td>
+<td>O titular pode se opor a tratamento realizado com fundamento em uma das hipóteses de dispensa de consentimento, quando houver descumprimento da LGPD.</td>
+<td style="text-align:center">Art. 18, § 2º</td>
+</tr>
+<tr>
+<td style="text-align:right">68</td>
+<td><strong>Decisões automatizadas</strong></td>
+<td>O titular pode solicitar revisão de decisões tomadas unicamente com base em tratamento automatizado de dados pessoais que afetem seus interesses.</td>
+<td style="text-align:center">Art. 20</td>
+</tr>
+<tr>
+<td style="text-align:right">69</td>
+<td><strong>Tratamento pelo Poder Público</strong></td>
+<td>O tratamento de dados pessoais pelo Poder Público deve atender finalidade pública, interesse público e execução de competências legais ou atribuições legais do serviço público.</td>
+<td style="text-align:center">Art. 23</td>
+</tr>
+<tr>
+<td style="text-align:right">70</td>
+<td><strong>Transparência no Poder Público</strong></td>
+<td>Órgãos e entidades públicas devem informar hipóteses de tratamento, finalidade, procedimentos e práticas utilizadas para execução das atividades de tratamento, em veículos de fácil acesso, preferencialmente em seus sítios eletrônicos.</td>
+<td style="text-align:center">Art. 23, I</td>
+</tr>
+<tr>
+<td style="text-align:right">71</td>
+<td><strong>Compartilhamento de dados pelo Poder Público</strong></td>
+<td>O uso compartilhado de dados pessoais pelo Poder Público deve atender a finalidades específicas de execução de políticas públicas e atribuição legal pelos órgãos e entidades públicas.</td>
+<td style="text-align:center">Arts. 25 e 26</td>
+</tr>
+<tr>
+<td style="text-align:right">72</td>
+<td><strong>Comunicação ou uso compartilhado com entidades privadas pelo Poder Público</strong></td>
+<td>Em regra, o Poder Público não deve transferir dados pessoais constantes de bases públicas a entidades privadas, salvo hipóteses legais, como execução descentralizada de atividade pública, previsão legal, contratos ou convênios, prevenção de fraudes e proteção da segurança do titular.</td>
+<td style="text-align:center">Art. 26, § 1º</td>
+</tr>
+<tr>
+<td style="text-align:right">73</td>
+<td><strong>Transferência internacional de dados</strong></td>
+<td>A transferência internacional só é permitida nas hipóteses previstas na LGPD, como país com grau de proteção adequado, cláusulas contratuais, normas corporativas globais, cooperação jurídica internacional, execução de política pública, consentimento específico, entre outras.</td>
+<td style="text-align:center">Arts. 33 a 36</td>
+</tr>
+<tr>
+<td style="text-align:right">74</td>
+<td><strong>Registro das operações de tratamento – ROPA</strong></td>
+<td>Controlador e operador devem manter registro das operações de tratamento de dados pessoais que realizarem, especialmente quando baseado no legítimo interesse.</td>
+<td style="text-align:center">Art. 37</td>
+</tr>
+<tr>
+<td style="text-align:right">75</td>
+<td><strong>Relatório de Impacto – exigência pela ANPD</strong></td>
+<td>A ANPD pode determinar ao controlador que elabore RIPD, inclusive de dados sensíveis, referente às suas operações de tratamento.</td>
+<td style="text-align:center">Art. 38</td>
+</tr>
+<tr>
+<td style="text-align:right">76</td>
+<td><strong>Instruções do controlador ao operador</strong></td>
+<td>O operador deve realizar o tratamento segundo as instruções fornecidas pelo controlador, que verificará a observância das próprias instruções e das normas aplicáveis.</td>
+<td style="text-align:center">Art. 39</td>
+</tr>
+<tr>
+<td style="text-align:right">77</td>
+<td><strong>Responsabilidade e reparação de danos</strong></td>
+<td>Controlador ou operador que causar dano patrimonial, moral, individual ou coletivo, em violação à legislação de proteção de dados, é obrigado a repará-lo.</td>
+<td style="text-align:center">Art. 42</td>
+</tr>
+<tr>
+<td style="text-align:right">78</td>
+<td><strong>Responsabilidade solidária</strong></td>
+<td>Operador e controlador podem responder solidariamente em determinadas hipóteses, especialmente quando o operador descumpre a LGPD ou as instruções lícitas do controlador.</td>
+<td style="text-align:center">Art. 42, § 1º</td>
+</tr>
+<tr>
+<td style="text-align:right">79</td>
+<td><strong>Excludentes de responsabilidade</strong></td>
+<td>Os agentes de tratamento não serão responsabilizados se provarem que não realizaram o tratamento, que não houve violação à LGPD ou que o dano decorreu de culpa exclusiva do titular ou de terceiro.</td>
+<td style="text-align:center">Art. 43</td>
+</tr>
+<tr>
+<td style="text-align:right">80</td>
+<td><strong>Segurança da informação no tratamento de dados</strong></td>
+<td>Os agentes de tratamento devem adotar medidas de segurança, técnicas e administrativas, aptas a proteger dados pessoais contra acessos não autorizados e situações acidentais ou ilícitas.</td>
+<td style="text-align:center">Art. 46</td>
+</tr>
+<tr>
+<td style="text-align:right">81</td>
+<td><strong>Segurança desde a concepção do produto ou serviço</strong></td>
+<td>As medidas de segurança devem ser observadas desde a fase de concepção do produto ou serviço até sua execução.</td>
+<td style="text-align:center">Art. 46, § 2º</td>
+</tr>
+<tr>
+<td style="text-align:right">82</td>
+<td><strong>Comunicação de incidente de segurança</strong></td>
+<td>O controlador deve comunicar à ANPD e ao titular a ocorrência de incidente de segurança que possa acarretar risco ou dano relevante aos titulares.</td>
+<td style="text-align:center">Art. 48</td>
+</tr>
+<tr>
+<td style="text-align:right">83</td>
+<td><strong>Boas práticas e governança</strong></td>
+<td>Controladores e operadores podem formular regras de boas práticas e governança que estabeleçam condições de organização, regime de funcionamento, procedimentos, normas de segurança, padrões técnicos, obrigações específicas e mecanismos de supervisão.</td>
+<td style="text-align:center">Art. 50</td>
+</tr>
+<tr>
+<td style="text-align:right">84</td>
+<td><strong>Programa de governança em privacidade</strong></td>
+<td>A LGPD prevê a adoção de programa de governança em privacidade, que deve demonstrar comprometimento do controlador com boas práticas, políticas e salvaguardas adequadas ao tratamento de dados pessoais.</td>
+<td style="text-align:center">Art. 50, § 2º, I</td>
+</tr>
+<tr>
+<td style="text-align:right">85</td>
+<td><strong>Sanções administrativas</strong></td>
+<td>A ANPD pode aplicar sanções como advertência, multa simples, multa diária, publicização da infração, bloqueio ou eliminação dos dados, suspensão de banco de dados, suspensão do tratamento e proibição de atividades relacionadas a tratamento.</td>
+<td style="text-align:center">Art. 52</td>
+</tr>
+<tr>
+<td style="text-align:right">86</td>
+<td><strong>Critérios para aplicação de sanções</strong></td>
+<td>A aplicação de sanções deve considerar gravidade, boa-fé do infrator, vantagem auferida, condição econômica, reincidência, grau do dano, cooperação, adoção de boas práticas, pronta correção e proporcionalidade.</td>
+<td style="text-align:center">Art. 52, § 1º</td>
+</tr>
+<tr>
+<td style="text-align:right">87</td>
+<td><strong>Autoridade Nacional de Proteção de Dados – competências</strong></td>
+<td>A ANPD tem competências para zelar pela proteção de dados, fiscalizar e aplicar sanções, editar regulamentos, orientar titulares e agentes de tratamento, promover estudos e deliberar sobre interpretação da LGPD.</td>
+<td style="text-align:center">Art. 55-J</td>
+</tr>
+<tr>
+<td style="text-align:right">88</td>
+<td><strong>Conselho Nacional de Proteção de Dados Pessoais e da Privacidade</strong></td>
+<td>Órgão consultivo integrante da estrutura da ANPD, com atribuições relacionadas à proposição de diretrizes estratégicas, estudos, debates e disseminação do conhecimento sobre proteção de dados.</td>
+<td style="text-align:center">Arts. 58-A e 58-B</td>
+</tr>
+<tr>
+<td style="text-align:right">89</td>
+<td><strong>Entrada em vigor e vigência escalonada</strong></td>
+<td>A LGPD teve vigência escalonada, com dispositivos entrando em vigor em momentos distintos, especialmente quanto à estrutura da ANPD e sanções administrativas.</td>
+<td style="text-align:center">Art. 65</td>
+</tr>
+</tbody>
+</table>
+<h1 id="sequência-didática">Sequência Didática </h1>
+<p>\1) contexto geral da lei; 2) conceitos estruturantes; 3) princípios e bases legais; 4) direitos dos titulares; 5) obrigações dos agentes de tratamento; 6) segurança, governança, responsabilização, sanções e atuação da ANPD.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Ordem Didática</th>
+<th>Bloco de Aprendizagem</th>
+<th>Conceito Fundamental</th>
+<th>Explicação Sintética</th>
+<th style="text-align:center">Localização na LGPD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>Introdução e contexto</td>
+<td><strong>Finalidade geral da LGPD</strong></td>
+<td>Explica o objetivo central da lei: disciplinar o tratamento de dados pessoais para proteger liberdade, privacidade e livre desenvolvimento da personalidade.</td>
+<td style="text-align:center">Art. 1º</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>Introdução e contexto</td>
+<td><strong>Proteção da privacidade</strong></td>
+<td>Apresenta a privacidade como fundamento essencial da proteção de dados pessoais.</td>
+<td style="text-align:center">Art. 2º, I</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>Introdução e contexto</td>
+<td><strong>Autodeterminação informativa</strong></td>
+<td>Demonstra que o titular deve ter controle sobre o uso de seus dados pessoais.</td>
+<td style="text-align:center">Art. 2º, II</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>Introdução e contexto</td>
+<td><strong>Liberdade de expressão, informação, comunicação e opinião</strong></td>
+<td>Mostra que a LGPD deve conviver com outros direitos fundamentais relacionados à circulação de informações.</td>
+<td style="text-align:center">Art. 2º, III</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td>Introdução e contexto</td>
+<td><strong>Inviolabilidade da intimidade, honra e imagem</strong></td>
+<td>Relaciona proteção de dados à proteção da esfera pessoal e reputacional do indivíduo.</td>
+<td style="text-align:center">Art. 2º, IV</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td>Introdução e contexto</td>
+<td><strong>Desenvolvimento econômico, tecnológico e inovação</strong></td>
+<td>Explica que a LGPD não impede inovação, mas exige tratamento responsável dos dados.</td>
+<td style="text-align:center">Art. 2º, V</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td>Introdução e contexto</td>
+<td><strong>Livre iniciativa, livre concorrência e defesa do consumidor</strong></td>
+<td>Demonstra a relação entre proteção de dados, mercado, consumo e concorrência leal.</td>
+<td style="text-align:center">Art. 2º, VI</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td>Introdução e contexto</td>
+<td><strong>Direitos humanos, dignidade e cidadania</strong></td>
+<td>Situa a proteção de dados no campo dos direitos fundamentais e da dignidade da pessoa humana.</td>
+<td style="text-align:center">Art. 2º, VII</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td>Campo de aplicação</td>
+<td><strong>Âmbito de aplicação territorial</strong></td>
+<td>Define quando a LGPD se aplica: tratamento no Brasil, oferta de bens ou serviços no Brasil ou coleta de dados no território nacional.</td>
+<td style="text-align:center">Art. 3º</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td>Campo de aplicação</td>
+<td><strong>Hipóteses de não aplicação da LGPD</strong></td>
+<td>Esclarece situações em que a LGPD não se aplica ou tem aplicação diferenciada, como uso pessoal, fins jornalísticos, acadêmicos, segurança pública e investigação penal.</td>
+<td style="text-align:center">Art. 4º</td>
+</tr>
+<tr>
+<td style="text-align:right">11</td>
+<td>Conceitos básicos</td>
+<td><strong>Dado pessoal</strong></td>
+<td>Informação relacionada a pessoa natural identificada ou identificável.</td>
+<td style="text-align:center">Art. 5º, I</td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td>Conceitos básicos</td>
+<td><strong>Dado pessoal sensível</strong></td>
+<td>Dado com maior potencial de discriminação ou dano, como saúde, biometria, religião, opinião política, origem racial ou étnica.</td>
+<td style="text-align:center">Art. 5º, II</td>
+</tr>
+<tr>
+<td style="text-align:right">13</td>
+<td>Conceitos básicos</td>
+<td><strong>Dado anonimizado</strong></td>
+<td>Dado que não permite identificar o titular, considerando meios técnicos razoáveis disponíveis.</td>
+<td style="text-align:center">Art. 5º, III</td>
+</tr>
+<tr>
+<td style="text-align:right">14</td>
+<td>Conceitos básicos</td>
+<td><strong>Banco de dados</strong></td>
+<td>Conjunto estruturado de dados pessoais, em meio físico ou eletrônico.</td>
+<td style="text-align:center">Art. 5º, IV</td>
+</tr>
+<tr>
+<td style="text-align:right">15</td>
+<td>Conceitos básicos</td>
+<td><strong>Titular</strong></td>
+<td>Pessoa natural a quem se referem os dados pessoais.</td>
+<td style="text-align:center">Art. 5º, V</td>
+</tr>
+<tr>
+<td style="text-align:right">16</td>
+<td>Conceitos básicos</td>
+<td><strong>Tratamento de dados pessoais</strong></td>
+<td>Toda operação realizada com dados pessoais, como coleta, acesso, armazenamento, compartilhamento, eliminação e transferência.</td>
+<td style="text-align:center">Art. 5º, X</td>
+</tr>
+<tr>
+<td style="text-align:right">17</td>
+<td>Conceitos básicos</td>
+<td><strong>Anonimização</strong></td>
+<td>Processo técnico para impedir associação direta ou indireta de um dado a uma pessoa natural.</td>
+<td style="text-align:center">Art. 5º, XI</td>
+</tr>
+<tr>
+<td style="text-align:right">18</td>
+<td>Conceitos básicos</td>
+<td><strong>Consentimento</strong></td>
+<td>Manifestação livre, informada e inequívoca do titular para finalidade determinada.</td>
+<td style="text-align:center">Art. 5º, XII; Art. 7º, I; Art. 8º</td>
+</tr>
+<tr>
+<td style="text-align:right">19</td>
+<td>Conceitos básicos</td>
+<td><strong>Bloqueio</strong></td>
+<td>Suspensão temporária de qualquer operação de tratamento, mantendo-se a guarda do dado.</td>
+<td style="text-align:center">Art. 5º, XIII</td>
+</tr>
+<tr>
+<td style="text-align:right">20</td>
+<td>Conceitos básicos</td>
+<td><strong>Eliminação</strong></td>
+<td>Exclusão de dado ou conjunto de dados armazenados em banco de dados.</td>
+<td style="text-align:center">Art. 5º, XIV</td>
+</tr>
+<tr>
+<td style="text-align:right">21</td>
+<td>Conceitos básicos</td>
+<td><strong>Transferência internacional de dados</strong></td>
+<td>Envio de dados pessoais para país estrangeiro ou organismo internacional.</td>
+<td style="text-align:center">Art. 5º, XV; Arts. 33 a 36</td>
+</tr>
+<tr>
+<td style="text-align:right">22</td>
+<td>Conceitos básicos</td>
+<td><strong>Uso compartilhado de dados</strong></td>
+<td>Comunicação, transferência, interconexão ou tratamento compartilhado de dados entre entidades públicas ou privadas.</td>
+<td style="text-align:center">Art. 5º, XVI</td>
+</tr>
+<tr>
+<td style="text-align:right">23</td>
+<td>Conceitos básicos</td>
+<td><strong>Órgão de pesquisa</strong></td>
+<td>Órgão ou entidade voltada à pesquisa histórica, científica, tecnológica ou estatística, nos termos da lei.</td>
+<td style="text-align:center">Art. 5º, XVIII</td>
+</tr>
+<tr>
+<td style="text-align:right">24</td>
+<td>Papéis e responsabilidades</td>
+<td><strong>Controlador</strong></td>
+<td>Pessoa natural ou jurídica responsável pelas decisões referentes ao tratamento de dados pessoais.</td>
+<td style="text-align:center">Art. 5º, VI</td>
+</tr>
+<tr>
+<td style="text-align:right">25</td>
+<td>Papéis e responsabilidades</td>
+<td><strong>Operador</strong></td>
+<td>Pessoa natural ou jurídica que trata dados pessoais em nome do controlador.</td>
+<td style="text-align:center">Art. 5º, VII</td>
+</tr>
+<tr>
+<td style="text-align:right">26</td>
+<td>Papéis e responsabilidades</td>
+<td><strong>Agentes de tratamento</strong></td>
+<td>Conjunto formado pelo controlador e pelo operador.</td>
+<td style="text-align:center">Art. 5º, IX</td>
+</tr>
+<tr>
+<td style="text-align:right">27</td>
+<td>Papéis e responsabilidades</td>
+<td><strong>Encarregado pelo tratamento de dados pessoais</strong></td>
+<td>Pessoa indicada para atuar como canal entre controlador, titulares e ANPD.</td>
+<td style="text-align:center">Art. 5º, VIII; Art. 41</td>
+</tr>
+<tr>
+<td style="text-align:right">28</td>
+<td>Papéis e responsabilidades</td>
+<td><strong>Autoridade Nacional de Proteção de Dados – ANPD</strong></td>
+<td>Órgão responsável por zelar, implementar, regulamentar e fiscalizar o cumprimento da LGPD.</td>
+<td style="text-align:center">Art. 5º, XIX; Arts. 55-A e seguintes</td>
+</tr>
+<tr>
+<td style="text-align:right">29</td>
+<td>Princípios</td>
+<td><strong>Princípio da boa-fé</strong></td>
+<td>Exige conduta leal, ética, transparente e compatível com a confiança do titular.</td>
+<td style="text-align:center">Art. 6º, caput</td>
+</tr>
+<tr>
+<td style="text-align:right">30</td>
+<td>Princípios</td>
+<td><strong>Princípio da finalidade</strong></td>
+<td>O tratamento deve ter propósitos legítimos, específicos, explícitos e informados ao titular.</td>
+<td style="text-align:center">Art. 6º, I</td>
+</tr>
+<tr>
+<td style="text-align:right">31</td>
+<td>Princípios</td>
+<td><strong>Princípio da adequação</strong></td>
+<td>O tratamento deve ser compatível com as finalidades informadas ao titular.</td>
+<td style="text-align:center">Art. 6º, II</td>
+</tr>
+<tr>
+<td style="text-align:right">32</td>
+<td>Princípios</td>
+<td><strong>Princípio da necessidade</strong></td>
+<td>O tratamento deve limitar-se ao mínimo necessário para atingir sua finalidade.</td>
+<td style="text-align:center">Art. 6º, III</td>
+</tr>
+<tr>
+<td style="text-align:right">33</td>
+<td>Princípios</td>
+<td><strong>Princípio do livre acesso</strong></td>
+<td>Garante ao titular consulta facilitada e gratuita sobre forma, duração e integralidade dos dados tratados.</td>
+<td style="text-align:center">Art. 6º, IV</td>
+</tr>
+<tr>
+<td style="text-align:right">34</td>
+<td>Princípios</td>
+<td><strong>Princípio da qualidade dos dados</strong></td>
+<td>Exige dados exatos, claros, relevantes e atualizados.</td>
+<td style="text-align:center">Art. 6º, V</td>
+</tr>
+<tr>
+<td style="text-align:right">35</td>
+<td>Princípios</td>
+<td><strong>Princípio da transparência</strong></td>
+<td>Garante informações claras, precisas e acessíveis sobre o tratamento e os agentes envolvidos.</td>
+<td style="text-align:center">Art. 6º, VI</td>
+</tr>
+<tr>
+<td style="text-align:right">36</td>
+<td>Princípios</td>
+<td><strong>Princípio da segurança</strong></td>
+<td>Exige medidas técnicas e administrativas para proteger dados pessoais contra acessos indevidos e situações ilícitas ou acidentais.</td>
+<td style="text-align:center">Art. 6º, VII; Art. 46</td>
+</tr>
+<tr>
+<td style="text-align:right">37</td>
+<td>Princípios</td>
+<td><strong>Princípio da prevenção</strong></td>
+<td>Determina a adoção de medidas para evitar danos decorrentes do tratamento de dados.</td>
+<td style="text-align:center">Art. 6º, VIII</td>
+</tr>
+<tr>
+<td style="text-align:right">38</td>
+<td>Princípios</td>
+<td><strong>Princípio da não discriminação</strong></td>
+<td>Veda tratamento de dados para fins discriminatórios, ilícitos ou abusivos.</td>
+<td style="text-align:center">Art. 6º, IX</td>
+</tr>
+<tr>
+<td style="text-align:right">39</td>
+<td>Princípios</td>
+<td><strong>Princípio da responsabilização e prestação de contas</strong></td>
+<td>Exige que o agente demonstre a adoção de medidas eficazes de conformidade.</td>
+<td style="text-align:center">Art. 6º, X</td>
+</tr>
+<tr>
+<td style="text-align:right">40</td>
+<td>Bases legais</td>
+<td><strong>Bases legais para tratamento de dados pessoais comuns</strong></td>
+<td>Apresenta as hipóteses que autorizam o tratamento de dados pessoais comuns.</td>
+<td style="text-align:center">Art. 7º</td>
+</tr>
+<tr>
+<td style="text-align:right">41</td>
+<td>Bases legais</td>
+<td><strong>Consentimento como base legal</strong></td>
+<td>Permite tratamento mediante autorização válida do titular, para finalidade determinada.</td>
+<td style="text-align:center">Art. 7º, I; Art. 8º</td>
+</tr>
+<tr>
+<td style="text-align:right">42</td>
+<td>Bases legais</td>
+<td><strong>Cumprimento de obrigação legal ou regulatória</strong></td>
+<td>Autoriza tratamento necessário ao cumprimento de dever previsto em lei ou regulamento.</td>
+<td style="text-align:center">Art. 7º, II; Art. 11, II, “a”</td>
+</tr>
+<tr>
+<td style="text-align:right">43</td>
+<td>Bases legais</td>
+<td><strong>Execução de políticas públicas</strong></td>
+<td>Autoriza tratamento pela Administração Pública para execução de políticas públicas previstas em normas ou instrumentos oficiais.</td>
+<td style="text-align:center">Art. 7º, III; Art. 11, II, “b”; Art. 23</td>
+</tr>
+<tr>
+<td style="text-align:right">44</td>
+<td>Bases legais</td>
+<td><strong>Estudos por órgão de pesquisa</strong></td>
+<td>Permite tratamento para estudos, preferencialmente com anonimização dos dados.</td>
+<td style="text-align:center">Art. 7º, IV; Art. 11, II, “c”</td>
+</tr>
+<tr>
+<td style="text-align:right">45</td>
+<td>Bases legais</td>
+<td><strong>Execução de contrato</strong></td>
+<td>Autoriza tratamento necessário à execução de contrato ou procedimentos preliminares.</td>
+<td style="text-align:center">Art. 7º, V</td>
+</tr>
+<tr>
+<td style="text-align:right">46</td>
+<td>Bases legais</td>
+<td><strong>Exercício regular de direitos</strong></td>
+<td>Autoriza tratamento em processo judicial, administrativo ou arbitral.</td>
+<td style="text-align:center">Art. 7º, VI; Art. 11, II, “d”</td>
+</tr>
+<tr>
+<td style="text-align:right">47</td>
+<td>Bases legais</td>
+<td><strong>Proteção da vida ou da incolumidade física</strong></td>
+<td>Autoriza tratamento para proteger a vida ou integridade física do titular ou de terceiro.</td>
+<td style="text-align:center">Art. 7º, VII; Art. 11, II, “e”</td>
+</tr>
+<tr>
+<td style="text-align:right">48</td>
+<td>Bases legais</td>
+<td><strong>Tutela da saúde</strong></td>
+<td>Autoriza tratamento por profissionais, serviços de saúde ou autoridade sanitária.</td>
+<td style="text-align:center">Art. 7º, VIII; Art. 11, II, “f”</td>
+</tr>
+<tr>
+<td style="text-align:right">49</td>
+<td>Bases legais</td>
+<td><strong>Legítimo interesse</strong></td>
+<td>Autoriza tratamento para atender interesses legítimos, desde que não prevaleçam direitos e liberdades fundamentais do titular.</td>
+<td style="text-align:center">Art. 7º, IX; Art. 10</td>
+</tr>
+<tr>
+<td style="text-align:right">50</td>
+<td>Bases legais</td>
+<td><strong>Proteção do crédito</strong></td>
+<td>Autoriza tratamento para proteção do crédito, conforme legislação aplicável.</td>
+<td style="text-align:center">Art. 7º, X</td>
+</tr>
+<tr>
+<td style="text-align:right">51</td>
+<td>Dados sensíveis</td>
+<td><strong>Tratamento de dados pessoais sensíveis</strong></td>
+<td>Apresenta regime jurídico mais restritivo para dados com maior potencial de dano ou discriminação.</td>
+<td style="text-align:center">Art. 11</td>
+</tr>
+<tr>
+<td style="text-align:right">52</td>
+<td>Dados sensíveis</td>
+<td><strong>Dados sensíveis e prevenção à fraude</strong></td>
+<td>Permite uso de dados sensíveis para prevenção à fraude e segurança do titular em processos de identificação e autenticação.</td>
+<td style="text-align:center">Art. 11, II, “g”</td>
+</tr>
+<tr>
+<td style="text-align:right">53</td>
+<td>Dados sensíveis</td>
+<td><strong>Vedação de comunicação ou uso compartilhado abusivo de dados sensíveis de saúde</strong></td>
+<td>Impõe restrições ao compartilhamento de dados de saúde com objetivo de vantagem econômica, ressalvadas hipóteses legais.</td>
+<td style="text-align:center">Art. 11, §§ 4º e 5º</td>
+</tr>
+<tr>
+<td style="text-align:right">54</td>
+<td>Dados anonimizados e perfis</td>
+<td><strong>Dados anonimizados e reidentificação</strong></td>
+<td>Dados anonimizados não são pessoais, salvo se a anonimização puder ser revertida por meios próprios ou esforços razoáveis.</td>
+<td style="text-align:center">Art. 12</td>
+</tr>
+<tr>
+<td style="text-align:right">55</td>
+<td>Dados anonimizados e perfis</td>
+<td><strong>Perfil comportamental</strong></td>
+<td>Dados usados para formação de perfil comportamental de pessoa identificada podem ser considerados dados pessoais.</td>
+<td style="text-align:center">Art. 12, § 2º</td>
+</tr>
+<tr>
+<td style="text-align:right">56</td>
+<td>Crianças e adolescentes</td>
+<td><strong>Tratamento de dados de crianças e adolescentes</strong></td>
+<td>Deve observar o melhor interesse da criança ou adolescente e, em regra, exigir consentimento específico de responsável legal para crianças.</td>
+<td style="text-align:center">Art. 14</td>
+</tr>
+<tr>
+<td style="text-align:right">57</td>
+<td>Ciclo de vida dos dados</td>
+<td><strong>Término do tratamento</strong></td>
+<td>Define quando o tratamento deve ser encerrado, como alcance da finalidade ou revogação do consentimento.</td>
+<td style="text-align:center">Art. 15</td>
+</tr>
+<tr>
+<td style="text-align:right">58</td>
+<td>Ciclo de vida dos dados</td>
+<td><strong>Conservação após o término do tratamento</strong></td>
+<td>Indica hipóteses em que os dados podem ser conservados após o fim do tratamento.</td>
+<td style="text-align:center">Art. 16</td>
+</tr>
+<tr>
+<td style="text-align:right">59</td>
+<td>Direitos dos titulares</td>
+<td><strong>Direitos do titular</strong></td>
+<td>Apresenta o conjunto de direitos assegurados à pessoa natural em relação aos seus dados pessoais.</td>
+<td style="text-align:center">Arts. 17 a 22</td>
+</tr>
+<tr>
+<td style="text-align:right">60</td>
+<td>Direitos dos titulares</td>
+<td><strong>Confirmação e acesso aos dados</strong></td>
+<td>O titular pode confirmar se há tratamento e acessar seus dados pessoais.</td>
+<td style="text-align:center">Art. 18, I e II; Art. 19</td>
+</tr>
+<tr>
+<td style="text-align:right">61</td>
+<td>Direitos dos titulares</td>
+<td><strong>Correção de dados</strong></td>
+<td>O titular pode solicitar correção de dados incompletos, inexatos ou desatualizados.</td>
+<td style="text-align:center">Art. 18, III</td>
+</tr>
+<tr>
+<td style="text-align:right">62</td>
+<td>Direitos dos titulares</td>
+<td><strong>Anonimização, bloqueio ou eliminação</strong></td>
+<td>O titular pode solicitar providências sobre dados desnecessários, excessivos ou tratados em desconformidade.</td>
+<td style="text-align:center">Art. 18, IV</td>
+</tr>
+<tr>
+<td style="text-align:right">63</td>
+<td>Direitos dos titulares</td>
+<td><strong>Portabilidade</strong></td>
+<td>O titular pode solicitar transferência dos dados a outro fornecedor, observada regulamentação da ANPD.</td>
+<td style="text-align:center">Art. 18, V</td>
+</tr>
+<tr>
+<td style="text-align:right">64</td>
+<td>Direitos dos titulares</td>
+<td><strong>Informação sobre compartilhamento</strong></td>
+<td>O titular tem direito de saber com quais entidades públicas e privadas seus dados foram compartilhados.</td>
+<td style="text-align:center">Art. 18, VII</td>
+</tr>
+<tr>
+<td style="text-align:right">65</td>
+<td>Direitos dos titulares</td>
+<td><strong>Revogação do consentimento</strong></td>
+<td>O titular pode revogar consentimento mediante procedimento gratuito e facilitado.</td>
+<td style="text-align:center">Art. 18, IX; Art. 8º, § 5º</td>
+</tr>
+<tr>
+<td style="text-align:right">66</td>
+<td>Direitos dos titulares</td>
+<td><strong>Oposição ao tratamento</strong></td>
+<td>O titular pode se opor ao tratamento realizado com dispensa de consentimento quando houver descumprimento da LGPD.</td>
+<td style="text-align:center">Art. 18, § 2º</td>
+</tr>
+<tr>
+<td style="text-align:right">67</td>
+<td>Direitos dos titulares</td>
+<td><strong>Decisões automatizadas</strong></td>
+<td>O titular pode solicitar revisão de decisões tomadas unicamente por tratamento automatizado que afetem seus interesses.</td>
+<td style="text-align:center">Art. 20</td>
+</tr>
+<tr>
+<td style="text-align:right">68</td>
+<td>Poder Público</td>
+<td><strong>Tratamento pelo Poder Público</strong></td>
+<td>O tratamento pelo Poder Público deve atender finalidade pública, interesse público e competências legais.</td>
+<td style="text-align:center">Art. 23</td>
+</tr>
+<tr>
+<td style="text-align:right">69</td>
+<td>Poder Público</td>
+<td><strong>Transparência no Poder Público</strong></td>
+<td>Órgãos públicos devem informar hipóteses, finalidades, procedimentos e práticas de tratamento, preferencialmente em seus sítios eletrônicos.</td>
+<td style="text-align:center">Art. 23, I</td>
+</tr>
+<tr>
+<td style="text-align:right">70</td>
+<td>Poder Público</td>
+<td><strong>Compartilhamento de dados pelo Poder Público</strong></td>
+<td>O uso compartilhado deve atender finalidades específicas de execução de políticas públicas e atribuições legais.</td>
+<td style="text-align:center">Arts. 25 e 26</td>
+</tr>
+<tr>
+<td style="text-align:right">71</td>
+<td>Poder Público</td>
+<td><strong>Comunicação ou uso compartilhado com entidades privadas pelo Poder Público</strong></td>
+<td>Estabelece limites e hipóteses para transferência de dados pessoais do Poder Público a entidades privadas.</td>
+<td style="text-align:center">Art. 26, § 1º</td>
+</tr>
+<tr>
+<td style="text-align:right">72</td>
+<td>Transferência internacional</td>
+<td><strong>Transferência internacional de dados</strong></td>
+<td>Apresenta as hipóteses legais que autorizam envio de dados pessoais ao exterior.</td>
+<td style="text-align:center">Arts. 33 a 36</td>
+</tr>
+<tr>
+<td style="text-align:right">73</td>
+<td>Documentação e accountability</td>
+<td><strong>Registro das operações de tratamento – ROPA</strong></td>
+<td>Controlador e operador devem manter registro das operações de tratamento que realizarem.</td>
+<td style="text-align:center">Art. 37</td>
+</tr>
+<tr>
+<td style="text-align:right">74</td>
+<td>Documentação e accountability</td>
+<td><strong>Relatório de Impacto à Proteção de Dados Pessoais – RIPD</strong></td>
+<td>Documento do controlador que descreve tratamentos que podem gerar riscos e as medidas de mitigação.</td>
+<td style="text-align:center">Art. 5º, XVII; Art. 38</td>
+</tr>
+<tr>
+<td style="text-align:right">75</td>
+<td>Documentação e accountability</td>
+<td><strong>Relatório de Impacto – exigência pela ANPD</strong></td>
+<td>A ANPD pode determinar a elaboração de RIPD pelo controlador, inclusive para dados sensíveis.</td>
+<td style="text-align:center">Art. 38</td>
+</tr>
+<tr>
+<td style="text-align:right">76</td>
+<td>Relação controlador-operador</td>
+<td><strong>Instruções do controlador ao operador</strong></td>
+<td>O operador deve tratar dados conforme instruções do controlador e normas aplicáveis.</td>
+<td style="text-align:center">Art. 39</td>
+</tr>
+<tr>
+<td style="text-align:right">77</td>
+<td>Responsabilidade civil</td>
+<td><strong>Responsabilidade e reparação de danos</strong></td>
+<td>Controlador ou operador que causar dano em violação à LGPD deve repará-lo.</td>
+<td style="text-align:center">Art. 42</td>
+</tr>
+<tr>
+<td style="text-align:right">78</td>
+<td>Responsabilidade civil</td>
+<td><strong>Responsabilidade solidária</strong></td>
+<td>Controlador e operador podem responder solidariamente em hipóteses previstas na lei.</td>
+<td style="text-align:center">Art. 42, § 1º</td>
+</tr>
+<tr>
+<td style="text-align:right">79</td>
+<td>Responsabilidade civil</td>
+<td><strong>Excludentes de responsabilidade</strong></td>
+<td>O agente não será responsabilizado se provar ausência de tratamento, inexistência de violação ou culpa exclusiva do titular/terceiro.</td>
+<td style="text-align:center">Art. 43</td>
+</tr>
+<tr>
+<td style="text-align:right">80</td>
+<td>Segurança da informação</td>
+<td><strong>Segurança da informação no tratamento de dados</strong></td>
+<td>Agentes devem adotar medidas técnicas e administrativas para proteção dos dados pessoais.</td>
+<td style="text-align:center">Art. 46</td>
+</tr>
+<tr>
+<td style="text-align:right">81</td>
+<td>Segurança da informação</td>
+<td><strong>Segurança desde a concepção do produto ou serviço</strong></td>
+<td>As medidas de segurança devem estar presentes desde a concepção até a execução do produto ou serviço.</td>
+<td style="text-align:center">Art. 46, § 2º</td>
+</tr>
+<tr>
+<td style="text-align:right">82</td>
+<td>Segurança da informação</td>
+<td><strong>Comunicação de incidente de segurança</strong></td>
+<td>O controlador deve comunicar à ANPD e ao titular incidente que possa gerar risco ou dano relevante.</td>
+<td style="text-align:center">Art. 48</td>
+</tr>
+<tr>
+<td style="text-align:right">83</td>
+<td>Governança</td>
+<td><strong>Boas práticas e governança</strong></td>
+<td>Controladores e operadores podem estabelecer regras de boas práticas, governança, segurança e supervisão.</td>
+<td style="text-align:center">Art. 50</td>
+</tr>
+<tr>
+<td style="text-align:right">84</td>
+<td>Governança</td>
+<td><strong>Programa de governança em privacidade</strong></td>
+<td>Demonstra o comprometimento institucional com políticas, salvaguardas, controles e boas práticas de proteção de dados.</td>
+<td style="text-align:center">Art. 50, § 2º, I</td>
+</tr>
+<tr>
+<td style="text-align:right">85</td>
+<td>Sanções e fiscalização</td>
+<td><strong>Sanções administrativas</strong></td>
+<td>A ANPD pode aplicar advertência, multa, bloqueio, eliminação, suspensão e proibição de tratamento, entre outras sanções.</td>
+<td style="text-align:center">Art. 52</td>
+</tr>
+<tr>
+<td style="text-align:right">86</td>
+<td>Sanções e fiscalização</td>
+<td><strong>Critérios para aplicação de sanções</strong></td>
+<td>A aplicação das sanções deve observar proporcionalidade, gravidade, boa-fé, reincidência, cooperação e medidas corretivas.</td>
+<td style="text-align:center">Art. 52, § 1º</td>
+</tr>
+<tr>
+<td style="text-align:right">87</td>
+<td>ANPD e sistema institucional</td>
+<td><strong>Autoridade Nacional de Proteção de Dados – competências</strong></td>
+<td>Define competências da ANPD, como fiscalizar, regulamentar, orientar e aplicar sanções.</td>
+<td style="text-align:center">Art. 55-J</td>
+</tr>
+<tr>
+<td style="text-align:right">88</td>
+<td>ANPD e sistema institucional</td>
+<td><strong>Conselho Nacional de Proteção de Dados Pessoais e da Privacidade</strong></td>
+<td>Órgão consultivo voltado a diretrizes, estudos, debates e disseminação de conhecimento sobre proteção de dados.</td>
+<td style="text-align:center">Arts. 58-A e 58-B</td>
+</tr>
+<tr>
+<td style="text-align:right">89</td>
+<td>Vigência</td>
+<td><strong>Entrada em vigor e vigência escalonada</strong></td>
+<td>Indica a vigência escalonada da LGPD e dos dispositivos relativos à ANPD e às sanções.</td>
+<td style="text-align:center">Art. 65</td>
+</tr>
+</tbody>
+</table>
+<h1 id="eixos-de-conhecimento">Eixos de conhecimento </h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">Etapa</th>
+<th>Foco da aprendizagem</th>
+<th>Objetivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>Introdução e fundamentos</td>
+<td>Compreender por que a LGPD existe e quais direitos protege.</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>Aplicação da lei</td>
+<td>Saber quando a LGPD se aplica ou não se aplica.</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>Conceitos básicos</td>
+<td>Dominar a linguagem técnica da LGPD.</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>Papéis e responsabilidades</td>
+<td>Identificar quem decide, quem executa, quem fiscaliza e quem é titular dos dados.</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td>Princípios</td>
+<td>Aprender os critérios que devem orientar qualquer tratamento de dados.</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td>Bases legais</td>
+<td>Saber quando o tratamento é juridicamente permitido.</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td>Regimes específicos</td>
+<td>Compreender cuidados adicionais com dados sensíveis, dados anonimizados, perfis e crianças/adolescentes.</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td>Ciclo de vida dos dados</td>
+<td>Entender quando coletar, armazenar, conservar e eliminar dados.</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td>Direitos dos titulares</td>
+<td>Conhecer os direitos que precisam ser atendidos pela organização.</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td>Poder Público e compartilhamento</td>
+<td>Aplicar a LGPD ao contexto governamental e ao compartilhamento institucional.</td>
+</tr>
+<tr>
+<td style="text-align:right">11</td>
+<td>Documentação e accountability</td>
+<td>Preparar base conceitual para ROPA e RIPD.</td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td>Segurança, governança e incidentes</td>
+<td>Relacionar LGPD com gestão de riscos, controles e segurança da informação.</td>
+</tr>
+<tr>
+<td style="text-align:right">13</td>
+<td>Responsabilização, sanções e ANPD</td>
+<td>Compreender consequências do descumprimento e papel fiscalizatório da ANPD.</td>
+</tr>
+</tbody>
+</table>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
