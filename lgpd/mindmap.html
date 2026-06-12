@@ -1,0 +1,489 @@
+<!DOCTYPE html><html><head>
+      <title>Mindmp - LGPD</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\paulo.cunha\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.30\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-details{margin:0;padding:0;border:none}.markdown-preview .md-toc summary.md-toc-link-wrapper{cursor:pointer;list-style-position:outside}.markdown-preview .md-toc summary.md-toc-link-wrapper::marker{font-size:.85em}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='0']{margin-left:12px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='1']{margin-left:28px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='2']{margin-left:44px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='3']{margin-left:60px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='4']{margin-left:76px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='5']{margin-left:80px}.markdown-preview a.tag,.markdown-preview a.tag:active,.markdown-preview a.tag:link,.markdown-preview a.tag:visited,.markdown-preview span.tag:not(.token){display:inline-block;background-color:var(--vscode-badge-background,rgba(127,127,127,.18));color:var(--vscode-badge-foreground,currentColor);border-radius:2em;font-size:.85em;font-weight:500;padding:.05em .55em;line-height:1.5;white-space:nowrap;text-decoration:none;text-shadow:none;box-shadow:none;transition:background-color .12s ease,opacity .12s ease}.markdown-preview a.tag{cursor:pointer}.markdown-preview a.tag:focus,.markdown-preview a.tag:hover{background-color:var(--vscode-badge-background,rgba(127,127,127,.32));color:var(--vscode-badge-foreground,currentColor);opacity:.85;text-decoration:none;outline:0}.markdown-preview .wikilink-embed-content{border-left:3px solid var(--vscode-textBlockQuote-border,rgba(128,128,128,.3));background:var(--vscode-textBlockQuote-background,rgba(128,128,128,.05));margin:.5em 0;padding:.5em .75em;border-radius:0 3px 3px 0}.markdown-preview .wikilink-embed-content.wikilink-embed-error{border-left-color:var(--vscode-errorForeground,#cf222e);color:var(--vscode-errorForeground,#cf222e);font-style:italic;opacity:.8}.markdown-preview .wikilink-embed-content h1:first-child,.markdown-preview .wikilink-embed-content h2:first-child,.markdown-preview .wikilink-embed-content h3:first-child,.markdown-preview .wikilink-embed-content h4:first-child,.markdown-preview .wikilink-embed-content h5:first-child,.markdown-preview .wikilink-embed-content h6:first-child{margin-top:.25em}.markdown-preview .wikilink-embed-content .wikilink-embed-content{margin:.25em 0;padding:.25em .5em}.markdown-preview .block-id{display:none}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:var(--vscode-scrollbarSlider-background,rgba(150,150,150,.66));border:4px solid var(--vscode-scrollbarSlider-background,rgba(150,150,150,.66));background-clip:content-box}.scrollbar-style::-webkit-scrollbar-thumb:hover{background-color:var(--vscode-scrollbarSlider-hoverBackground,rgba(120,120,120,.66))}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:var(--vscode-scrollbarSlider-background,rgba(150,150,150,.66));border:4px solid var(--vscode-scrollbarSlider-background,rgba(150,150,150,.66));background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb:hover{background-color:var(--vscode-scrollbarSlider-hoverBackground,rgba(120,120,120,.66))}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-details{margin:0;padding:0;border:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='0']{padding-left:0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='1']{padding-left:16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='2']{padding-left:32px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='3']{padding-left:48px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='4']{padding-left:64px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='5']{padding-left:80px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  background-color: white;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. -->
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="mapa-mental--lei-geral-de-proteção-de-dados-pessoais--lgpd">Mapa Mental – Lei Geral de Proteção de Dados Pessoais – LGPD </h1>
+<h2 id="1-lgpd--lei-no-137092018">1. LGPD – Lei nº 13.709/2018 </h2>
+<h3 id="11-finalidade-da-lei">1.1 Finalidade da Lei </h3>
+<p>A LGPD tem por finalidade disciplinar o tratamento de dados pessoais no Brasil, buscando proteger:</p>
+<ul>
+<li>a privacidade;</li>
+<li>a liberdade;</li>
+<li>a intimidade;</li>
+<li>a honra;</li>
+<li>a imagem;</li>
+<li>o livre desenvolvimento da personalidade da pessoa natural;</li>
+<li>a autodeterminação informativa.</li>
+</ul>
+<hr>
+<h2 id="2-fundamentos-da-proteção-de-dados">2. Fundamentos da Proteção de Dados </h2>
+<p>A disciplina da proteção de dados pessoais fundamenta-se em valores jurídicos e constitucionais, entre eles:</p>
+<ul>
+<li>respeito à privacidade;</li>
+<li>autodeterminação informativa;</li>
+<li>liberdade de expressão, informação, comunicação e opinião;</li>
+<li>inviolabilidade da intimidade, honra e imagem;</li>
+<li>desenvolvimento econômico, tecnológico e inovação;</li>
+<li>livre iniciativa, livre concorrência e defesa do consumidor;</li>
+<li>direitos humanos, dignidade e cidadania.</li>
+</ul>
+<hr>
+<h2 id="3-aplicação-da-lgpd">3. Aplicação da LGPD </h2>
+<h3 id="31-aplica-se-a">3.1 Aplica-se a </h3>
+<p>A LGPD aplica-se a operações de tratamento de dados realizadas por pessoa natural ou jurídica, de direito público ou privado, quando:</p>
+<ul>
+<li>o tratamento ocorrer no território nacional;</li>
+<li>a atividade tiver por objetivo ofertar bens ou serviços a pessoas localizadas no Brasil;</li>
+<li>os dados pessoais tiverem sido coletados no território nacional.</li>
+</ul>
+<h3 id="32-não-se-aplica-a">3.2 Não se aplica a </h3>
+<p>A LGPD não se aplica, em regra, ao tratamento de dados:</p>
+<ul>
+<li>realizado por pessoa natural para fins exclusivamente particulares e não econômicos;</li>
+<li>realizado para fins jornalísticos, artísticos ou acadêmicos, observadas as hipóteses legais;</li>
+<li>realizado para fins de segurança pública, defesa nacional, segurança do Estado ou investigação e repressão penal, nos termos próprios da legislação aplicável.</li>
+</ul>
+<hr>
+<h2 id="4-conceitos-essenciais">4. Conceitos Essenciais </h2>
+<h3 id="41-dado-pessoal">4.1 Dado pessoal </h3>
+<p>Informação relacionada a pessoa natural identificada ou identificável.</p>
+<p>Exemplo: nome, CPF, telefone, endereço, e-mail, matrícula funcional.</p>
+<h3 id="42-dado-pessoal-sensível">4.2 Dado pessoal sensível </h3>
+<p>Dado pessoal relacionado a aspectos mais protegidos da pessoa natural, como:</p>
+<ul>
+<li>origem racial ou étnica;</li>
+<li>convicção religiosa;</li>
+<li>opinião política;</li>
+<li>filiação sindical;</li>
+<li>dado referente à saúde;</li>
+<li>dado referente à vida sexual;</li>
+<li>dado genético;</li>
+<li>dado biométrico.</li>
+</ul>
+<h3 id="43-dado-anonimizado">4.3 Dado anonimizado </h3>
+<p>Dado relativo a titular que não possa ser identificado, considerando meios técnicos razoáveis disponíveis no momento do tratamento.</p>
+<h3 id="44-banco-de-dados">4.4 Banco de dados </h3>
+<p>Conjunto estruturado de dados pessoais, estabelecido em suporte eletrônico ou físico.</p>
+<h3 id="45-tratamento-de-dados">4.5 Tratamento de dados </h3>
+<p>Toda operação realizada com dados pessoais, incluindo:</p>
+<ul>
+<li>coleta;</li>
+<li>produção;</li>
+<li>recepção;</li>
+<li>classificação;</li>
+<li>utilização;</li>
+<li>acesso;</li>
+<li>reprodução;</li>
+<li>transmissão;</li>
+<li>distribuição;</li>
+<li>processamento;</li>
+<li>arquivamento;</li>
+<li>armazenamento;</li>
+<li>eliminação;</li>
+<li>avaliação;</li>
+<li>modificação;</li>
+<li>comunicação;</li>
+<li>transferência;</li>
+<li>difusão;</li>
+<li>extração.</li>
+</ul>
+<hr>
+<h2 id="5-agentes-e-atores-da-lgpd">5. Agentes e Atores da LGPD </h2>
+<h3 id="51-titular">5.1 Titular </h3>
+<p>Pessoa natural a quem se referem os dados pessoais.</p>
+<h3 id="52-controlador">5.2 Controlador </h3>
+<p>Pessoa natural ou jurídica, de direito público ou privado, responsável pelas decisões referentes ao tratamento de dados pessoais.</p>
+<h3 id="53-operador">5.3 Operador </h3>
+<p>Pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de dados pessoais em nome do controlador.</p>
+<h3 id="54-encarregado">5.4 Encarregado </h3>
+<p>Pessoa indicada pelo controlador e pelo operador para atuar como canal de comunicação entre:</p>
+<ul>
+<li>controlador;</li>
+<li>titulares dos dados;</li>
+<li>Autoridade Nacional de Proteção de Dados.</li>
+</ul>
+<h3 id="55-anpd">5.5 ANPD </h3>
+<p>Autoridade Nacional de Proteção de Dados, órgão responsável por zelar, implementar e fiscalizar o cumprimento da LGPD.</p>
+<hr>
+<h2 id="6-princípios-do-tratamento-de-dados">6. Princípios do Tratamento de Dados </h2>
+<p>O tratamento de dados pessoais deve observar os seguintes princípios:</p>
+<h3 id="61-finalidade">6.1 Finalidade </h3>
+<p>Tratamento realizado para propósitos legítimos, específicos, explícitos e informados ao titular.</p>
+<h3 id="62-adequação">6.2 Adequação </h3>
+<p>Compatibilidade do tratamento com as finalidades informadas ao titular.</p>
+<h3 id="63-necessidade">6.3 Necessidade </h3>
+<p>Limitação do tratamento ao mínimo necessário para atingir a finalidade pretendida.</p>
+<h3 id="64-livre-acesso">6.4 Livre acesso </h3>
+<p>Garantia de consulta facilitada e gratuita sobre a forma e duração do tratamento.</p>
+<h3 id="65-qualidade-dos-dados">6.5 Qualidade dos dados </h3>
+<p>Garantia de exatidão, clareza, relevância e atualização dos dados.</p>
+<h3 id="66-transparência">6.6 Transparência </h3>
+<p>Informações claras, precisas e acessíveis sobre o tratamento.</p>
+<h3 id="67-segurança">6.7 Segurança </h3>
+<p>Uso de medidas técnicas e administrativas para proteger os dados pessoais.</p>
+<h3 id="68-prevenção">6.8 Prevenção </h3>
+<p>Adoção de medidas para prevenir danos decorrentes do tratamento.</p>
+<h3 id="69-não-discriminação">6.9 Não discriminação </h3>
+<p>Vedação de tratamento para fins discriminatórios, ilícitos ou abusivos.</p>
+<h3 id="610-responsabilização-e-prestação-de-contas">6.10 Responsabilização e prestação de contas </h3>
+<p>Demonstração da adoção de medidas eficazes para cumprimento da LGPD.</p>
+<hr>
+<h2 id="7-bases-legais-para-tratamento-de-dados-pessoais">7. Bases Legais para Tratamento de Dados Pessoais </h2>
+<p>O tratamento de dados pessoais somente pode ocorrer mediante uma das bases legais previstas na LGPD, entre as quais:</p>
+<h3 id="71-consentimento">7.1 Consentimento </h3>
+<p>Manifestação livre, informada e inequívoca do titular.</p>
+<h3 id="72-cumprimento-de-obrigação-legal-ou-regulatória">7.2 Cumprimento de obrigação legal ou regulatória </h3>
+<p>Tratamento necessário para cumprimento de dever previsto em lei ou regulamento.</p>
+<h3 id="73-execução-de-políticas-públicas">7.3 Execução de políticas públicas </h3>
+<p>Tratamento realizado pela Administração Pública para execução de políticas públicas previstas em lei ou regulamento.</p>
+<h3 id="74-estudos-por-órgão-de-pesquisa">7.4 Estudos por órgão de pesquisa </h3>
+<p>Preferencialmente com anonimização dos dados.</p>
+<h3 id="75-execução-de-contrato">7.5 Execução de contrato </h3>
+<p>Tratamento necessário à execução de contrato ou procedimentos preliminares relacionados a contrato.</p>
+<h3 id="76-exercício-regular-de-direitos">7.6 Exercício regular de direitos </h3>
+<p>Uso dos dados em processo judicial, administrativo ou arbitral.</p>
+<h3 id="77-proteção-da-vida-ou-da-incolumidade-física">7.7 Proteção da vida ou da incolumidade física </h3>
+<p>Tratamento necessário para proteger a vida ou segurança física do titular ou de terceiro.</p>
+<h3 id="78-tutela-da-saúde">7.8 Tutela da saúde </h3>
+<p>Tratamento realizado por profissionais, serviços de saúde ou autoridade sanitária.</p>
+<h3 id="79-legítimo-interesse">7.9 Legítimo interesse </h3>
+<p>Tratamento necessário para atender interesses legítimos do controlador ou de terceiro, respeitados os direitos e liberdades fundamentais do titular.</p>
+<h3 id="710-proteção-do-crédito">7.10 Proteção do crédito </h3>
+<p>Tratamento necessário para proteção do crédito.</p>
+<hr>
+<h2 id="8-tratamento-de-dados-pessoais-sensíveis">8. Tratamento de Dados Pessoais Sensíveis </h2>
+<h3 id="81-regime-jurídico-mais-restritivo">8.1 Regime jurídico mais restritivo </h3>
+<p>Os dados sensíveis recebem proteção reforçada, em razão do maior potencial de discriminação ou dano ao titular.</p>
+<h3 id="82-hipóteses-de-tratamento">8.2 Hipóteses de tratamento </h3>
+<p>O tratamento pode ocorrer, entre outras hipóteses, para:</p>
+<ul>
+<li>cumprimento de obrigação legal ou regulatória;</li>
+<li>execução de políticas públicas;</li>
+<li>realização de estudos por órgão de pesquisa;</li>
+<li>exercício regular de direitos;</li>
+<li>proteção da vida ou da incolumidade física;</li>
+<li>tutela da saúde;</li>
+<li>prevenção à fraude e segurança do titular.</li>
+</ul>
+<h3 id="83-atenção-especial">8.3 Atenção especial </h3>
+<p>No setor público e na área da saúde, o tratamento de dados sensíveis deve observar controles reforçados, especialmente quanto a:</p>
+<ul>
+<li>acesso restrito;</li>
+<li>rastreabilidade;</li>
+<li>confidencialidade;</li>
+<li>segurança;</li>
+<li>transparência;</li>
+<li>retenção adequada.</li>
+</ul>
+<hr>
+<h2 id="9-direitos-dos-titulares">9. Direitos dos Titulares </h2>
+<p>O titular dos dados pessoais possui direitos perante o controlador, tais como:</p>
+<h3 id="91-confirmação">9.1 Confirmação </h3>
+<p>Direito de confirmar se existe tratamento de seus dados pessoais.</p>
+<h3 id="92-acesso">9.2 Acesso </h3>
+<p>Direito de acessar os dados tratados.</p>
+<h3 id="93-correção">9.3 Correção </h3>
+<p>Direito de corrigir dados incompletos, inexatos ou desatualizados.</p>
+<h3 id="94-anonimização-bloqueio-ou-eliminação">9.4 Anonimização, bloqueio ou eliminação </h3>
+<p>Direito de solicitar providências sobre dados desnecessários, excessivos ou tratados em desconformidade.</p>
+<h3 id="95-portabilidade">9.5 Portabilidade </h3>
+<p>Direito de portabilidade dos dados, observada a regulamentação da ANPD.</p>
+<h3 id="96-informação-sobre-compartilhamento">9.6 Informação sobre compartilhamento </h3>
+<p>Direito de saber com quais entidades públicas ou privadas os dados foram compartilhados.</p>
+<h3 id="97-informação-sobre-consentimento">9.7 Informação sobre consentimento </h3>
+<p>Direito de ser informado sobre a possibilidade de não fornecer consentimento e sobre as consequências da negativa.</p>
+<h3 id="98-revogação-do-consentimento">9.8 Revogação do consentimento </h3>
+<p>Quando o tratamento tiver como base legal o consentimento, o titular pode revogá-lo.</p>
+<h3 id="99-revisão-de-decisões-automatizadas">9.9 Revisão de decisões automatizadas </h3>
+<p>Direito de solicitar revisão de decisões tomadas unicamente com base em tratamento automatizado de dados pessoais.</p>
+<hr>
+<h2 id="10-tratamento-de-dados-pelo-poder-público">10. Tratamento de Dados pelo Poder Público </h2>
+<h3 id="101-finalidade-pública">10.1 Finalidade pública </h3>
+<p>O tratamento de dados pessoais pelo Poder Público deve atender finalidade pública, interesse público e execução de competências legais.</p>
+<h3 id="102-transparência">10.2 Transparência </h3>
+<p>Os órgãos públicos devem informar, de forma clara e atualizada:</p>
+<ul>
+<li>hipóteses de tratamento;</li>
+<li>finalidade;</li>
+<li>procedimentos;</li>
+<li>práticas utilizadas;</li>
+<li>responsáveis pelo tratamento.</li>
+</ul>
+<h3 id="103-compartilhamento">10.3 Compartilhamento </h3>
+<p>O compartilhamento de dados pelo Poder Público deve observar:</p>
+<ul>
+<li>finalidade pública;</li>
+<li>compatibilidade com a política pública;</li>
+<li>transparência;</li>
+<li>segurança;</li>
+<li>base legal adequada.</li>
+</ul>
+<h3 id="104-responsabilidade-institucional">10.4 Responsabilidade institucional </h3>
+<p>A Administração Pública deve estruturar governança de dados, controles internos, políticas de segurança e mecanismos de prestação de contas.</p>
+<hr>
+<h2 id="11-término-do-tratamento-de-dados">11. Término do Tratamento de Dados </h2>
+<p>O tratamento de dados pessoais deve ser encerrado quando:</p>
+<ul>
+<li>a finalidade for alcançada;</li>
+<li>os dados deixarem de ser necessários;</li>
+<li>terminar o período de tratamento;</li>
+<li>houver revogação do consentimento, quando aplicável;</li>
+<li>houver determinação da ANPD.</li>
+</ul>
+<p>Após o término, os dados devem ser eliminados, ressalvadas hipóteses legais de conservação.</p>
+<hr>
+<h2 id="12-transferência-internacional-de-dados">12. Transferência Internacional de Dados </h2>
+<p>A transferência internacional de dados pessoais somente pode ocorrer em hipóteses autorizadas pela LGPD, como:</p>
+<ul>
+<li>países ou organismos internacionais com grau de proteção adequado;</li>
+<li>garantias contratuais;</li>
+<li>normas corporativas globais;</li>
+<li>consentimento específico;</li>
+<li>cooperação jurídica internacional;</li>
+<li>proteção da vida;</li>
+<li>execução de política pública;</li>
+<li>cumprimento de obrigação legal.</li>
+</ul>
+<hr>
+<h2 id="13-segurança-e-boas-práticas">13. Segurança e Boas Práticas </h2>
+<h3 id="131-medidas-de-segurança">13.1 Medidas de segurança </h3>
+<p>Os agentes de tratamento devem adotar medidas técnicas e administrativas aptas a proteger os dados pessoais contra:</p>
+<ul>
+<li>acessos não autorizados;</li>
+<li>perda;</li>
+<li>destruição;</li>
+<li>alteração;</li>
+<li>comunicação indevida;</li>
+<li>tratamento inadequado ou ilícito.</li>
+</ul>
+<h3 id="132-governança-em-privacidade">13.2 Governança em privacidade </h3>
+<p>A LGPD estimula programas de governança que contemplem:</p>
+<ul>
+<li>políticas internas;</li>
+<li>controles de acesso;</li>
+<li>gestão de riscos;</li>
+<li>plano de resposta a incidentes;</li>
+<li>treinamento;</li>
+<li>auditoria;</li>
+<li>monitoramento contínuo.</li>
+</ul>
+<h3 id="133-registro-das-operações--ropa">13.3 Registro das operações – ROPA </h3>
+<p>Controlador e operador devem manter registro das operações de tratamento de dados pessoais, especialmente quando o tratamento se basear no legítimo interesse.</p>
+<h3 id="134-relatório-de-impacto--ripd">13.4 Relatório de Impacto – RIPD </h3>
+<p>A ANPD pode determinar ao controlador a elaboração de relatório de impacto à proteção de dados pessoais, especialmente em operações que possam gerar riscos às liberdades civis e aos direitos fundamentais.</p>
+<hr>
+<h2 id="14-responsabilidade-e-ressarcimento-de-danos">14. Responsabilidade e Ressarcimento de Danos </h2>
+<h3 id="141-responsabilização">14.1 Responsabilização </h3>
+<p>Controlador ou operador que causar dano patrimonial, moral, individual ou coletivo em violação à LGPD deverá repará-lo.</p>
+<h3 id="142-responsabilidade-solidária">14.2 Responsabilidade solidária </h3>
+<p>Pode haver responsabilidade solidária entre agentes de tratamento em determinadas situações, especialmente quando houver descumprimento da legislação ou das instruções lícitas do controlador.</p>
+<h3 id="143-excludentes-de-responsabilidade">14.3 Excludentes de responsabilidade </h3>
+<p>O agente pode não ser responsabilizado se comprovar, por exemplo:</p>
+<ul>
+<li>que não realizou o tratamento;</li>
+<li>que não houve violação à LGPD;</li>
+<li>que o dano decorreu de culpa exclusiva do titular ou de terceiro.</li>
+</ul>
+<hr>
+<h2 id="15-fiscalização-e-sanções-administrativas">15. Fiscalização e Sanções Administrativas </h2>
+<p>A ANPD pode aplicar sanções administrativas, tais como:</p>
+<ul>
+<li>advertência;</li>
+<li>multa simples;</li>
+<li>multa diária;</li>
+<li>publicização da infração;</li>
+<li>bloqueio dos dados pessoais;</li>
+<li>eliminação dos dados pessoais;</li>
+<li>suspensão parcial do funcionamento do banco de dados;</li>
+<li>suspensão do exercício da atividade de tratamento;</li>
+<li>proibição parcial ou total do exercício de atividades relacionadas a tratamento de dados.</li>
+</ul>
+<hr>
+<h2 id="16-autoridade-nacional-de-proteção-de-dados--anpd">16. Autoridade Nacional de Proteção de Dados – ANPD </h2>
+<h3 id="161-funções-principais">16.1 Funções principais </h3>
+<p>A ANPD possui competências para:</p>
+<ul>
+<li>zelar pela proteção de dados pessoais;</li>
+<li>fiscalizar o cumprimento da LGPD;</li>
+<li>aplicar sanções;</li>
+<li>editar regulamentos e procedimentos;</li>
+<li>orientar controladores, operadores e titulares;</li>
+<li>promover cultura de proteção de dados;</li>
+<li>deliberar sobre interpretação da LGPD.</li>
+</ul>
+<hr>
+<h1 id="síntese-visual-em-formato-de-mapa-mental">Síntese visual em formato de mapa mental </h1>
+<pre data-role="codeBlock" data-info="text" class="language-text text"><code>LGPD – Lei nº 13.709/2018
+│
+├── 1. Finalidade
+│   ├── Proteger privacidade
+│   ├── Proteger liberdade
+│   └── Garantir livre desenvolvimento da personalidade
+│
+├── 2. Fundamentos
+│   ├── Privacidade
+│   ├── Autodeterminação informativa
+│   ├── Liberdade de expressão
+│   ├── Direitos humanos
+│   └── Dignidade da pessoa humana
+│
+├── 3. Conceitos
+│   ├── Dado pessoal
+│   ├── Dado sensível
+│   ├── Dado anonimizado
+│   ├── Banco de dados
+│   └── Tratamento
+│
+├── 4. Atores
+│   ├── Titular
+│   ├── Controlador
+│   ├── Operador
+│   ├── Encarregado
+│   └── ANPD
+│
+├── 5. Princípios
+│   ├── Finalidade
+│   ├── Adequação
+│   ├── Necessidade
+│   ├── Livre acesso
+│   ├── Qualidade
+│   ├── Transparência
+│   ├── Segurança
+│   ├── Prevenção
+│   ├── Não discriminação
+│   └── Responsabilização
+│
+├── 6. Bases Legais
+│   ├── Consentimento
+│   ├── Obrigação legal
+│   ├── Políticas públicas
+│   ├── Execução de contrato
+│   ├── Exercício regular de direitos
+│   ├── Proteção da vida
+│   ├── Tutela da saúde
+│   ├── Legítimo interesse
+│   └── Proteção do crédito
+│
+├── 7. Dados Sensíveis
+│   ├── Saúde
+│   ├── Biometria
+│   ├── Genética
+│   ├── Religião
+│   ├── Política
+│   └── Origem racial ou étnica
+│
+├── 8. Direitos do Titular
+│   ├── Confirmação
+│   ├── Acesso
+│   ├── Correção
+│   ├── Eliminação
+│   ├── Portabilidade
+│   ├── Informação
+│   ├── Revogação do consentimento
+│   └── Revisão de decisões automatizadas
+│
+├── 9. Poder Público
+│   ├── Finalidade pública
+│   ├── Interesse público
+│   ├── Transparência
+│   ├── Compartilhamento regulado
+│   └── Governança de dados
+│
+├── 10. Governança e Segurança
+│   ├── Medidas técnicas
+│   ├── Medidas administrativas
+│   ├── ROPA
+│   ├── RIPD
+│   ├── Resposta a incidentes
+│   └── Boas práticas
+│
+├── 11. Responsabilidade
+│   ├── Reparação de danos
+│   ├── Responsabilidade do controlador
+│   ├── Responsabilidade do operador
+│   └── Responsabilidade solidária
+│
+└── 12. Fiscalização e Sanções
+    ├── Advertência
+    ├── Multa
+    ├── Bloqueio dos dados
+    ├── Eliminação dos dados
+    ├── Suspensão do tratamento
+    └── Atuação da ANPD
+</code></pre><hr>
+<h1 id="leitura-técnica-para-auditoria">Leitura técnica para auditoria </h1>
+<p>Do ponto de vista da auditoria interna governamental, a LGPD pode ser compreendida em quatro grandes blocos de controle:</p>
+<table>
+<thead>
+<tr>
+<th>Bloco</th>
+<th>Foco de Auditoria</th>
+<th>Evidências Esperadas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Governança</td>
+<td>Papéis, políticas e responsabilidades</td>
+<td>Política de privacidade, nomeação do encarregado, comitê de privacidade</td>
+</tr>
+<tr>
+<td>Legalidade</td>
+<td>Bases legais e finalidade</td>
+<td>ROPA, análise jurídica, termos de uso, avisos de privacidade</td>
+</tr>
+<tr>
+<td>Segurança</td>
+<td>Proteção técnica e administrativa</td>
+<td>Controles de acesso, logs, backups, criptografia, plano de resposta a incidentes</td>
+</tr>
+<tr>
+<td>Accountability</td>
+<td>Demonstração de conformidade</td>
+<td>RIPD, relatórios, treinamentos, registros de decisão, auditorias internas</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="em-síntese">Em síntese </h1>
+<p>A LGPD estrutura um regime jurídico de proteção de dados baseado em <strong>finalidade legítima, transparência, minimização, segurança, responsabilização e direitos do titular</strong>. Para fins de controle interno, os pontos mais relevantes são: identificação dos agentes de tratamento, definição das bases legais, manutenção do ROPA, elaboração de RIPD quando aplicável, gestão de riscos, segurança da informação e atendimento aos direitos dos titulares.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
