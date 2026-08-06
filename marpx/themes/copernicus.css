@@ -1,0 +1,123 @@
+/* @theme copernicus */
+
+@import "marpx";
+
+
+:root {
+  /*------------ Overall theme parameters ---------------------------------*/
+
+  --marpx-theme-brandlogo:                 " ";
+  --marpx-theme-chapter-background-color: #fac01f;
+  --marpx-theme-chapter-h1-font-color:    #021d24;
+  --marpx-theme-chapter-h2-font-color:    #021d24;
+  --marpx-theme-color:                    #360200;
+  --marpx-theme-figure-captiontext:       "Fig. ";
+  --marpx-theme-figure-captiontext-color: #455b8a;
+  --marpx-theme-font-family:              "Fira Sans", Faustina, Bookerly, sans-serif;
+  --marpx-theme-marker-color:             #f16762;
+  --marpx-theme-table-captiontext:        "Table ";
+  --marpx-theme-chapter-h2-font-color:    #19441b;
+  --marpx-theme-h1-color:	                #3d4e9c;
+  --marpx-theme-h2-color:	                #465070;
+
+
+  /* --marpx-theme-toc-color: #5b688b; */
+  --marpx-theme-background-color:       #bbc7e7;
+  --marpx-theme-bold-color:             #6462f1;
+  --marpx-theme-bold-color:             #1a3952;
+  --marpx-theme-code-color:             rgb(233, 233, 233);
+  --marpx-theme-font-color:             #444a55;
+  --marpx-theme-footnote-mark-color:    #ff0000;
+  --marpx-theme-h1-bold-color:          #e96363;
+  --marpx-theme-highlight-color:        #b9e4f1;
+  --marpx-theme-subtitle-color:         #5d616d;
+
+  /* ------------------- TITLE SLIDE -----------------------------*/
+
+  /* fonts sizes */
+  --marpx-title_academic-author-size:     110%;
+  --marpx-title_academic-date-size:       95%;
+  --marpx-title_academic-institute-size:  85%;
+  --marpx-title_academic-subtitle-size:   95%;
+  --marpx-title_academic-title-size:      145%;
+
+  /* inter character space */
+  --marpx-title_academic-letter-spacing: 0.075px;
+
+  /* font weights */
+  --marpx-title_academic-subtitle-font-weight: 400;
+  --marpx-title_academic-title-font-weight: bold;
+
+  /* colors in style */
+  --marpx-title_academic-title-color:     #002b36;
+  --marpx-title_academic-subtitle-color:  #dcdee0;
+  --marpx-title_academic-author-color:    #002b36;
+  --marpx-title_academic-font-color:      #242d31;
+  --marpx-title_academic-background-color:#7790c7;
+  --marpx-title_academic-border-color:    #aacce2;
+
+  /*------------ Parameters used in `REFERENCES` ---------------------------------*/
+
+  --marpx-references-bold-color: #3e6ceb;
+  --marpx-references-background-color: #eff4fa;
+  --marpx-references-header-color: #539dd3;
+
+  /*------------ Parameters used in `QUOTE` ---------------------------------*/
+
+  --marpx-quote-font-family: Bookerly, Faustina, Times, serif;
+
+  --marpx-quote-background-color: #f3f3f2;
+  --marpx-quote-paragraph-background-color: #f3f3f2;
+  --marpx-quote-bold-color: #6462f1;
+
+  /*- quote dark -*/
+
+  --marpx-quote_dark-font: Bookerly, Faustina, Bookerly, Times, serif;
+
+  --marpx-quote_dark-font-color: #c4bcbc;
+  --marpx-quote_dark-color-background: #222020;
+  --marpx-quote_dark-color-paragraph-background: #222020;
+  --marpx-quote_dark-bold-color: #ffffff;
+
+  /*------------ Parameters used in `TABLE` ---------------------------------*/
+
+  --marpx-table-header-background-color: #000000;
+  --marpx-table-header-color-color: white;
+  /* --marpx-table-border-top-color: ; */
+  --marpx-table-border-bottom-color: #cac9c5f8;
+  --marpx-table-nth-child-color-color: #f5f5f5;
+  --marpx-table-hover-color: #474619;
+  --marpx-table-hover-background-color: #eaf779;
+
+  --marpx-table-font-size: 22px;
+  --marpx-table-font-family: ;
+  
+  /*------------ Parameters used in `TOC` ---------------------------------*/
+  --marpx-color-toc-marker: rgb(50, 14, 253);
+
+}
+
+section {
+  line-height: 1.153em;
+  letter-spacing: -1.1px;
+}
+
+.box {
+  border: 2px solid #222;
+  border-radius: 6px; /* opcional: cantos arredondados */
+  padding: 2px 8px; /* espaço interno */
+  /* background: #fffbe7;   /* opcional: cor de fundo */
+  display: inline-block; /* garante o retângulo ao redor da palavra */
+}
+
+section code:not(pre code) {
+
+  background: #7790c759 !important;
+  border-radius: 6px !important;
+  border: 0x solid #222;
+  color: #1a3952;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 600 !important;
+  padding: 1px 8px;
+}

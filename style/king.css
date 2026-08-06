@@ -1,0 +1,230 @@
+/* @theme king */
+
+/*
+  ============================================
+    Created by Paulo Cunha
+    version: 1.0
+    last update: 26.mar.2023
+  ============================================       
+*/
+
+/* Importing COLOR SCHEMA */
+
+@import "default";
+@import "schema";
+@import "structure";
+
+/* Importing Font */
+/* Font Credit: htts://https://www.cdnfonts.com/ */
+
+/* @import url('https://fonts.cdnfonts.com/css/frutiger?styles=28198'); */
+@import url('https://fonts.cdnfonts.com/css/noto-sans-display-2');
+
+/* -------------------- ROOT -------------------------------*/
+
+:root {
+  
+  /* font-family: 'Fira Sans Condensed', sans-serif; */
+  /* font-family: "FrutigerNextW04-Regular", sans-serif; */
+  font-family: "Noto Sans Display";
+  
+  font-weight: initial;
+  
+  --cool-list-color              : rgb(107, 130, 173);
+
+  --bold-color                   : rgb(71, 107, 184);
+  --italic-background-color      : rgb(219, 208, 54);
+  
+
+  --default-background-color        : black;
+  --default-background-color        : #42454b7c;
+  --default-background-color        : #2e3440cc;
+  --default-background-color        : rgb(22, 28, 43);
+  --default-background-color        : #272c36cc;
+  --default-background-color        : #2E3440;
+  --default-background-color        : #20242c;
+
+  --default-font-color              : #ECEFF4;
+  --default-font-color              : #D8DEE9;
+  --default-font-color              : #E5E9F0;
+  
+  --default-border-color            : 2px solid rgb(253, 194, 0);
+  
+
+
+
+  background-color: var(--default-background-color);
+  color: var(--default-font-color);
+}
+
+:root p {
+  
+  font-size: 32px;
+  font-family: "FrutigerNextW04-Regular", 'Open Sans', sans-serif;
+  letter-spacing: -0.5px;
+  
+  color: var(--default-font-color);
+
+  
+}
+
+:root ul, ol{
+  font-size: 27px;
+  font-family: "Fira Sans Light";
+  letter-spacing: -0.4px;
+
+  color: var(--default-font-color);
+
+}
+
+:root h1, h2, h3, h4, h5, h6 {
+
+  color: var(--default-font-color);
+
+}
+:root h1 {
+
+  border-bottom: var(--default-border-color);
+
+}
+
+/* -------------------- PRE -------------------------------*/
+
+:root pre {
+  color: rgb(33, 34, 34);
+  font-weight:800 ;
+  background-color: #e7eaee;
+}
+
+/* -------------------- STRONG -----------------------------*/
+
+section strong {
+  color:rgb(211, 172, 43);
+  
+  padding-left: 2px;
+  padding-right: 2px;
+  font-weight: 600;
+}
+
+/* -------------------- TABLE -------------------------------*/
+section table {
+
+  color: #3B4252;
+
+}
+
+section table th {
+
+  background-color: #3e5d86
+  ;
+
+}
+
+/* -------------------- CITE -------------------------------*/
+
+section.cite {
+
+  background-color: #D8DEE9;
+  --strong-color        : #c53442;
+  --strong-color        : #4d75a5;
+}
+
+
+/* -------------------- TITLEPAGE -------------------------------*/
+
+section.titlepage {
+
+  color: var(--default-font-color);
+  background-color: var(--default-background-color);
+}
+
+section.titlepage .title {
+  
+  border-bottom: var(--default-border-color);
+  color: var(--default-font-color);
+}
+
+section.titlepage h1 {
+  
+  border-bottom: var(--default-border-color);
+  color: var(--default-font-color);
+}
+
+
+section.titlepage .author,
+section.titlepage .date,
+section.titlepage .organization {
+
+  text-align: left;
+  color: var(--default-font-color) !important;
+}
+
+section.titlepage h1, h2, h3, h4, h5 {
+  color: var(--default-font-color) !important;
+}
+
+
+
+
+/* -------------------- TRANSITION -------------------------------*/
+
+section.transition em {
+
+  /* color: rgb(10, 100, 235); */
+  background-color: rgba(255, 5, 5, 0.295);
+
+}
+
+section.transition strong {
+
+  color: rgb(255, 5, 5);
+
+}
+
+section.transition {
+
+  background-color: rgb(255, 145, 0);
+  background-color: orange;
+
+}
+
+/* -------------------- TRANSITION2 -------------------------------*/
+
+section.transition2 strong {
+
+  color: rgb(10, 100, 235);
+  color: rgb(161, 240, 3);
+
+}
+
+/* -------------------- BIBLIO -------------------------------*/
+
+section.biblio p {
+  
+  font-family: "FrutigerNextW04-Regular", sans-serif;
+  
+}
+
+section.biblio {
+
+  /* font-family: "Fira Sans", serif;  */
+  
+  --text-color              : rgb(253, 252, 252);
+  --biblio-background-color : rgb(22, 28, 43);
+  --border-color            : darkorange;
+  --bold-color              : orange;
+}
+
+/* -------------------- COLUMNS -------------------------------*/
+
+section.columns ul, ol, li {
+
+  color: var(--default-font-color);
+  font-family: 'Fira Sans', sans-serif !important;
+  font-weight: 100;
+}
+
+section.columns li {
+
+
+}

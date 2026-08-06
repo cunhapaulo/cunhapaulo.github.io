@@ -1,0 +1,113 @@
+/* @theme frankfurt */
+
+@import "marpx";
+
+
+:root {
+
+    /** ----------------------------------------------------------------------------------------------- */
+    /** WARNING: The parameter (container-type: normal) was used to allow the numbering of figures      */
+    /**          and tables. Be warned that it may produce side effects in browsers other than Chrome!  */
+    /** ----------------------------------------------------------------------------------------------- */
+    container-type: normal;
+    counter-reset: figure_cnt table_cnt;
+
+    --marpx-color-light-grey: #a6a6a6;
+    --marpx-color-dark-grey: #000000;
+
+    /*------------ Overall theme parameters --------------------------*/
+
+    --marpx-theme-font-family:  Faustina, Bookerly, "Source Sans Pro", 'Fira Sans Light',sans-serif;
+    --marpx-theme-figure-captiontext: "Fig. ";
+    --marpx-theme-table-captiontext: "Table ";
+    --marpx-theme-brandlogo: " ";
+    
+    --marpx-theme-color: #3e6ceb;
+    --marpx-theme-toc-color: #0aa5ff;
+  
+    /* --marpx-theme-chapter-background-color: #1e2022;
+    --marpx-theme-chapter-h1-font-color: #758cfa;
+    --marpx-theme-chapter-h2-font-color: #9bbaf5;
+   
+    --marpx-theme-chapter-background-color: #11212d;
+    --marpx-theme-chapter-h1-font-color: #7aadbe;
+    --marpx-theme-chapter-h2-font-color: #55818b; */
+   
+    --marpx-theme-chapter-background-color: hsl(215, 36%, 24%);
+    --marpx-theme-chapter-background-color: hsl(215, 37%, 12%);
+    --marpx-theme-chapter-h1-font-color: #778bf0;
+    --marpx-theme-chapter-h2-font-color: hsl(214, 5%, 73%);
+
+    --marpx-theme-background-color: #f5f4ef;
+    --marpx-theme-bold-color: #2E45B8;
+
+    --marpx-theme-subtitle-color: #545e7c;
+    --marpx-theme-h1-color: #02000a;
+    --marpx-theme-h2-color: #30374d;
+
+    --marpx-theme-h1-bold-color: #ad2424;
+
+    --marpx-theme-footnote-mark-color: #ff0000;
+    --marpx-theme-code-color: #ffff00;
+    --marpx-theme-highlight-color: #ffff00;
+    --marpx-theme-marker-color: #fa0909;
+
+    /*------------ Parameters used in `REFERENCES` --------------------------*/
+
+    --maprx-color-references-bold: #3e6ceb;
+    --marpx-references-background-color: #eff4fa;
+    --marpx-references-header-color: #539dd3;
+
+    /*------------ Parameters used in `QUOTE` --------------------------*/
+
+    --marpx-quote-background-color: #ffffff;
+    --marpx-quote-paragraph-background-color: #ffffff;
+    --marpx-quote-bold-color: #6462f1;
+    --marpx-quote-font-family: Faustina, Bookerly, Times, serif;
+
+    --marpx-quote_dark-color-background: #9aade2;
+    --marpx-quote_dark-color-paragraph-background: #9aade2;
+    --marpx-quote_dark-bold-color: #f8f8f7;
+    --marpx-quote_dark-font: Faustina, Bookerly, Times, serif;
+
+    /*------------ Parameters used in `TABLE` --------------------------*/
+
+    --marpx-table-header-background-color: rgb(21, 29, 51);
+    --marpx-table-header-color-color: white;
+    --marpx-table-border-top-color: rgb(255, 73, 1);
+    --marpx-table-border-bottom-color: rgba(202, 201, 197, 0.973);
+    --marpx-table-nth-child-color-color: #f5f5f5;
+    --marpx-table-hover-color: black;
+    --marpx-table-hover-background-color: rgb(234, 247, 121);
+
+    --marpx-table-font-size: 18px;
+    --marpx-table-font-family: 'Fira Sans';
+  
+  /*------------ Parameters used in `TOC` ---------------------------------*/
+  --marpx-color-toc-marker: #0066ff;
+}
+
+section {
+    
+    line-height: 1.1em;
+    font-size: 23pt;
+}
+
+.boxed {
+  border: 2px solid #222;
+  border-radius: 6px;      /* opcional: cantos arredondados */
+  padding: 2px 8px;        /* espaço interno */
+  /* background: #fffbe7;   /* opcional: cor de fundo */
+  display: inline-block;   /* garante o retângulo ao redor da palavra */
+}
+
+section code:not(pre code) {
+  /* color: hsl(0, 0%, 0%); */
+  border: 0px solid #0a0a00ff;
+  background: #ffd044ff !important;
+  /* background: initial; */
+  border-radius: 10px;
+  padding: 6px 10px;
+  /* font-size: 1em; */
+  display: inline-block;
+}
