@@ -1,2 +1,2 @@
-# Paulo Cunha´s Programming Site
+# Programmer site
 My Projects site
