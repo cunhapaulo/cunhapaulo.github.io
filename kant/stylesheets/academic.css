@@ -1,0 +1,93 @@
+.uni-name {
+  font-size: 1.01 em !important;
+  color:#364766;
+}
+
+.event-name {
+    /* font-family:  "Times New Roman", sans-serif !important; */
+    font-size: 2.5em !important;
+    /* color:#191922 !important; */
+}
+
+.event-name strong {
+    color:#8b8bff !important;
+    font-size: 1.25em !important;
+}
+
+.event-info {
+    color:#223691 !important;
+    color:#8b8bff !important;
+    font-weight: bolder !important;
+}
+
+.speaker {
+    color:#8b8bff !important;
+    font-weight: bolder !important;
+}
+
+.md-typeset strong {
+  color: #8b8bff;
+  font-weight: 700;
+}
+
+.md-typeset table {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.md-typeset table th {
+    background-color: #ffe605; /* azul institucional */
+    background-color: #8b8bff; /* azul institucional */
+    color: #ffffff;            /* texto branco */
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Largura geral do site, incluindo navegação lateral */
+.md-grid {
+  max-width: 60rem;
+}
+
+.md-img {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Largura máxima do texto de leitura */
+/* .md-content__inner {
+  max-width: 78ch;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+.convidado {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.foto-convidado {
+  width: 260px;
+  height: auto;
+  flex: 0 0 auto;
+}
+
+.bio-convidado {
+  flex: 1;
+  min-width: 0;
+}
+
+.bio-convidado p {
+  margin-top: 0;
+}
+
+/* Em telas pequenas, imagem e texto voltam a ficar um abaixo do outro. */
+@media screen and (max-width: 600px) {
+  .convidado {
+    flex-direction: column;
+  }
+
+  .foto-convidado {
+    width: min(260px, 100%);
+  }
+}
