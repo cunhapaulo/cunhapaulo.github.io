@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MarpX — Site institucional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-primary: #0a2a43;
+            --brand-accent: #0a6ecd;
+            --bg: #ffffff;
+            --ink: #0b1726
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Fira Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Open Sans', sans-serif;
+            color: #111;
+            background: var(--bg)
+        }
+
+        .header-top {
+            background: var(--brand-primary);
+            color: #fff;
+            padding: .5rem 0
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 1rem
+        }
+
+        .a11y a {
+            color: #fff;
+            opacity: .9;
+            text-decoration: none;
+            margin-left: 1rem
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e5e7eb
+        }
+
+        .brand {
+            display: flex;
+            gap: .75rem;
+            align-items: center
+        }
+
+        .brand-badge {
+            width: 36px;
+            height: 36px;
+            border-radius: .75rem;
+            background: var(--brand-accent);
+            display: grid;
+            place-items: center;
+            color: #fff;
+            font-weight: 700
+        }
+
+        .hero {
+            background: var(--brand-primary);
+            color: #fff;
+            padding: 3rem 0
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            border: 1px solid #e5e7eb;
+            background: #fff;
+            color: #111;
+            padding: .6rem 1rem;
+            border-radius: .6rem;
+            text-decoration: none
+        }
+
+        .btn.primary {
+            background: var(--brand-accent);
+            color: #fff;
+            border: none
+        }
+
+        .grid {
+            display: grid;
+            gap: 1rem
+        }
+
+        @media(min-width:768px) {
+            .grid-3 {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        .card {
+            border: 1px solid #e5e7eb;
+            border-radius: .8rem;
+            padding: 1rem;
+            background: #fff
+        }
+
+        .footer {
+            border-top: 1px solid #e5e7eb;
+            background: #f8fafc;
+            margin-top: 2rem
+        }
+
+        .footer-cols {
+            display: grid;
+            gap: 1rem
+        }
+
+        @media(min-width:1024px) {
+            .footer-cols {
+                grid-template-columns: repeat(4, 1fr)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-top">
+        <div class="container a11y" style="display:flex;justify-content:space-between;align-items:center;">
+            <div>Site oficial do projeto MarpX</div>
+            <div>
+                <a href="#acessibilidade">Acessibilidade</a>
+                <a href="#politicas">Políticas</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </div>
+    </div>
+    <div class="container nav">
+        <div class="brand">
+            <div class="brand-badge">MX</div>
+            <div>
+                <div style="font-weight:600">MarpX</div>
+                <div style="font-size:.8rem;color:#64748b">Slides institucionais com Marp + CSS</div>
+            </div>
+        </div>
+        <nav><a href="/" style="margin-right:1rem">Projeto</a><a href="/docs.html"
+                style="margin-right:1rem">Documentação</a><a href="/themes.html" style="margin-right:1rem">Temas</a><a
+                href="/examples.html">Exemplos</a></nav>
+    </div>
+    <section class="hero">
+        <div class="container">
+            <h1 style="font-size:2.25rem;line-height:1.1;margin:0 0 1rem 0">MarpX — Slides institucionais, claros e
+                consistentes</h1>
+            <p style="max-width:56ch;color:#e2e8f0">Temas, componentes e convenções CSS para apresentações com Marp,
+                padronizando tipografia, cores e legendas.</p>
+            <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap">
+                <a class="btn primary" href="https://github.com/cunhapaulo/MarpX">Acessar no GitHub</a>
+                <a class="btn" href="/docs.html">Documentação</a>
+                <a class="btn" href="/examples.html">Exemplos</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container" style="padding:2rem 0">
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>Visão geral</h3>
+                    <p>O que é o MarpX, objetivos e princípios editoriais.</p>
+                </div>
+                <div class="card">
+                    <h3>Documentação</h3>
+                    <p>Como estruturar slides, cabeçalhos, legendas e numeração.</p>
+                </div>
+                <div class="card">
+                    <h3>Tokens de tema</h3>
+                    <p>Variáveis CSS para cores, tipografia e espaçamentos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container" style="padding:2rem 0">
+            <div class="footer-cols">
+                <div>
+                    <div class="brand" style="margin-bottom:.5rem">
+                        <div class="brand-badge">MX</div>
+                        <div style="font-weight:600">MarpX</div>
+                    </div>
+                    <p style="font-size:.9rem;color:#475569">Projeto aberto e colaborativo.</p>
+                </div>
+                <div>
+                    <h4>Projeto</h4>
+                    <ul style="list-style:none;padding:0;margin:0">
+                        <li><a href="#projeto">Visão geral</a></li>
+                        <li><a href="/docs.html">Documentação</a></li>
+                        <li><a href="/themes.html">Temas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Recursos</h4>
+                    <ul style="list-style:none;padding:0;margin:0">
+                        <li><a href="https://github.com/cunhapaulo/MarpX/tree/main/examples">Exemplos</a></li>
+                        <li><a href="https://github.com/cunhapaulo/MarpX/releases">Releases</a></li>
+                        <li><a href="https://github.com/cunhapaulo/MarpX/issues">Issues</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Institucional</h4>
+                    <ul style="list-style:none;padding:0;margin:0">
+                        <li><a href="#acessibilidade">Acessibilidade</a></li>
+                        <li><a href="#politicas">Políticas</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:1rem;font-size:.8rem;color:#64748b">© 2025 MarpX — Projeto
+                comunitário.</div>
+        </div>
+    </footer>
+</body>
+
+</html>

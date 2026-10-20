@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MarpX — Documentação</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Open Sans', sans-serif
+        }
+
+        header {
+            border-bottom: 1px solid #e5e7eb
+        }
+
+        footer {
+            border-top: 1px solid #e5e7eb
+        }
+    </style>
+</head>
+
+<body>
+    <header style="padding:1rem 0">
+        <div
+            style="max-width:1120px;margin:0 auto;padding:0 1rem;display:flex;justify-content:space-between;align-items:center">
+            <a href="/index.html" style="text-decoration:none;color:#111;font-weight:600">MarpX</a>
+            <nav><a href="/docs.html" style="margin-right:1rem">Docs</a><a href="/themes.html"
+                    style="margin-right:1rem">Temas</a><a href="/examples.html">Exemplos</a></nav>
+        </div>
+    </header>
+    <main style="max-width:1120px;margin:0 auto;padding:1rem">
+        <h1>Documentação</h1>
+        <p>Guia de uso do MarpX, estrutura e boas práticas.</p>
+        <h2>Instalação</h2>
+        <ol>
+            <li>Copie <code>themes/</code> para seu projeto.</li>
+            <li>Inclua o CSS do tema no frontmatter.</li>
+            <li>Ajuste tokens em <code>:root</code>.</li>
+        </ol>
+        <h2>Legendas</h2>
+        <p><strong>Fig.</strong> e <strong>Tab.</strong> com numeração automática via CSS.</p>
+        <h2>Exportação</h2>
+        <p>Gere HTML/PDF via CLI do Marp.</p>
+    </main>
+    <footer style="padding:1rem 0;text-align:center;color:#64748b">© 2025 MarpX</footer>
+</body>
+
+</html>

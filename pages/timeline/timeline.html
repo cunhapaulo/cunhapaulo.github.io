@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Linha do Tempo Interativa</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #cde4fc;
+            color: #333;
+            line-height: 1.2;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #021f3b;
+            font-size: 2.5rem;
+        }
+        
+        /* Linha do Tempo */
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+        
+        /* Linha central */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #3498db;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 10px;
+        }
+        
+        /* Container de cada evento */
+        .event {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.9s ease;
+        }
+        
+        .event.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Eventos à esquerda */
+        .event.left {
+            left: 0;
+            text-align: right;
+            padding-right: 70px;
+        }
+        
+        /* Eventos à direita */
+        .event.right {
+            left: 50%;
+            padding-left: 70px;
+        }
+        
+        /* Círculo na linha do tempo */
+        .event::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-color: white;
+            border: 4px solid #3498db;
+            border-radius: 50%;
+            top: 30px;
+            z-index: 1;
+        }
+        
+        .event.left::after {
+            right: -12px;
+        }
+        
+        .event.right::after {
+            left: -12px;
+        }
+        
+        /* Conteúdo do evento */
+        .event-content {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .event-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Data do evento */
+        .date {
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        /* Título do evento */
+        .event-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        /* Descrição do evento */
+        .event-desc {
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+        
+        /* Seta para conteúdo à esquerda */
+        .event.left .event-content::after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+            top: 20px;
+            right: -10px;
+        }
+        
+        /* Seta para conteúdo à direita */
+        .event.right .event-content::after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+            top: 20px;
+            left: -10px;
+        }
+        
+        /* Responsividade */
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .event {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .event.left, .event.right {
+                left: 0;
+                text-align: left;
+                padding-right: 25px;
+            }
+            
+            .event.left::after, .event.right::after {
+                left: 19px;
+            }
+            
+            .event.left .event-content::after, 
+            .event.right .event-content::after {
+                left: -10px;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+            
+            .event.left {
+                padding-right: 25px;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Linha do Tempo Interativa</h1>
+        
+        <div class="timeline">
+            <!-- Evento 1 -->
+            <div class="event left">
+                <div class="event-content">
+                    <div class="date">Janeiro 2020</div>
+                    <h2 class="event-title">Início do Projeto</h2>
+                    <p class="event-desc">Lançamento da primeira versão do nosso produto com recursos básicos.</p>
+                </div>
+            </div>
+            
+            <!-- Evento 2 -->
+            <div class="event right">
+                <div class="event-content">
+                    <div class="date">Junho 2020</div>
+                    <h2 class="event-title">Atualização Principal</h2>
+                    <p class="event-desc">Adicionamos novos recursos solicitados pelos usuários e melhoramos a performance.</p>
+                </div>
+            </div>
+            
+            <!-- Evento 3 -->
+            <div class="event left">
+                <div class="event-content">
+                    <div class="date">Dezembro 2020</div>
+                    <h2 class="event-title">Expansão para Mobile</h2>
+                    <p class="event-desc">Lançamento dos aplicativos para iOS e Android, aumentando nosso alcance.</p>
+                </div>
+            </div>
+            
+            <!-- Evento 4 -->
+            <div class="event right">
+                <div class="event-content">
+                    <div class="date">Março 2021</div>
+                    <h2 class="event-title">Parceria Estratégica</h2>
+                    <p class="event-desc">Fechamos uma parceria importante com uma grande empresa do setor.</p>
+                </div>
+            </div>
+            
+            <!-- Evento 5 -->
+            <div class="event left">
+                <div class="event-content">
+                    <div class="date">Agosto 2021</div>
+                    <h2 class="event-title">1 Milhão de Usuários</h2>
+                    <p class="event-desc">Alcançamos a marca de 1 milhão de usuários ativos em nossa plataforma.</p>
+                </div>
+            </div>
+            
+            <!-- Evento 6 -->
+            <div class="event right">
+                <div class="event-content">
+                    <div class="date">Fevereiro 2022</div>
+                    <h2 class="event-title">Nova Interface</h2>
+                    <p class="event-desc">Redesenhamos completamente a interface do usuário para melhor experiência.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Script para animação de aparição ao rolar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            const events = document.querySelectorAll('.event');
+            
+            function checkVisibility() {
+                events.forEach(event => {
+                    const position = event.getBoundingClientRect();
+                    
+                    // Verificando se o elemento está visível na tela
+                    if(position.top < window.innerHeight - 100) {
+                        event.classList.add('visible');
+                    }
+                });
+            }
+            
+            // Verificar visibilidade ao carregar e ao rolar
+            checkVisibility();
+            window.addEventListener('scroll', checkVisibility);
+        });
+    </script>
+</body>
+</html>
