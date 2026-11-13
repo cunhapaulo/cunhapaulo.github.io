@@ -30,9 +30,9 @@ Lei Geral de Proteção de Dados Pessoais
 </div><div>
 
 4. Relatórios de Gestão (ROPA) <br> [(HTML)](./output/modulo-4-1.html) - [(PDF)](./output/modulo-4-1.pdf)
-   1. `Arquivo ROPA` <br> [(modelo)](./modelos/ROPA-ANPD.pdf) - [(preenchido)](./modelos/ROPA-TJPA-SEAUD-PROCESS0-1.pdf)
+   1. `Arquivo ROPA` <br> [(modelo)](./modelos/ROPA-ANPD.pdf) - [(preenchido)](./modelos/ROPA-TJPA-SEAUD-PROCESS0-1.pdf) - [(Word)](./modelos/ROPA-TJPA-MODELO.docx)
 5. Relatórios de Gestão (RIPD) <br> [(HTML)](./output/modulo-5-1.html) - [(PDF)](./output/modulo-5-1.pdf)
-   1. `Arquivo RIPD` <br> [(modelo)](./modelos/RIPD-TJPA-MODELO.pdf) - [(preenchido)](./modelos/RIPD-TJPA-SEAUD-PROCESS0-1.pdf)
+   1. `Arquivo RIPD` <br> [(modelo)](./modelos/RIPD-TJPA-MODELO.pdf) - [(preenchido)](./modelos/RIPD-TJPA-SEAUD-PROCESS0-1.pdf)  - [(Word)](./modelos/RIPD-TJPA-MODELO.docx)
 6. Material de Apoio [(HTML)](https://cunhapaulo.github.io/lgpd/)
 
 </div></div>
